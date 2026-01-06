@@ -1,4 +1,9 @@
 # Kuzushiji-Detection
+## Binarization
+* RGB_256_Split
+* R_256_Split
+* RGB_512_Split
+* R_512_Split
 
 ## MMOCR
 * MMCV==2.2.0 is used but incompatible. Please install mmcv>=2.0.0rc4, <2.2.0.
