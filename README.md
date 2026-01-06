@@ -1,4 +1,7 @@
 # Kuzushiji-Detection
+## Data_Correction
+* 100241706_00006_1
+
 ## Binarization
 * RGB_256_Split
 * R_256_Split
