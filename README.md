@@ -2,6 +2,7 @@
 ## Data_Correction
 * 100241706_00006_1
 * 100241706_00016_1
+* 100241706_00033_1
 
 ## Binarization
 * RGB_256_Split
