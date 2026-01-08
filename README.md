@@ -7,6 +7,19 @@
 | 3 | 100249416 | 餅菓子即席/手製集 | 468 | 7,950 | 70 |
 
 ## Data_Correction
+<details>
+<summary>100241706</summary>
+<ul>
+  <li>IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Barcelona, Spain, 2026, Reviewer.</li>
+  <li>AAAI Conference on Artificial Intelligence (AAAI), Singapore, 2026, Reviwer.</li>
+  <li>Pacific Rim International Conference on Artificial Intelligence (PRICAI), Wellington, New Zealand, 2025, Program Committee.</li>
+  <li>International Joint Conference on Neural Networks (IJCNN), Rome, Italy, 2025, Reviewer.</li>
+  <li>IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Hyderabad, India, 2025, Reviewer.</li>
+  <li>Pacific Rim International Conference on Artificial Intelligence (PRICAI), Kyoto, Japan, 2024, Program Committee.</li>
+  <li>British Machine Vision Conference (BMVC), Glasgow, UK, 2024, Reviewer.</li>
+  <li>Pacific Rim International Conference on Artificial Intelligence (PRICAI), Jakarta, Indonesia, 2023, Program Committee.</li>
+</ul>
+</details>
 * 100241706_00006_1
 * 100241706_00016_1
 * 100241706_00033_1
