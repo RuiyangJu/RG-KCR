@@ -153,6 +153,13 @@
 </ul>
 </details>
 
+<details>
+<summary>200020019</summary>
+<ul>
+<li>200020019_000</li>
+</ul>
+</details>
+
 ## Binarization
 * RGB_256_Split
 * R_256_Split
