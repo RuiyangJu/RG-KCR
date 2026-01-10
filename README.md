@@ -14,7 +14,7 @@
 | 10 | 200021869 | 料理方心得之事 | 330 | 3,003 | 35 |
 | 11 | 200022050 | 料理秘伝抄 | 255 | 9,545 | 30 |
 
-## Data_Correction
+## Data Correction
 <details>
 <summary>100241706</summary>
 <ul>
