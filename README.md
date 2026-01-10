@@ -166,6 +166,13 @@
 </ul>
 </details>
 
+<details>
+<summary>200022050</summary>
+<ul>
+<li>200022050_0000</li> 
+</ul>
+</details>
+
 ## Binarization
 * RGB_256_Split
 * R_256_Split
