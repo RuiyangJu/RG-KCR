@@ -1,4 +1,4 @@
-# Kuzushiji-Detection
+<img width="162" height="68" alt="image" src="https://github.com/user-attachments/assets/8078b85d-4176-478b-8d34-9cc552c2d16b" /># Kuzushiji-Detection
 ## Data Collection
 | 並び | 国文研書誌ID | 書名 | 文字種 | 文字数 | 画像数 |
 | :--: | :--: | :--: | :--: | :--: | :--: |
@@ -137,6 +137,7 @@
 <li>200017458_00019_2</li>   
 <li>200017458_00021_2</li>   
 <li>200017458_00027_2</li>     
+<li>200017458_00030_1</li>     
 </ul>
 </details>
 
