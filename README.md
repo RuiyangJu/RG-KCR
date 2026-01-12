@@ -315,6 +315,8 @@
 </ul>
 </details>
 
+###  Synthetic Data
+
 ## Binarization
 * RGB_256_Split
 * R_256_Split
