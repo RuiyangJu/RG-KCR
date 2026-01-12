@@ -132,6 +132,8 @@ These missing labels were manually corrected, and the corresponding image names 
 <li>200015843_00104_2</li>   
 <li>200015843_00110_2</li>   
 <li>200015843_00112_1</li>   
+<li>200015843_00115_2</li> 
+<li>200015843_00116_1</li>   
 <li>200015843_00116_2</li>    
 <li>200015843_00117_1</li>   
 <li>200015843_00120_2</li> 
