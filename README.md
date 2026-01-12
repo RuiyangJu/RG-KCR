@@ -1,4 +1,4 @@
-# Kuzushiji-Detection
+# Kuzushiji Character Detection with Seal Interference
 
 
 ## Dataset 
