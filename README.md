@@ -1,6 +1,5 @@
 # Kuzushiji Character Detection with Seal Interference
 
-
 ## Dataset 
 ### Data Collection
 
