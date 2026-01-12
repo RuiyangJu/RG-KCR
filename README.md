@@ -97,6 +97,8 @@ These missing labels were manually corrected, and the corresponding image names 
 <li>200015843_00037_1</li>   
 <li>200015843_00037_2</li>   
 <li>200015843_00041_2</li>  
+<li>200015843_00047_2</li>
+<li>200015843_00048_1</li>    
 <li>200015843_00049_1</li>  
 <li>200015843_00049_2</li>  
 <li>200015843_00051_2</li> 
