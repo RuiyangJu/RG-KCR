@@ -1,5 +1,6 @@
 # Kuzushiji-Detection
-## Data Collection
+## Dataset 
+### Data Collection
 | 並び | 国文研書誌ID | 書名 | 文字種 | 文字数 | 画像数 |
 | :--: | :--: | :--: | :--: | :--: | :--: |
 | 1 | 100241706 | 虚南留別志 | 786 | 8,527 | 77 |
@@ -14,7 +15,7 @@
 | 10 | 200021869 | 料理方心得之事 | 330 | 3,003 | 35 |
 | 11 | 200022050 | 料理秘伝抄 | 255 | 9,545 | 30 |
 
-## Data Correction
+### Data Correction
 <details>
 <summary>100241706</summary>
 <ul>
