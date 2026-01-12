@@ -294,7 +294,8 @@ These missing labels were manually corrected, and the corresponding image names 
 <li>200021763_00036_1</li> 
 <li>200021763_00036_2</li>   
 <li>200021763_00038_2</li>   
-<li>200021763_00039_2</li>     
+<li>200021763_00039_2</li> 
+<li>200021763_00040_1</li>   
 </ul>
 </details>
 
