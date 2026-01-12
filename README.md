@@ -25,6 +25,7 @@ The dataset is available from the [Center for Open Data in the Humanities (CODH)
 <details>
 <summary>100241706</summary>
 <ul>
+<li>100241706_00002_1</li>
 <li>100241706_00006_1</li>
 <li>100241706_00016_1</li>
 <li>100241706_00033_1</li>
