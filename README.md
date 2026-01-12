@@ -26,7 +26,7 @@ Among the **1,000** annotated images, we found that **256** images contained inc
 These missing labels were manually corrected, and the corresponding image names are listed below：
 
 <details>
-<summary>100241706：5</summary>
+<summary>100241706 (5 images)</summary>
 <ul>
 <li>100241706_00002_1</li>
 <li>100241706_00006_1</li>
@@ -37,7 +37,7 @@ These missing labels were manually corrected, and the corresponding image names 
 </details>
 
 <details>
-<summary>100249376</summary>
+<summary>100249376 (10 images)</summary>
 <ul>
 <li>100249376_00012_1</li>
 <li>100249376_00013_2</li>
@@ -53,7 +53,7 @@ These missing labels were manually corrected, and the corresponding image names 
 </details>
 
 <details>
-<summary>100249416</summary>
+<summary>100249416 (9 images)</summary>
 <ul>
 <li>100249416_00002_2</li>
 <li>100249416_00003_2</li>
@@ -68,7 +68,7 @@ These missing labels were manually corrected, and the corresponding image names 
 </details>
 
 <details>
-<summary>100249476</summary>
+<summary>100249476 (3 images)</summary>
 <ul>
 <li>100249476_00016_1</li>
 <li>100249476_00016_2</li>
@@ -77,7 +77,7 @@ These missing labels were manually corrected, and the corresponding image names 
 </details>
 
 <details>
-<summary>200015843</summary>
+<summary>200015843 (53 images)</summary>
 <ul>
 <li>200015843_00004_2</li>
 <li>200015843_00011_1</li>
@@ -136,7 +136,7 @@ These missing labels were manually corrected, and the corresponding image names 
 </details>
 
 <details>
-<summary>200017458</summary>
+<summary>200017458 (27 images)</summary>
 <ul>
 <li>200017458_00003_2</li>
 <li>200017458_00004_1</li> 
@@ -169,7 +169,7 @@ These missing labels were manually corrected, and the corresponding image names 
 </details>
 
 <details>
-<summary>200020019</summary>
+<summary>200020019 (48 images)</summary>
 <ul>
 <li>200020019_00003_1</li>
 <li>200020019_00006_1</li>  
@@ -223,7 +223,7 @@ These missing labels were manually corrected, and the corresponding image names 
 </details>
 
 <details>
-<summary>200021086</summary>
+<summary>200021086 (46 images)</summary>
 <ul>
 <li>200021086_00003_1</li>
 <li>200021086_00004_1</li>  
@@ -275,7 +275,7 @@ These missing labels were manually corrected, and the corresponding image names 
 </details>
 
 <details>
-<summary>200021763</summary>
+<summary>200021763 (22 images)</summary>
 <ul>
 <li>200021763_00014_2</li>
 <li>200021763_00017_1</li>  
@@ -303,7 +303,7 @@ These missing labels were manually corrected, and the corresponding image names 
 </details>
 
 <details>
-<summary>200021802</summary>
+<summary>200021802 (23 images)</summary>
 <ul>
 <li>200021802_00005_2</li>
 <li>200021802_00006_1</li>  
@@ -332,7 +332,7 @@ These missing labels were manually corrected, and the corresponding image names 
 </details>
 
 <details>
-<summary>200021869</summary>
+<summary>200021869 (3 images)</summary>
 <ul>
 <li>200021869_00004_2</li>
 <li>200021869_00008_2</li>  
@@ -341,7 +341,7 @@ These missing labels were manually corrected, and the corresponding image names 
 </details>
 
 <details>
-<summary>200022050</summary>
+<summary>200022050 (7 images)</summary>
 <ul>
 <li>200022050_00005_2</li> 
 <li>200022050_00009_2</li>   
