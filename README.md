@@ -79,6 +79,8 @@ These missing labels were manually corrected, and the corresponding image names 
 <details>
 <summary>200015843 (53 images)</summary>
 <ul>
+<li>200015843_00002_2</li> 
+<li>200015843_00003_1</li>   
 <li>200015843_00004_2</li>
 <li>200015843_00011_1</li>
 <li>200015843_00016_1</li>
