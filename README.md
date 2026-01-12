@@ -22,11 +22,11 @@ The dataset is available from the [Center for Open Data in the Humanities (CODH)
 
 ### Data Annotation and Correction
 
-Among the **1,000** annotated images, we found that 234 images contained incomplete annotations. 
+Among the **1,000** annotated images, we found that **256** images contained incomplete annotations. 
 These missing labels were manually corrected, and the corresponding image names are listed below：
 
 <details>
-<summary>100241706</summary>
+<summary>100241706：5</summary>
 <ul>
 <li>100241706_00002_1</li>
 <li>100241706_00006_1</li>
