@@ -275,6 +275,13 @@ These missing labels were manually corrected, and the corresponding image names 
 </details>
 
 <details>
+<summary>200021763</summary>
+<ul>
+<li>200021763_00014_2</li>
+</ul>
+</details>
+
+<details>
 <summary>200021802</summary>
 <ul>
 <li>200021802_00005_2</li>
