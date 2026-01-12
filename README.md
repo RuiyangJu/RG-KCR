@@ -280,7 +280,8 @@ These missing labels were manually corrected, and the corresponding image names 
 <li>200021763_00014_2</li>
 <li>200021763_00017_1</li>  
 <li>200021763_00019_2</li>  
-<li>200021763_00020_1</li>    
+<li>200021763_00020_1</li>   
+<li>200021763_00020_2</li>     
 </ul>
 </details>
 
