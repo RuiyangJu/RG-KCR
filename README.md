@@ -22,6 +22,10 @@ The dataset is available from the [Center for Open Data in the Humanities (CODH)
 | 12 | 200022050 | 料理秘伝抄 | 30 | 24 |
 
 ### Data Annotation and Correction
+
+Among the 1,000 annotated images, we found that 234 images contained incomplete annotations. 
+These missing labels were manually corrected, and the corresponding image names are listed below：
+
 <details>
 <summary>100241706</summary>
 <ul>
