@@ -15,7 +15,7 @@
 | 10 | 200021869 | 料理方心得之事 | 330 | 3,003 | 35 |
 | 11 | 200022050 | 料理秘伝抄 | 255 | 9,545 | 30 |
 
-### Data Correction
+### Data Annotation and Correction
 <details>
 <summary>100241706</summary>
 <ul>
@@ -315,7 +315,7 @@
 </ul>
 </details>
 
-###  Synthetic Data
+### Synthetic Data Generation
 
 ## Binarization
 * RGB_256_Split
