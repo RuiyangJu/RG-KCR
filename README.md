@@ -1,6 +1,9 @@
 # Kuzushiji-Detection
 ## Dataset 
 ### Data Collection
+
+The dataset is available from the [CODH](https://codh.rois.ac.jp/char-shape/book/), and the raw data is held by National Institute of Japanese Literature (NIJL).
+
 | Index | NIJL Book ID | Book Title | Total Images | Annotated Images |
 | :--: | :--: | :--: | :--: | :--: |
 | 1 | 100241706 | 虚南留別志 | 77 | 67 |
