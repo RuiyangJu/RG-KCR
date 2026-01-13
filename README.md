@@ -368,11 +368,10 @@ These missing labels were manually corrected, and the corresponding image names 
 
 ### Synthetic Data Generation
 
-## Binarization
-* RGB_256_Split
-* R_256_Split
-* RGB_512_Split
-* R_512_Split
+## Preprocess
+```
+  python preprocess.py --r_min 90 --rg_ratio 1.2 --rb_ratio 1.2
+```
 
 ## Kuzushiji Character Detection
 ### Ultralytics YOLO
