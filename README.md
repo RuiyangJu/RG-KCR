@@ -374,6 +374,12 @@ These missing labels were manually corrected, and the corresponding image names 
 * RGB_512_Split
 * R_512_Split
 
+## Kuzushiji Character Detection
+### Ultralytics YOLO
+```
+  yolo detect train model=yolov9m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov9m
+```
+
 ## MMOCR
 * MMCV==2.2.0 is used but incompatible. Please install mmcv>=2.0.0rc4, <2.2.0.
 ```
