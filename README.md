@@ -387,7 +387,7 @@ These missing labels were manually corrected, and the corresponding image names 
   yolo val model='./runs/detect/train_yolov9m/weights/best.pt' data=./yolo_dataset/meta.yaml split='test' name=test_yolov9m
   yolo val model='./runs/detect/train_yolov10m/weights/best.pt' data=./yolo_dataset/meta.yaml split='test' name=test_yolov10m
   yolo val model='./runs/detect/train_yolo11m/weights/best.pt' data=./yolo_dataset/meta.yaml split='test' name=test_yolo11m
-  yolo val model='./runs/detect/train_yolov12m/weights/best.pt' data=./yolo_dataset/meta.yaml split='test' name=test_yolov12m
+  yolo val model='./runs/detect/train_yolo12m/weights/best.pt' data=./yolo_dataset/meta.yaml split='test' name=test_yolo12m
 ```
 
 ## MMOCR
