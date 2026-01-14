@@ -380,7 +380,7 @@ These missing labels were manually corrected, and the corresponding image names 
   yolo detect train model=yolov9m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov9m
   yolo detect train model=yolov10m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov10m
   yolo detect train model=yolo11m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolo11m
-  yolo detect train model=yolov12m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov12m
+  yolo detect train model=yolo12m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolo12m
 ```
 * Test
 ```
