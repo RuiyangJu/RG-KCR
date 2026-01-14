@@ -377,9 +377,9 @@ These missing labels were manually corrected, and the corresponding image names 
 ### Ultralytics YOLO
 * Train
 ```
-  yolo detect train model=yolov9m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov9m
-  yolo detect train model=yolov10m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov10m
-  yolo detect train model=yolo11m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolo11m
+  yolo detect train model=yolov9m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=32 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov9m
+  yolo detect train model=yolov10m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=32 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov10m
+  yolo detect train model=yolo11m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=32 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolo11m
 ```
 * Test
 ```
