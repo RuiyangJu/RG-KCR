@@ -381,6 +381,7 @@ These missing labels were manually corrected, and the corresponding image names 
   yolo detect train model=yolov10m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov10m
   yolo detect train model=yolo11m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolo11m
   yolo detect train model=yolo12m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolo12m
+  yolo detect train model=rtdetr-l.pt data=./yolo_dataset/meta.yaml epochs=100 batch=8 imgsz=640 device=0 workers=8 optimizer=AdamW lr0=0.001 name=train_rtdetr-l
 ```
 * Test
 ```
