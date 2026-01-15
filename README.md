@@ -379,7 +379,7 @@
 
 ## :o: Environment
 ```
-  conda create -n kuzushiji python=3.10
+  conda create -n Kuzushiji python=3.10
   pip install -r requirements.txt
 ```
 
@@ -396,7 +396,7 @@
 ```
 
 ### Test:
-* You can download our pretrained models here.
+* You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgBw5aIxd2jAS5oB9VxuHdWkAfPXzCM62l_L0YrVi5YG5l0).
 ```
   yolo val model='./runs/detect/train_yolov9m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_yolov9m
   yolo val model='./runs/detect/train_yolov10m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_yolov10m
