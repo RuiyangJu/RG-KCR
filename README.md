@@ -378,8 +378,7 @@
 ## :o: Kuzushiji Character Classification 
 
 ## :o: Kuzushiji Character Detection Model
-### Ultralytics YOLO
-* Train
+### Train:
 ```
   yolo detect train model=yolov9m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov9m
   yolo detect train model=yolov10m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov10m
@@ -387,7 +386,7 @@
   yolo detect train model=yolo12m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolo12m
   yolo detect train model=rtdetr-l.pt data=./yolo_dataset/meta.yaml epochs=100 batch=8 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_rtdetr-l
 ```
-* Test
+### Test:
 ```
   yolo val model='./runs/detect/train_yolov9m/weights/best.pt' data=./yolo_dataset/meta.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_yolov9m
   yolo val model='./runs/detect/train_yolov10m/weights/best.pt' data=./yolo_dataset/meta.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_yolov10m
