@@ -21,7 +21,7 @@ The dataset is available from the [Center for Open Data in the Humanities (CODH)
 | 12 | 200021869 | 料理方心得之事 | 35 | 30 |
 | 13 | 200022050 | 料理秘伝抄 | 30 | 24 |
 
-### Data Annotation and Correction
+### Data Correction (Detection Label)
 
 Among the **1,000** annotated images, we found that **268** images contained incomplete annotations. 
 These missing labels were manually corrected, and the corresponding image names are listed below：
@@ -363,6 +363,35 @@ These missing labels were manually corrected, and the corresponding image names 
 <li>200022050_00012_2</li>   
 <li>200022050_00013_2</li>    
 <li>200022050_00020_2</li>      
+</ul>
+</details>
+
+### Data Annotation (Unicode Label)
+
+<details>
+<summary>Test Set (21 images)</summary>
+<ul>
+<li>100249376_00034_1</li>  
+<li>100249416_00017_1</li>  
+<li>200015843_00003_1</li>  
+<li>200015843_00049_1</li>  
+<li>200015843_00062_2</li>  
+<li>200015843_00069_2</li>  
+<li>200015843_00079_2</li>  
+<li>200015843_00130_2</li>  
+<li>200020019_00012_1</li>  
+<li>200020019_00020_1</li>  
+<li>200020019_00028_2</li>  
+<li>200020019_00057_1</li>  
+<li>200020019_00064_1</li>  
+<li>200021086_00005_1</li>  
+<li>200021086_00016_1</li>  
+<li>200021086_00018_1</li>  
+<li>200021086_00019_2</li>  
+<li>200021763_00020_1</li>  
+<li>200021763_00043_2</li>  
+<li>200021802_00026_2</li>  
+<li>200022050_00010_2</li>  
 </ul>
 </details>
 
