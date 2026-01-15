@@ -391,10 +391,3 @@ These missing labels were manually corrected, and the corresponding image names 
   yolo val model='./runs/detect/train_yolo12m/weights/best.pt' data=./yolo_dataset/meta.yaml split='test' save_txt=True save_conf=True name=test_yolo12m
   yolo val model='./runs/detect/train_rtdetr-l/weights/best.pt' data=./yolo_dataset/meta.yaml split='test' save_txt=True save_conf=True name=test_rtdetr-l
 ```
-
-## MMOCR
-* MMCV==2.2.0 is used but incompatible. Please install mmcv>=2.0.0rc4, <2.2.0.
-```
-  https://github.com/open-mmlab/mmocr/issues/2041
-  https://github.com/open-mmlab/mmdetection/issues/11668
-```
