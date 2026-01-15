@@ -1,6 +1,6 @@
 # Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
 
-## Dataset 
+## :o: Kuzushiji Character Dataset 
 ### Data Collection
 
 The dataset is available from the [Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/char-shape/book/), and the raw data is held by [National Institute of Japanese Literature (NIJL)](https://www.nijl.ac.jp/db/).
