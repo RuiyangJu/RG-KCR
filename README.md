@@ -30,16 +30,16 @@
 * Among the **1,000** annotated images, we found that **268** images contained incomplete annotations. 
 * These missing labels were manually corrected, and the corresponding image names are listed below：
 
-<details>
-<summary>100241706 (5 images)</summary>
-<ul>
-<li>100241706_00002_1</li>
-<li>100241706_00006_1</li>
-<li>100241706_00016_1</li>
-<li>100241706_00033_1</li>
-<li>100241706_00038_1</li>
-</ul>
-</details>
+  <details>
+  <summary>100241706 (5 images)</summary>
+  <ul>
+  <li>100241706_00002_1</li>
+  <li>100241706_00006_1</li>
+  <li>100241706_00016_1</li>
+  <li>100241706_00033_1</li>
+  <li>100241706_00038_1</li>
+  </ul>
+  </details>
 
 <details>
 <summary>100249376 (10 images)</summary>
