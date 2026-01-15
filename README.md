@@ -396,7 +396,7 @@
 ```
 
 ### Test:
-* 
+* You can download our pretrained models here.
 ```
   yolo val model='./runs/detect/train_yolov9m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_yolov9m
   yolo val model='./runs/detect/train_yolov10m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_yolov10m
