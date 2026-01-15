@@ -377,7 +377,15 @@
 
 ## :o: Kuzushiji Character Classification 
 
+## Environment
+```
+  conda create -n kuzushiji python=3.10
+  pip install -r requirements.txt
+```
+
 ## :o: Kuzushiji Character Detection Model
+
+
 ### Train:
 ```
   yolo detect train model=yolov9m.pt data=./yolo_dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov9m
