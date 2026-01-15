@@ -407,7 +407,7 @@
 ```
 
 
-## Preprocess
+## :o: Kuzushiji Document Restoration
 ```
   python preprocess.py --r_min 90 --rg_ratio 1.2 --rb_ratio 1.2
 ```
