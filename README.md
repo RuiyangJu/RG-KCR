@@ -384,6 +384,7 @@
 ```
 
 ## :o: Kuzushiji Character Detection Model
+* Please put the downloaded `Kuzushiji_Character_Detection_Dataset` into this folder.
 ### Train:
 ```
   yolo detect train model=yolov9m.pt data=./Kuzushiji_Character_Detection_Dataset/meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov9m
