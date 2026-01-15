@@ -371,8 +371,8 @@
   </details>
 
 ### :three: Synthetic Data Generation
-* Based on the 1,000 corrected images, we synthesized data using 128 high-quality red seal images and randomly split the resulting dataset into training, validation, and test sets with a ratio of 8:1:1.
-* At a result, there are 800 training images, 100 validation images, and 100 test images.
+* Based on the 1,000 corrected images, we synthesized data using 128 high-quality red seal images.
+* And then we randomly split the resulting dataset into training, validation, and test sets with a ratio of 8:1:1, resulting in 800 training images, 100 validation images, and 100 test images.
 * You can download our constructed dataset for **Kuzushiji Character Detection** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
 
 ## :o: Kuzushiji Character Classification 
