@@ -1,12 +1,11 @@
 # Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
 
+# Dataset
 ## :o: Kuzushiji Character Detection Dataset 
 
 <p align="center">
   <img src="img/fig_detection_data.png" width="1024" title="details">
 </p>
-
-You can download our constructed dataset for **Kuzushiji Character Detection** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
 
 ### :one: Data Collection
 
@@ -373,36 +372,13 @@ These missing labels were manually corrected, and the corresponding image names 
 </ul>
 </details>
 
-### Data Annotation (Unicode Label)
+### :three: Synthetic Data Generation
 
-<details>
-<summary>Test Set (21 images)</summary>
-<ul>
-<li>100249376_00034_1</li>  
-<li>100249416_00017_1</li>  
-<li>200015843_00003_1</li>  
-<li>200015843_00049_1</li>  
-<li>200015843_00062_2</li>  
-<li>200015843_00069_2</li>  
-<li>200015843_00079_2</li>  
-<li>200015843_00130_2</li>  
-<li>200020019_00012_1</li>  
-<li>200020019_00020_1</li>  
-<li>200020019_00028_2</li>  
-<li>200020019_00057_1</li>  
-<li>200020019_00064_1</li>  
-<li>200021086_00005_1</li>  
-<li>200021086_00016_1</li>  
-<li>200021086_00018_1</li>  
-<li>200021086_00019_2</li>  
-<li>200021763_00020_1</li>  
-<li>200021763_00043_2</li>  
-<li>200021802_00026_2</li>  
-<li>200022050_00010_2</li>  
-</ul>
-</details>
+You can download our constructed dataset for **Kuzushiji Character Detection** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
 
-### Synthetic Data Generation
+## :o: Kuzushiji Character Classification 
+
+
 
 ## Preprocess
 ```
