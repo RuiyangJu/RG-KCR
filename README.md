@@ -1,4 +1,4 @@
-# Kuzushiji Character Detection with Seal Interference
+# Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
 
 ## Dataset 
 ### Data Collection
