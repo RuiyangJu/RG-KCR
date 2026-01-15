@@ -377,14 +377,7 @@
 
 ## :o: Kuzushiji Character Classification 
 
-
-
-## Preprocess
-```
-  python preprocess.py --r_min 90 --rg_ratio 1.2 --rb_ratio 1.2
-```
-
-## Kuzushiji Character Detection
+## :o: Kuzushiji Character Detection Model
 ### Ultralytics YOLO
 * Train
 ```
@@ -401,6 +394,12 @@
   yolo val model='./runs/detect/train_yolo11m/weights/best.pt' data=./yolo_dataset/meta.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_yolo11m
   yolo val model='./runs/detect/train_yolo12m/weights/best.pt' data=./yolo_dataset/meta.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_yolo12m
   yolo val model='./runs/detect/train_rtdetr-l/weights/best.pt' data=./yolo_dataset/meta.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_rtdetr-l
+```
+
+
+## Preprocess
+```
+  python preprocess.py --r_min 90 --rg_ratio 1.2 --rb_ratio 1.2
 ```
 
 # License
