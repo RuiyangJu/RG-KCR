@@ -1,6 +1,11 @@
 # Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
 
 ## :o: Kuzushiji Character Detection Dataset 
+
+<p align="center">
+  <img src="img/fig_detection_data.png" width="1024" title="details">
+</p>
+
 You can download our constructed dataset for **Kuzushiji Character Detection** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
 
 ### :one: Data Collection
