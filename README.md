@@ -9,22 +9,22 @@
 
 ### :one: Data Collection
 * The original dataset is available from the [Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/char-shape/book/), and the raw data is held by [National Institute of Japanese Literature (NIJL)](https://www.nijl.ac.jp/db/).
-
-| Index | NIJL Book ID | Book Title | Total Images | Annotated Images |
-| :--: | :--: | :--: | :--: | :--: |
-| 1 | 100241706 | 虚南留別志 | 77 | 67 |
-| 2 | 100249376 | 御前菓子秘伝抄 | 112 | 104 |
-| 3 | 100249416 | 餅菓子即席/手製集 | 70 | 58 |
-| 4 | 100249476 | 飯百珍伝 | 54 | 46 |
-| 5 | 200006663 | ぢぐち | 12 | 8 |
-| 6 | 200015843 | 日本永代蔵 | 244 | 180 |
-| 7 | 200017458 | 曾我物語 | 102 | 78 |
-| 8 | 200020019 | 竹斎 | 162 | 146 |
-| 9 | 200021086 | 伊曾保物語 | 62 | 60 |
-| 10 | 200021763 | 膳部料理抄 | 100 | 94 |
-| 11 | 200021802 | 料理物語 | 111 | 105 |
-| 12 | 200021869 | 料理方心得之事 | 35 | 30 |
-| 13 | 200022050 | 料理秘伝抄 | 30 | 24 |
+  
+  | Index | NIJL Book ID | Book Title | Total Images | Annotated Images |
+  | :--: | :--: | :--: | :--: | :--: |
+  | 1 | 100241706 | 虚南留別志 | 77 | 67 |
+  | 2 | 100249376 | 御前菓子秘伝抄 | 112 | 104 |
+  | 3 | 100249416 | 餅菓子即席/手製集 | 70 | 58 |
+  | 4 | 100249476 | 飯百珍伝 | 54 | 46 |
+  | 5 | 200006663 | ぢぐち | 12 | 8 |
+  | 6 | 200015843 | 日本永代蔵 | 244 | 180 |
+  | 7 | 200017458 | 曾我物語 | 102 | 78 |
+  | 8 | 200020019 | 竹斎 | 162 | 146 |
+  | 9 | 200021086 | 伊曾保物語 | 62 | 60 |
+  | 10 | 200021763 | 膳部料理抄 | 100 | 94 |
+  | 11 | 200021802 | 料理物語 | 111 | 105 |
+  | 12 | 200021869 | 料理方心得之事 | 35 | 30 |
+  | 13 | 200022050 | 料理秘伝抄 | 30 | 24 |
 
 ### :two: Data Correction
 * Among the **1,000** annotated images, we found that **268** images contained incomplete annotations. 
