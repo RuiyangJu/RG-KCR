@@ -1,4 +1,4 @@
-<img width="96" height="24" alt="image" src="https://github.com/user-attachments/assets/665d9be1-55f4-49d9-bcbb-c42682b1713e" /># Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
+# Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
 
 # :o: Dataset
 ## :one: Kuzushiji Character Detection Dataset 
