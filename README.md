@@ -440,8 +440,8 @@
 ```
 
 ### Evaluate
-* The Ground-Truth data (original document images) can also be found from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k) as `Kuzushiji_Character_Detection_Dataset/images/test_raw`.
-* Example command for evaluating by psnr and ssim:
+* The ground-truth data (original document images) can be found at `Kuzushiji_Character_Detection_Dataset/images/test_raw`，available from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
+* Example command for evaluation using PSNR and SSIM is provided below:
 ```
   python restoration_metric.py
 ```
