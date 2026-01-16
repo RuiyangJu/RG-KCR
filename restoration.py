@@ -5,7 +5,7 @@ import numpy as np
 from tqdm import tqdm
 
 parser = argparse.ArgumentParser(description="Remove red seals from document images using color thresholding and inpainting")
-parser.add_argument("--input_dir", type=str, default="./yolo_dataset/images/test", help="Input image directory")
+parser.add_argument("--input_dir", type=str, default="./Kuzushiji_Character_Detection_Dataset/images/test", help="Input image directory")
 parser.add_argument("--output_dir", type=str, default=None, help="Output image directory (if not set, auto-generated from parameters)")
 parser.add_argument("--r_min", type=int, default=90, help="Minimum R channel threshold (e.g., 80, 90)")
 parser.add_argument("--rg_ratio", type=float, default=1.3, help="R/G ratio threshold (e.g., 1.2, 1.3, 1.4, 1.5)")
