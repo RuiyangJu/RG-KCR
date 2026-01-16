@@ -385,7 +385,7 @@
 ```
 
 ## :two: Kuzushiji Character Detection Model
-
+* 
   | Method | Params | FLOPs | Precision | Recall | mAP@50 | mAP@50-95 |
   | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
   | RT-DETR (CVPR'24) | 31.99M | 103.4G | 86.2% | 79.2% | 84.1% | 57.0% |
