@@ -385,6 +385,7 @@
 ```
 
 ## :two: Kuzushiji Character Detection Model
+* The evaluation results on the test set are presented as follows:
 * 
   | Method | Params | FLOPs | Precision | Recall | mAP@50 | mAP@50-95 |
   | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
