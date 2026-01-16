@@ -378,13 +378,13 @@
 ## :two: Kuzushiji Character Classification 
 
 # Experiments
-## :o: Environment
+## :one: Environment
 ```
   conda create -n Kuzushiji python=3.10
   pip install -r requirements.txt
 ```
 
-## :o: Kuzushiji Character Detection Model
+## :two: Kuzushiji Character Detection Model
 ### Train:
 * Please download the `Kuzushiji_Character_Detection_Dataset` and place it in this directory.
 * Please revise the `/path/to/data` in `./Kuzushiji_Character_Detection_Dataset/meta.yaml`.
@@ -408,7 +408,7 @@
 ```
 
 
-## :o: Kuzushiji Document Restoration
+## :three: Kuzushiji Document Restoration
 ```
   python preprocess.py --r_min 90 --rg_ratio 1.2 --rb_ratio 1.2
 ```
