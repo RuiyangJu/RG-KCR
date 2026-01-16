@@ -420,7 +420,7 @@
 
 ## :three: Kuzushiji Document Restoration
 
-| Minimum R-Channel Threshold | R/G & R/B Ratio Threshold | Valid_PSNR | Valid SSIM | Test PSNR | Test SSIM |
+| r_min | rg_ratio & rb_ratio | Valid<sub>PSNR</sub> | Valid SSIM | Test PSNR | Test SSIM |
 | :--: | :--: | :--: | :--: | :--: | :--: |
 | -  | -   | 29.15 | 0.9655 | 28.71 | 0.9639 |
 | 80 | 1.2 | 29.76 | 0.9470 | 29.61 | 0.9465 |
