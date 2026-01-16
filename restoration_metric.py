@@ -120,9 +120,9 @@ def eval_folders(
 
 
 if __name__ == "__main__":
-    gt_dir = "./yolo_dataset/images/test_gt"
-    pred_dir = "./yolo_dataset/images/test_r90_rg1.5_rb1.5"
-    out_csv = "./restoration_results/test/r90_rg1.5_rb1.5.csv"
+    gt_dir = "./Kuzushiji_Character_Detection_Dataset/images/test_raw"
+    pred_dir = "./Kuzushiji_Character_Detection_Dataset/test_r90_rg1.3_rb1.3"
+    out_csv = "./restoration_results/test/r90_rg1.3_rb1.3.csv"
 
     eval_folders(
         gt_dir=gt_dir,
