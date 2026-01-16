@@ -18,7 +18,6 @@ font_scale = 0.6
 font_thickness = 2
 
 CONF_THRES = None
-
 TOPK = None
 
 IMG_EXTS = [".jpg", ".jpeg", ".png", ".tif", ".tiff", ".bmp", ".webp"]
@@ -142,13 +141,21 @@ for txt_path in txt_files:
         patch = safe_crop(img, x1, y1, x2, y2)
         if patch is None:
             continue
+        
+        crop_name = f"{stem}_X{x1}_Y{y1}_W{x2-x1}_H{y2-y1}.png"
+        crop_path = os.path.join(per_img_crop_root, crop_name)
 
-        cls_folder = os.path.join(per_img_crop_root, f"cls_{cls_id}")
-        os.makedirs(cls_folder, exist_ok=True)
+        if os.path.exists(crop_path):
+            base, ext = os.path.splitext(crop_name)
+            k = 1
+            while True:
+                alt_name = f"{base}_{k:04d}{ext}"
+                alt_path = os.path.join(per_img_crop_root, alt_name)
+                if not os.path.exists(alt_path):
+                    crop_path = alt_path
+                    break
+                k += 1
 
-        conf_str = "NA" if conf is None else f"{conf:.4f}"
-        crop_name = f"{stem}_box{i:04d}_cls{cls_id}_conf{conf_str}_x{x1}_y{y1}_w{x2-x1}_h{y2-y1}.png"
-        crop_path = os.path.join(cls_folder, crop_name)
         cv2.imwrite(crop_path, patch)
         total_crops += 1
 
