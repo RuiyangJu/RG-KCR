@@ -446,6 +446,8 @@
 ```
 * The evaluation results will be saved to `./resotration_results`.
 
+## :four: Kuzushiji Character Classification Model
+
 # License
 <img src="./img/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="100" style="vertical-align: middle;">  
 
