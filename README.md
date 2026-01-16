@@ -1,13 +1,13 @@
 # Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
 
 # Dataset
-## :o: Kuzushiji Character Detection Dataset 
+## :one: Kuzushiji Character Detection Dataset 
 
 <p align="center">
   <img src="img/fig_detection_data.png" width="1024" title="details">
 </p>
 
-### :one: Data Collection
+### Data Collection
 * The original dataset is available from the [Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/char-shape/book/), and the raw data is held by [National Institute of Japanese Literature (NIJL)](https://www.nijl.ac.jp/db/).
   
   | Index | NIJL Book ID | Book Title | Total Images | Annotated Images |
@@ -26,7 +26,7 @@
   | 12 | 200021869 | 料理方心得之事 | 35 | 30 |
   | 13 | 200022050 | 料理秘伝抄 | 30 | 24 |
 
-### :two: Data Correction
+### Data Correction
 * Among the **1,000** annotated images, we found that **268** images contained incomplete annotations. 
 * These missing labels were manually corrected, and the corresponding image names are listed below：
 
@@ -370,12 +370,12 @@
   </ul>
   </details>
 
-### :three: Synthetic Data Generation
+### Synthetic Data Generation
 * Based on the 1,000 corrected images, we synthesized data using 128 high-quality red seal images.
 * The resulting dataset was randomly split into training, validation, and test sets with a ratio of 8:1:1, consisting of 800 training images, 100 validation images, and 100 test images.
 * Our constructed dataset for **Kuzushiji character detection** can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
 
-## :o: Kuzushiji Character Classification 
+## :two: Kuzushiji Character Classification 
 
 # Experiments
 ## :o: Environment
