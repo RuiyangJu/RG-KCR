@@ -1,6 +1,6 @@
 # Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
 
-# Dataset
+# :o: Dataset
 ## :one: Kuzushiji Character Detection Dataset 
 
 <p align="center">
@@ -377,7 +377,7 @@
 
 ## :two: Kuzushiji Character Classification 
 
-# Experiments
+# :o: Experiments
 ## :one: Environment
 ```
   conda create -n Kuzushiji python=3.10
