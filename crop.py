@@ -2,7 +2,7 @@ import os
 import glob
 import cv2
 
-image_dir = "./yolo_dataset/images/test_r90_rg1.3_rb1.3"
+image_dir = "./Kuzushiji_Character_Detection_Dataset/images/test_r90_rg1.3_rb1.3"
 label_dir = "./runs/detect/test_yolo12m/labels"
 save_root = "./visual_crop"
 vis_dir   = os.path.join(save_root, "vis_with_label")
