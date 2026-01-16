@@ -433,10 +433,14 @@
   | 90 | 1.4 | 34.05 | 0.9763 | 33.94 | 0.9753 |
   | 90 | 1.5 | 32.03 | 0.9721 | 31.74 | 0.9710 |
 
+### Perform
 * Example command for performing document restoration with `r_min = 90` and `rg_ratio & rb_ratio = 1.3`:
 ```
   python restoration.py --r_min 90 --rg_ratio 1.3 --rb_ratio 1.3
 ```
+
+### Evaluate
+
 
 # License
 <img src="./img/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="100" style="vertical-align: middle;">  
