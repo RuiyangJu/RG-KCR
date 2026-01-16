@@ -27,7 +27,7 @@
   | 13 | 200022050 | 料理秘伝抄 | 30 | 24 |
 
 ### Data Correction
-* Among the **1,000** annotated images, we found that **268** images contained incomplete annotations. 
+* Among the **1,000** annotated images, we found that **267** images contained incomplete annotations. 
 * These missing labels were manually corrected, and the corresponding image names are listed below：
 
   <details>
@@ -358,15 +358,14 @@
   </details>
   
   <details>
-  <summary>200022050 (7 images)</summary>
+  <summary>200022050 (6 images)</summary>
   <ul>
   <li>200022050_00005_2</li> 
   <li>200022050_00009_2</li>   
   <li>200022050_00010_2</li>   
   <li>200022050_00011_2</li> 
   <li>200022050_00012_2</li>   
-  <li>200022050_00013_2</li>    
-  <li>200022050_00020_2</li>      
+  <li>200022050_00013_2</li>        
   </ul>
   </details>
 
