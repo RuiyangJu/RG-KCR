@@ -445,7 +445,7 @@
 ```
   python restoration_metric.py
 ```
-* The evaluation results will be saved in `./resotration_results`.
+* The evaluation results will be saved to `./resotration_results`.
 
 # License
 <img src="./img/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="100" style="vertical-align: middle;">  
