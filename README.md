@@ -385,6 +385,15 @@
 ```
 
 ## :two: Kuzushiji Character Detection Model
+
+  | Method | Parameters | FLOPs | Precision | Recall | mAP@50 | mAP@50-95 |
+  |--------|------------|-------|-----------|--------|--------|-----------|
+  | RT-DETR (CVPR'24) | 31.99M | 103.4G | 86.2% | 79.2% | 84.1% | 57.0% |
+  | YOLOv9 (ECCV'24) | 20.01M | 76.5G | 97.7% | 93.0% | 96.6% | 80.9% |
+  | YOLOv10 (NeurIPS'24) | 15.31M | 58.9G | 97.7% | 92.3% | 96.5% | 80.5% |
+  | YOLO11 (GitHub'24) | 20.03M | 67.6G | 98.1% | 93.3% | 96.7% | 81.7% |
+  | YOLOv12 (NeurIPS'25) | 20.11M | 67.1G | 98.0% | 93.9% | 97.0% | 82.3% |
+
 ### Train:
 * Please download the `Kuzushiji_Character_Detection_Dataset` and place it in this directory.
 * Please revise the `/path/to/data` in `./Kuzushiji_Character_Detection_Dataset/meta.yaml`.
