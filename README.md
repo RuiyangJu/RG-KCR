@@ -1,4 +1,4 @@
-# Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
+<img width="96" height="24" alt="image" src="https://github.com/user-attachments/assets/665d9be1-55f4-49d9-bcbb-c42682b1713e" /># Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
 
 # :o: Dataset
 ## :one: Kuzushiji Character Detection Dataset 
@@ -429,7 +429,7 @@
   | 80 | 1.4 | 33.87 | 0.9756 | 33.77 | 0.9745 |
   | 80 | 1.5 | 31.97 | 0.9717 | 31.68 | 0.9706 |
   | 90 | 1.2 | 30.37 | 0.9522 | 30.19 | 0.9519 |
-  | 90 | 1.3 | 34.09 | 0.9757 | 34.15 | 0.9753 |
+  | 90 | 1.3 | 34.09 | 0.9757 | 34.13 | 0.9750 |
   | 90 | 1.4 | 34.05 | 0.9763 | 33.94 | 0.9753 |
   | 90 | 1.5 | 32.03 | 0.9721 | 31.74 | 0.9710 |
 
