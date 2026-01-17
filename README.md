@@ -384,13 +384,13 @@
 * The ground-truth data for the test set can be accessed at the following [link](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OAR9Eascelseepquchb3bOXk?e=TdsKac).
 
 # :o: Experiments
-## :one: Environment
+## Environment
 ```
   conda create -n Kuzushiji python=3.10
   pip install -r requirements.txt
 ```
 
-## :two: Kuzushiji Character Detection Model
+## :one: Kuzushiji Character Detection 
 * The evaluation results on the test set are presented as follows:
 
   | Method | Params | FLOPs | Precision | Recall | mAP@50 | mAP@50-95 |
@@ -423,7 +423,7 @@
   yolo val model='./Pretrained_Model_Kuzushiji_Detection/rtdetr-l.pt' data=./Kuzushiji_Character_Detection_Dataset/meta.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_rtdetr-l
 ```
 
-## :three: Kuzushiji Document Restoration
+## :two: Kuzushiji Document Restoration
 * The results of the parameter study are presented as follows:
   
   | r_min | rg_ratio & rb_ratio | PSNR<sub>Valid</sub> | SSIM<sub>Valid</sub> | PSNR<sub>Test</sub> | SSIM<sub>Test</sub> |
@@ -452,7 +452,9 @@
 ```
 * The evaluation results will be saved to `./resotration_results`.
 
-## :four: Kuzushiji Character Classification Model
+## :three: Kuzushiji Character Crop
+
+## :four: Kuzushiji Character Classification 
 * We employ [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for Kuzushiji character classification, and the official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 
 
