@@ -390,7 +390,7 @@
   pip install -r requirements.txt
 ```
 
-## :one: Kuzushiji Character Detection 
+## :one: Kuzushiji Character Detection
 * The evaluation results on the test set are presented as follows:
 
   | Method | Params | FLOPs | Precision | Recall | mAP@50 | mAP@50-95 |
@@ -452,9 +452,9 @@
 ```
 * The evaluation results will be saved to `./resotration_results`.
 
-## :three: Kuzushiji Character Crop
+## :three: Kuzushiji Character Cropping
 
-## :four: Kuzushiji Character Classification 
+## :four: Kuzushiji Character Classification
 * We employ [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for Kuzushiji character classification, and the official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 
 
