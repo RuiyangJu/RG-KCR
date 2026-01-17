@@ -416,7 +416,6 @@
   yolo val model='./Pretrained_Model_Kuzushiji_Detection/rtdetr-l.pt' data=./Kuzushiji_Character_Detection_Dataset/meta.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_rtdetr-l
 ```
 
-
 ## :three: Kuzushiji Document Restoration
 * The results of the parameter study are presented as follows:
   
@@ -448,6 +447,7 @@
 
 ## :four: Kuzushiji Character Classification Model
 * We employ [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for Kuzushiji character classification, and the official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
+* The ground-truth data (Test set) can be found [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OAR9Eascelseepquchb3bOXk?e=TdsKac), 
 
 # License
 <img src="./img/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="100" style="vertical-align: middle;">  
