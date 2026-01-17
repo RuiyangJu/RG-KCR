@@ -375,6 +375,13 @@
 * Our constructed dataset for **Kuzushiji character detection** can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
 
 ## :two: Kuzushiji Character Classification 
+* Details of the dataset are as follows:
+
+  | Test set | Total GT lables | Total Pred labels | Total matched pairs (IoU>=0.5) |
+  | :--: | :--: | :--: | :--: |
+  | 100 images | 19035 | 18656 | 17982 |
+
+* The ground-truth data (Test set) can be found [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OAR9Eascelseepquchb3bOXk?e=TdsKac).
 
 # :o: Experiments
 ## :one: Environment
@@ -447,7 +454,7 @@
 
 ## :four: Kuzushiji Character Classification Model
 * We employ [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for Kuzushiji character classification, and the official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
-* The ground-truth data (Test set) can be found [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OAR9Eascelseepquchb3bOXk?e=TdsKac), 
+
 
 # License
 <img src="./img/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="100" style="vertical-align: middle;">  
