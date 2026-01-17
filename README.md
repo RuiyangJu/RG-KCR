@@ -460,7 +460,8 @@
 * The output directory `./visual_crop` contains: (1) Cropped images of individual Kuzushiji characters, and (2) Visualization results of the original images overlaid with the predicted bounding boxes.
 
 ## :four: Kuzushiji Character Classification
- 
+* The results of the ablation study are presented as follows:
+
   | Restoration | Top-1 Error | Top-5 Error | 
   | :--: | :--: | :--: |
   |  | 93.45% | 97.46% | 
