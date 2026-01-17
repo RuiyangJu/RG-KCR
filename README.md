@@ -461,7 +461,12 @@
 
 ## :four: Kuzushiji Character Classification
 * We employ [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for Kuzushiji character classification, and the official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
-
+* To perform Kuzushiji character classification and evaluate the recognition performance, please run the following commands:
+```
+  python classification.py
+  python classification_metric.py
+```
+* These scripts will generate the classification results and report the Top-1 Error and Top-5 Error metrics.
 
 # License
 <img src="./img/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="100" style="vertical-align: middle;">  
