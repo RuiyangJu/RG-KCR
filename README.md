@@ -375,13 +375,13 @@
 * Our constructed dataset for **Kuzushiji character detection** can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
 
 ## :two: Kuzushiji Character Classification 
-* Details of the dataset are as follows:
+* Details of the dataset are summarized as follows：
 
   | Test set | Total GT lables | Total Pred labels | Total matched pairs (IoU>=0.5) |
   | :--: | :--: | :--: | :--: |
   | 100 images | 19035 | 18656 | 17982 |
 
-* The ground-truth data (Test set) can be found [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OAR9Eascelseepquchb3bOXk?e=TdsKac).
+* The ground-truth data for the test set can be accessed at the following [link](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OAR9Eascelseepquchb3bOXk?e=TdsKac).
 
 # :o: Experiments
 ## :one: Environment
