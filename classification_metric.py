@@ -115,7 +115,7 @@ def eval_one_file(gt_path: str, pred_path: str, iou_thr: float) -> Dict:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--gt_dir", type=str, default="./Kuzushiji_Classification_Test_GT", help="Folder of classification_gt jsons")
-    ap.add_argument("--pred_dir", type=str, default="./classification_results_raw", help="Folder of classification_results jsons")
+    ap.add_argument("--pred_dir", type=str, default="./classification_results", help="Folder of classification_results jsons")
     ap.add_argument("--iou", type=float, default=0.5, help="IoU threshold for matching (default 0.5)")
     ap.add_argument("--ext", type=str, default=".json", help="File extension (default .json)")
     ap.add_argument("--per_file", action="store_true", help="Print per-file stats")
