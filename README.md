@@ -453,6 +453,11 @@
 * The evaluation results will be saved to `./resotration_results`.
 
 ## :three: Kuzushiji Character Cropping
+* To extract individual Kuzushiji character instances, we crop each character region based on the predicted bounding boxes：
+```
+  python crop.py
+```
+* The output directory `./visual_crop` contains: (1) Cropped images of individual Kuzushiji characters, and (2) Visualization results of the original images overlaid with the predicted bounding boxes.
 
 ## :four: Kuzushiji Character Classification
 * We employ [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for Kuzushiji character classification, and the official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
