@@ -1,5 +1,5 @@
 # Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
-
+ 
 # :o: Dataset
 ## :one: Kuzushiji Character Detection Dataset 
 
@@ -9,7 +9,7 @@
 
 ### Data Collection
 * The original dataset is available from the [Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/char-shape/book/), and the raw data is held by [National Institute of Japanese Literature (NIJL)](https://www.nijl.ac.jp/db/).
-  
+
   | Index | NIJL Book ID | Book Title | Total Images | Annotated Images |
   | :--: | :--: | :--: | :--: | :--: |
   | 1 | 100241706 | 虚南留別志 | 77 | 67 |
@@ -460,6 +460,12 @@
 * The output directory `./visual_crop` contains: (1) Cropped images of individual Kuzushiji characters, and (2) Visualization results of the original images overlaid with the predicted bounding boxes.
 
 ## :four: Kuzushiji Character Classification
+ 
+  | Restoration | Top-1 Error | Top-5 Error | 
+  | :--: | :--: | :--: |
+  |  | 93.45% | 97.46% | 
+  | ✔ | 95.33% | 98.62% |
+
 * We employ [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for Kuzushiji character classification, and the official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 * To perform Kuzushiji character classification and evaluate the recognition performance, please run the following commands:
 ```
