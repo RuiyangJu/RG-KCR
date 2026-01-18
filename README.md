@@ -388,9 +388,9 @@ If you find our paper useful in your research, please consider citing:
 ## :two: Kuzushiji Character Classification 
 * Details of the dataset are summarized as follows：
 
-  | Test set | Total GT Bounding Boxes | Total Pred Bounding Boxes | Total Matched Pairs (IoU>=0.5) |
+  | Test set #Images | Total GT Bounding Boxes | Total Pred Bounding Boxes | Total Matched Pairs (IoU>=0.5) |
   | :--: | :--: | :--: | :--: |
-  | 100 images | 19,035 | 18,656 | 17,982 |
+  | 100 | 19,035 | 18,656 | 17,982 |
 
 * The ground-truth data for the test set can be accessed at the following [link](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OAR9Eascelseepquchb3bOXk?e=TdsKac).
 
