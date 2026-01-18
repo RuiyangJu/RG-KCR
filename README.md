@@ -21,7 +21,7 @@ If you find our paper useful in your research, please consider citing:
 ### Data Collection
 * The original dataset is available from the [Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/char-shape/book/), and the raw data is held by [National Institute of Japanese Literature (NIJL)](https://www.nijl.ac.jp/db/).
 
-  | Index | NIJL Book ID | Book Title | Total Images | Annotated Images |
+  | Index | NIJL Bibliographic ID | Book Title | Total Images | Annotated Images |
   | :--: | :--: | :--: | :--: | :--: |
   | 1 | 100241706 | 虚南留別志 | 77 | 67 |
   | 2 | 100249376 | 御前菓子秘伝抄 | 112 | 104 |
