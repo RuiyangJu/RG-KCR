@@ -473,10 +473,10 @@ If you find our paper useful in your research, please consider citing:
 ## :four: Kuzushiji Character Classification
 * The results of the ablation study are presented as follows:
 
-  | Restoration | Top-1 Error | Top-5 Error | 
-  | :--: | :--: | :--: |
-  |  | 93.45% | 97.46% | 
-  | ✔ | 95.33% | 98.62% |
+  | Method | Restoration | Top-1 Accuracy | Top-5 Accuracy | 
+  | :--: | :--: | :--: | :--: |
+  | Metom |  | 93.45% | 97.46% | 
+  | Metom | ✔ | 95.33% | 98.62% |
 
 * We employ [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for Kuzushiji character classification, and the official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 * To perform Kuzushiji character classification and evaluate the recognition performance, please run the following commands:
