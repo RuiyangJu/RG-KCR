@@ -388,7 +388,7 @@ If you find our paper useful in your research, please consider citing:
 ## :two: Kuzushiji Character Classification 
 * Details of the dataset are summarized as follows：
 
-  | Test set | Total GT lables | Total Pred labels | Total matched pairs (IoU>=0.5) |
+  | Test set | Total GT Bounding Boxes | Total Pred Bounding Boxes | Total Matched Pairs (IoU>=0.5) |
   | :--: | :--: | :--: | :--: |
   | 100 images | 19035 | 18656 | 17982 |
 
