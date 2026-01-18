@@ -5,6 +5,12 @@
   <img src="img/fig_pipeline.png" width="1024" title="details">
 </p>
 
+## Citation
+If you find our paper useful in your research, please consider citing:
+```
+  123
+```
+
 # :o: Dataset
 ## :one: Kuzushiji Character Detection Dataset 
 
