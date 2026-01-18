@@ -1,5 +1,4 @@
 # Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
-# :o: Pipeline
 
 <p align="center">
   <img src="img/fig_pipeline.png" width="1024" title="details">
