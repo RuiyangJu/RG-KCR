@@ -437,7 +437,7 @@ If you find our paper useful in your research, please consider citing:
 ## :two: Kuzushiji Document Restoration
 * The results of the parameter study are presented as follows:
   
-  | τ<sub>r</sub> | (τ<sub>rg</sub>,τ<sub>rb</sub> | PSNR<sub>Valid</sub> | SSIM<sub>Valid</sub> | PSNR<sub>Test</sub> | SSIM<sub>Test</sub> |
+  | τ<sub>r</sub> | (τ<sub>rg</sub>,τ<sub>rb</sub>) | PSNR<sub>Valid</sub> | SSIM<sub>Valid</sub> | PSNR<sub>Test</sub> | SSIM<sub>Test</sub> |
   | :--: | :--: | :--: | :--: | :--: | :--: |
   | -  | -   | 29.15 | 0.9655 | 28.71 | 0.9639 |
   | 80 | 1.2 | 29.76 | 0.9470 | 29.61 | 0.9465 |
