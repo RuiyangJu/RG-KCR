@@ -390,7 +390,7 @@ If you find our paper useful in your research, please consider citing:
 
   | Test set | Total GT Bounding Boxes | Total Pred Bounding Boxes | Total Matched Pairs (IoU>=0.5) |
   | :--: | :--: | :--: | :--: |
-  | 100 images | 19035 | 18656 | 17982 |
+  | 100 images | 19,035 | 18,656 | 17,982 |
 
 * The ground-truth data for the test set can be accessed at the following [link](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OAR9Eascelseepquchb3bOXk?e=TdsKac).
 
