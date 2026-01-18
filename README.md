@@ -404,7 +404,7 @@ If you find our paper useful in your research, please consider citing:
 ## :one: Kuzushiji Character Detection
 * The evaluation results on the test set are presented as follows:
 
-  | Method | Params | FLOPs | Precision | Recall | mAP@50 | mAP@50-95 |
+  | Method | Params | FLOPs | Precision | Recall | AP<sub>50</sub> | AP<sub>50-95</sub> |
   | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
   | RT-DETR (CVPR'24) | 31.99M | 103.4G | 86.2% | 79.2% | 84.1% | 57.0% |
   | YOLOv9 (ECCV'24) | 20.01M | 76.5G | 97.7% | 93.0% | 96.6% | 80.9% |
