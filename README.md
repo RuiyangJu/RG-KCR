@@ -1,4 +1,4 @@
-# Restoration-Guided Kuzushiji Character Recognition Framework under Red Seal Interference
+# Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interference
 >[arXiv](https://arxiv.org/)
 >[Project](https://ruiyangju.github.io/)
 
