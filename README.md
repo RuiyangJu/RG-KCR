@@ -465,6 +465,11 @@
   | 90 | 1.4 | 34.05dB | 0.9763 | 33.94dB | 0.9753 |
   | 90 | 1.5 | 32.03dB | 0.9721 | 31.74dB | 0.9710 |
 
+* Visual examples of document restoration results obtained with the parameters τ<sub>r</sub>=90, τ<sub>rg</sub>=τ<sub>rb</sub>=1.3.
+<p align="center">
+  <img src="img/fig_restoration.png" width="1024" title="details">
+</p>
+
 ### Perform
 * Example command for performing document restoration with `r_min = 90` and `rg_ratio & rb_ratio = 1.3`:
 ```
@@ -515,4 +520,3 @@ The following is the citation of the original Kuzushiji dataset; please cite it 
 ```
   『日本古典籍くずし字データセット』 （国文研所蔵／CODH加工） doi:10.20676/00000340
 ```
-
