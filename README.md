@@ -1,6 +1,12 @@
 # Restoration-Guided Kuzushiji Character Recognition under Red Seal Interference
-## Pipeline
 
+## Motivation
+Existing Kuzushiji character recognition systems, including Fuminoha, NDLkotenOCR-Lite, and Metom, fail to deliver satisfactory performance when recognizing Kuzushiji characters with overlapping seals.
+<p align="center">
+  <img src="img/fig_intro.png" width="1024" title="details">
+</p>
+
+## Pipeline
 <p align="center">
   <img src="img/fig_pipeline.png" width="1024" title="details">
 </p>
