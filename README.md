@@ -389,7 +389,7 @@
   </details>
 
 ### Synthetic Data Generation
-
+* 123
   <p align="center">
     <img src="img/fig_synthetic.png" width="1024" title="details">
   </p>
