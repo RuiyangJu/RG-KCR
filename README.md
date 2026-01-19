@@ -15,10 +15,10 @@
 </p>
 
 # Citation
-If you find our paper useful in your research, please consider citing:
-```
-  123
-```
+* If you find our paper useful in your research, please consider citing:
+  ```
+    123
+  ```
 
 # Dataset
 ## :one: Kuzushiji Character Detection Dataset 
