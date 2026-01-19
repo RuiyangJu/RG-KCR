@@ -22,11 +22,6 @@
 
 # Dataset
 ## :one: Kuzushiji Character Detection Dataset 
-
-<p align="center">
-  <img src="img/fig_detection_data.png" width="1024" title="details">
-</p>
-
 ### Data Collection
 * The original dataset is available from the [Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/char-shape/book/), and the raw data is held by [National Institute of Japanese Literature (NIJL)](https://www.nijl.ac.jp/db/).
 
@@ -47,6 +42,9 @@
   | 13 | 200022050 | 料理秘伝抄 | 30 | 24 |
 
 ### Data Correction
+<p align="center">
+  <img src="img/fig_correction.png" width="1024" title="details">
+</p>
 * Among the **1,000** annotated images, we found that **267** images contained incomplete annotations. 
 * These missing labels were manually corrected, and the corresponding image names are listed below：
 
