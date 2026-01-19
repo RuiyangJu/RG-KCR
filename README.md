@@ -389,7 +389,7 @@
   </details>
 
 ### Synthetic Data Generation
-* 123
+* Real documents with seals versus synthetic documents with seals.
   <p align="center">
     <img src="img/fig_synthetic.png" width="1024" title="details">
   </p>
