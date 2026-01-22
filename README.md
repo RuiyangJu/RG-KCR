@@ -496,7 +496,7 @@
 ## :four: Kuzushiji Character Classification
 * The results of the ablation study are presented as follows:
 
-  | Method | Document Restoration | Top-1 Accuracy | Top-5 Accuracy | 
+  | Method | Document Restoration (Stage 2) | Top-1 Accuracy | Top-5 Accuracy | 
   | :--: | :--: | :--: | :--: |
   | Metom |  | 93.45% | 97.46% | 
   | Metom | ✔ | 95.33% | 98.62% |
