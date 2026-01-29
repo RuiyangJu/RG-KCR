@@ -1,4 +1,4 @@
-## RG-KCR
+# RG-KCR
 >[arXiv](https://arxiv.org/)
 >[Project](https://ruiyangju.github.io/)
 
