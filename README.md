@@ -1,4 +1,5 @@
 # RG-KCR
+Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interference
 >[arXiv](https://arxiv.org/)
 >[Project](https://ruiyangju.github.io/)
 
