@@ -510,6 +510,12 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   ```
 * These scripts will generate the classification results and report the Top-1 Error and Top-5 Error metrics.
 
+## :five: Final Mapping
+* After running `classification.py` to generate the `.json` file, please execute the following command to map the prediction results onto the restored document images:
+  ```
+    python final_map.py --image path/to/restored_image.jpg --json /path/to/classification_results.json --out ./final_output_image.jpg --font_size 64
+  ```
+
 # License
 <img src="./img/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="100" style="vertical-align: middle;">  
 
