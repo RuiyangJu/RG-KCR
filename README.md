@@ -1,7 +1,7 @@
 # RG-KCR
 Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interference
 >[arXiv](https://arxiv.org/)
->[Project](https://ruiyangju.github.io/)
+>[Project](https://ruiyangju.github.io/RG-KCR/)
 
 # Motivation
 * Existing Kuzushiji character recognition systems, including [Fuminoha](https://camera.fuminoha.jp/), [NDLkotenOCR-Lite](https://ndlkotenocr-lite-web.netlify.app/), and [Metom](https://huggingface.co/SakanaAI/Metom), fail to deliver satisfactory performance when recognizing Kuzushiji characters with overlapping seals.
@@ -18,7 +18,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
 # Citation
 * If you find our paper useful in your research, please consider citing:
   ```
-    xxx
+    
   ```
 
 # Dataset
