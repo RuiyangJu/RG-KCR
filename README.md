@@ -1,6 +1,6 @@
 # RG-KCR
 Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interference
->[arXiv](https://arxiv.org/)
+>[arXiv](https://arxiv.org/abs/2602.19086)
 >[Project](https://ruiyangju.github.io/RG-KCR/)
 
 # Motivation
@@ -18,12 +18,12 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
 # Citation
 * If you find our paper useful in your research, please consider citing:
   ```
-  @article{ju2026rgkcr,
-    title={Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interference},
-    author={Ju, Rui-Yang and Yamashita, Kohei and Kameko, Hirotaka and Mori, Shinsuke},
-    journal={arXiv preprint arXiv:2602.19086},
-    year={2026}
-  }
+    @article{ju2026rgkcr,
+      title={Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interference},
+      author={Ju, Rui-Yang and Yamashita, Kohei and Kameko, Hirotaka and Mori, Shinsuke},
+      journal={arXiv preprint arXiv:2602.19086},
+      year={2026}
+    }
   ```
 
 # Dataset
