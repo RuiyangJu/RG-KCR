@@ -48,6 +48,8 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   | 13 | 200022050 | Ryouri Hiden-shou (料理秘伝抄) | 30 | 24 |
   | Total | N/A | N/A | 1,171 | 1,000 |
 
+* Accordingly, we selected the 1,000 annotated images listed above as the benchmark dataset.
+
 ### Data Correction
 * Among the **1,000** annotated images, we found that **267** images contained incomplete annotations.
 * As shown below, the red bounding boxes are annotated by us, while the green bounding boxes are from the original annotations:
