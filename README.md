@@ -399,6 +399,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   <p align="center">
     <img src="img/fig_synthetic.png" width="1024" title="details">
   </p>
+* The **synthetic documents with seals** through synthetic data augmentation can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
 
 # Experiments
 ## Environment
