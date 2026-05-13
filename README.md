@@ -391,7 +391,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   </details>
 
 ## ③ Data Splitting
-* Our constructed dataset was randomly split into training, validation, and test sets with a ratio of 8:1:1, consisting of 800 training images, 100 validation images, and 100 test images.
+* The 1,000 annotated images was randomly split into training, validation, and test sets with a ratio of 8:1:1, consisting of 800 training images, 100 validation images, and 100 test images.
 
 # Synthetic Data Augmentation
 * For the training set, 128 high-quality red seal images were used for synthetic data augmentation, expanding the training set from **800** corrected images to **1,600** images.
