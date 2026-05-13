@@ -427,6 +427,8 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
 ### Train:
 * Please download the **dataset** and place it in `./yolov12/`.
 * Please revise the `/path/to/data` in `./yolov12/dataset/meta_raw.yaml` and `./yolov12/dataset/meta_aug.yaml`.
+* You can run `train_xxx.py` to train the model. For example, `train_yolo12n_SA.py` can be used for training.
+
   ```
     from ultralytics import YOLO
     
