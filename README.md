@@ -451,22 +451,22 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
 * You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgBw5aIxd2jAS5oB9VxuHdWkAfPXzCM62l_L0YrVi5YG5l0).
 * Please place the folder `Pretrained_Model_Kuzushiji_Detection` in `./`.
   ```
-    yolo val model='./run/detect/train_yolov9m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_yolov9m
-    yolo val model='./run/detect/train_yolov10m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_yolov10m
-    yolo val model='./run/detect/train_yolo11m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_yolo11m
-    yolo val model='./run/detect/train_yolo12m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_yolo12m
-    yolo val model='./run/detect/train_rtdetr-l/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_rtdetr-l
+    yolo val model='./runs/detect/train_yolov9m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_yolov9m
+    yolo val model='./runs/detect/train_yolov10m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_yolov10m
+    yolo val model='./runs/detect/train_yolo11m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_yolo11m
+    yolo val model='./runs/detect/train_yolo12m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_yolo12m
+    yolo val model='./runs/detect/train_rtdetr-l/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_rtdetr-l
   ```
 
 ### Test_Aug:
 * You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgBw5aIxd2jAS5oB9VxuHdWkAfPXzCM62l_L0YrVi5YG5l0).
 * Please place the folder `Pretrained_Model_Kuzushiji_Detection` in `./`.
   ```
-    yolo val model='./run/detect/train_yolov9m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_yolov9m
-    yolo val model='./run/detect/train_yolov10m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_yolov10m
-    yolo val model='./run/detect/train_yolo11m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_yolo11m
-    yolo val model='./run/detect/train_yolo12m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_yolo12m
-    yolo val model='./run/detect/train_rtdetr-l/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_rtdetr-l
+    yolo val model='./runs/detect/train_yolov9m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_yolov9m
+    yolo val model='./runs/detect/train_yolov10m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_yolov10m
+    yolo val model='./runs/detect/train_yolo11m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_yolo11m
+    yolo val model='./runs/detect/train_yolo12m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_yolo12m
+    yolo val model='./runs/detect/train_rtdetr-l/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_rtdetr-l
   ```
   
 ## :two: Kuzushiji Document Restoration
