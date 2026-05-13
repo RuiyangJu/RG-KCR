@@ -400,15 +400,6 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
     <img src="img/fig_synthetic.png" width="1024" title="details">
   </p>
 
-## :two: Kuzushiji Character Classification 
-* Details of the dataset are summarized as follows：
-
-  | Test set #Images | Total GT Bounding Boxes | Total Pred Bounding Boxes | Total Matched Pairs (IoU>=0.5) |
-  | :--: | :--: | :--: | :--: |
-  | 100 | 19,035 | 18,656 | 17,982 |
-
-* The ground-truth data for the test set can be accessed at the following [link](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OAR9Eascelseepquchb3bOXk?e=TdsKac).
-
 # Experiments
 ## Environment
   ```
@@ -507,6 +498,17 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
 * The output directory `./visual_crop` contains: (1) Cropped images of individual Kuzushiji characters, and (2) Visualization results of the original images overlaid with the predicted bounding boxes.
 
 ## :four: Kuzushiji Character Classification
+
+## :two: Kuzushiji Character Classification 
+* Details of the dataset are summarized as follows：
+
+  | Test set #Images | Total GT Bounding Boxes | Total Pred Bounding Boxes | Total Matched Pairs (IoU>=0.5) |
+  | :--: | :--: | :--: | :--: |
+  | 100 | 19,035 | 18,656 | 17,982 |
+
+* The ground-truth data for the test set can be accessed at the following [link](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OAR9Eascelseepquchb3bOXk?e=TdsKac).
+
+
 * The results of the ablation study are presented as follows:
 
   | Method | Document Restoration (Stage 2) | Top-1 Accuracy | Top-5 Accuracy | 
