@@ -27,8 +27,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   ```
 
 # Dataset
-## :one: Kuzushiji Character Detection Dataset 
-### Data Collection
+## Data Collection
 * The original dataset is available from the [Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/char-shape/book/), and the raw data is held by [National Institute of Japanese Literature (NIJL)](https://www.nijl.ac.jp/db/).
 
   | Index | NIJL Bibliographic ID | Book Title | Total Images | Annotated Images |
