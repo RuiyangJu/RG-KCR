@@ -446,7 +446,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
     yolo detect train model=yolov10m.pt data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.001 name=train_yolov10m
     yolo detect train model=yolo11m.pt data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.001 name=train_yolo11m
     yolo detect train model=yolo12m.pt data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.001 name=train_yolo12m
-    yolo detect train model=rtdetr-l.pt data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.001 name=train_rtdetr-l
+    yolo detect train model=rtdetr-l.pt data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml epochs=100 batch=8 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.001 name=train_rtdetr-l
   ```
 
 ### Test_Raw:
