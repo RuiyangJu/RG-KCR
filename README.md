@@ -395,7 +395,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   </ul>
   </details>
 
-### Synthetic Data Generation
+### Synthetic Data Augmentation
 * Based on the 1,000 corrected images, we synthesized data using 128 high-quality red seal images.
 * Real documents with seals versus synthetic documents with seals:
   <p align="center">
