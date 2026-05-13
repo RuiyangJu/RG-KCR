@@ -450,6 +450,17 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
     metrics = model.val()
   ```
 
+* You can train the baseline models and our model as follows:
+
+  ```
+    cd yolov12
+    python train_rtdetr.py
+    python train_yolov9n.py
+    python train_yolov10n.py
+    python train_yolo11n.py
+    python train_yolo12n.py 
+  ```
+
 ### Test_Raw:
 * You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgBw5aIxd2jAS5oB9VxuHdWkAfPXzCM62l_L0YrVi5YG5l0).
 * Please place the folder `Pretrained_Model_Kuzushiji_Detection` in `./`.
