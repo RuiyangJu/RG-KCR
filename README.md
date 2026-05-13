@@ -457,7 +457,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
     yolo val model='./runs/detect/train_rtdetr-l/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_rtdetr-l
   ```
   
-## :two: Kuzushiji Document Restoration
+## ② Kuzushiji Document Restoration
 * The results of the parameter study are presented as follows:
   
   | τ<sub>r</sub> | (τ<sub>rg</sub>,τ<sub>rb</sub>) | PSNR<sub>Valid</sub> | SSIM<sub>Valid</sub> | PSNR<sub>Test</sub> | SSIM<sub>Test</sub> |
@@ -491,14 +491,14 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   ```
 * The evaluation results will be saved to `./resotration_results`.
 
-## :three: Kuzushiji Character Cropping
+## ③ Kuzushiji Character Cropping
 * To extract individual Kuzushiji character instances, we crop each character region based on the predicted bounding boxes：
   ```
     python crop.py
   ```
 * The output directory `./visual_crop` contains: (1) Cropped images of individual Kuzushiji characters, and (2) Visualization results of the original images overlaid with the predicted bounding boxes.
 
-## :four: Kuzushiji Character Classification
+## ④ Kuzushiji Character Classification
 
 ## :two: Kuzushiji Character Classification 
 * Details of the dataset are summarized as follows：
@@ -525,7 +525,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   ```
 * These scripts will generate the classification results and report the Top-1 Error and Top-5 Error metrics.
 
-## :five: Final Mapping
+## ⑤ Final Mapping
   <p align="center">
     <img src="img/fig_final_output.png" width="1024" title="details">
   </p>
