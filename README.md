@@ -21,8 +21,6 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   ```
 
 # Dataset
-* Our constructed dataset can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
-
 ## ① Data Collection
 * The original dataset is available from the [Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/char-shape/book/), and the raw data is held by [National Institute of Japanese Literature (NIJL)](https://www.nijl.ac.jp/db/).
 
@@ -392,14 +390,16 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   </ul>
   </details>
 
+## Data Splitting
+* Our constructed dataset was randomly split into training, validation, and test sets with a ratio of 8:1:1, consisting of 800 training images, 100 validation images, and 100 test images.
+* Our constructed dataset can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
+
 # Synthetic Data Augmentation
 * Based on the 1,000 corrected images, we used 128 high-quality red seal images for synthetic data augmentation.
 * **Real documents with seals** versus **synthetic documents with seals**:
   <p align="center">
     <img src="img/fig_synthetic.png" width="1024" title="details">
   </p>
-  
-* The resulting dataset was randomly split into training, validation, and test sets with a ratio of 8:1:1, consisting of 800 training images, 100 validation images, and 100 test images.
 
 ## :two: Kuzushiji Character Classification 
 * Details of the dataset are summarized as follows：
