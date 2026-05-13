@@ -408,7 +408,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
     pip install -r requirements.txt
   ```
 
-## :one: Kuzushiji Character Detection
+## ① Kuzushiji Character Detection
 * The evaluation results on the test set are presented as follows:
 
   | Method | Params | FLOPs | Precision | Recall | AP<sub>50</sub> | AP<sub>50:95</sub> |
