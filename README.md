@@ -425,7 +425,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   </p>
 
 ### Train:
-* Please download the `Kuzushiji_Character_Detection_Dataset` and place it in this directory.
+* Please download the **dataset** and place it in `./yolov12/`.
 * Please revise the `/path/to/data` in `./Kuzushiji_Character_Detection_Dataset/meta.yaml`.
   ```
     from ultralytics import YOLO
