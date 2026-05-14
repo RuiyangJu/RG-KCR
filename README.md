@@ -421,7 +421,6 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   | YOLOv12 (NeurIPS'25) | 20.11M | 67.1G | 98.0% | 93.9% | 97.0% | 82.3% |
 
 ### Train:
-* Please download the **dataset** and place it in `./yolov12/`.
 * Please revise the `/path/to/data` in `./yolov12/dataset/meta_raw.yaml` and `./yolov12/dataset/meta_aug.yaml`.
 * You can run `train_xxx.py` to train the model. For example, `train_yolo12n_SA.py` can be used for training.
 
@@ -458,7 +457,6 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   ```
 
 ### Test_Raw:
-* You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgBw5aIxd2jAS5oB9VxuHdWkAfPXzCM62l_L0YrVi5YG5l0).
 * Please place the folder `Pretrained_Model_Kuzushiji_Detection` in `./`.
   ```
     yolo val model='./runs/detect/train_rtdetr-l/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_rtdetr-l
