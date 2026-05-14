@@ -6,7 +6,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
 # Pipeline
 * The proposed framework consists of three main stages: **(1) Character Detection**, **(2) Document Restoration**, **(3) Character Classification**， and **(4) Character Ordering**.
   <p align="center">
-    <img src="img/fig_pipeline.png" width="1024" title="details">
+    <img src="img/fig_pipeline.png" width="640" title="details">
   </p>
 
 # Citation
