@@ -492,7 +492,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   | 90 | 1.5 | 32.03dB | 0.9721 | 31.74dB | 0.9710 |
 
 * Visual examples of document restoration results obtained with the parameters τ<sub>r</sub>=90, τ<sub>rg</sub>=τ<sub>rb</sub>=1.3:
-  <p align="center">
+  <p align="left">
     <img src="img/fig_restoration.png" width="1024" title="details">
   </p>
 
