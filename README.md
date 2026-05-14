@@ -467,7 +467,6 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   ```
 
 ### Test_Aug:
-* You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgBw5aIxd2jAS5oB9VxuHdWkAfPXzCM62l_L0YrVi5YG5l0).
 * Please place the folder `Pretrained_Model_Kuzushiji_Detection` in `./`.
   ```
     yolo val model='./runs/detect/train_rtdetr-l/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_rtdetr-l
