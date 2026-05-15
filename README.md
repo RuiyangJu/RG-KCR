@@ -394,7 +394,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
 * The **1,000** annotated images were randomly split into training, validation, and test sets with a ratio of **8:1:1**, consisting of **800** training images, **100** validation images, and **100** test images.
 * The **real dataset** can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
 
-# Synthetic Data Augmentation
+## ④ Synthetic Data Augmentation
 * For the training set, **128** high-quality red seal images were used for synthetic data augmentation, thereby expanding the training set from **800** corrected images to **1,600** images.
 * Real vs. synthetic seal-interfered documents:
   <p align="left">
