@@ -24,9 +24,9 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
 ## ① Data Collection
 * The original dataset is available from the [Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/char-shape/book/), and the raw data is held by [National Institute of Japanese Literature (NIJL)](https://www.nijl.ac.jp/db/).
 
-  | Index | NIJL Bibliographic ID | Book Title | Total Images | Annotated Images |
-  | :--: | :--: | :--: | :--: | :--: |
-  | 1 | 100241706 | Usonarubeshi (虚南留別志) | 77 | 67 |
+  | Index | NIJL Bibliographic ID | Book Title | Total Character | Total Images | Annotated Images |
+  | :--: | :--: | :--: | :--: | :--: | :--: |
+  | 1 | 100241706 | Usonarubeshi (虚南留別志) | 8,565 | 77 | 67 |
   | 2 | 100249376 | Gozenkashi Hiden-shou (御前菓子秘伝抄) | 112 | 104 |
   | 3 | 100249416 | Mochigashi Sokuseki Teseishuu (餅菓子即席手製集) | 70 | 58 |
   | 4 | 100249476 | Meshi Hyakuchin Den (飯百珍伝) | 54 | 46 |
