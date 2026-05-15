@@ -39,7 +39,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   | 11 | 200021802 | Ryouri Monogatari (料理物語) | 19,609 | 111 | 105 |
   | 12 | 200021869 | Ryourikata Kokoroenokoto (料理方心得之事) | 3,012 | 35 | 30 |
   | 13 | 200022050 | Ryouri Hiden-shou (料理秘伝抄) | 9,558 | 30 | 24 |
-  | Total | N/A | N/A | 1,171 | 1,000 |
+  | Total | N/A | N/A | 208,482 | 1,171 | 1,000 |
 
 * Accordingly, we selected the **1,000** annotated images listed above as the benchmark dataset.
 
