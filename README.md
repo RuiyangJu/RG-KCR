@@ -27,7 +27,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   | Index | NIJL Bibliographic ID | Book Title | Total Character | Total Images | Annotated Images |
   | :--: | :--: | :--: | :--: | :--: | :--: |
   | 1 | 100241706 | Usonarubeshi (虚南留別志) | 8,565 | 77 | 67 |
-  | 2 | 100249376 | Gozenkashi Hiden-shou (御前菓子秘伝抄) | 112 | 104 |
+  | 2 | 100249376 | Gozenkashi Hiden-shou (御前菓子秘伝抄) | 11,841 | 112 | 104 |
   | 3 | 100249416 | Mochigashi Sokuseki Teseishuu (餅菓子即席手製集) | 70 | 58 |
   | 4 | 100249476 | Meshi Hyakuchin Den (飯百珍伝) | 54 | 46 |
   | 5 | 200006663 | Diguchi (ぢぐち) | 12 | 8 |
