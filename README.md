@@ -4,7 +4,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
 >[Project](https://ruiyangju.github.io/RG-KCR/)
 
 # Pipeline
-* The proposed framework consists of three main stages: **(1) Character Detection**, **(2) Document Restoration**, **(3) Character Classification**, and **(4) Character Ordering**.
+* The proposed framework consists of four main stages: **(1) Character Detection**, **(2) Document Restoration**, **(3) Character Classification**, and **(4) Character Ordering**.
   <p align="left">
     <img src="img/fig_pipeline.png" width="640" title="details">
   </p>
@@ -49,7 +49,7 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   <p align="left">
     <img src="img/fig_correction.png" width="1024" title="details">
   </p>
-* These missing labels were manually corrected, and the corresponding image names are listed below：
+* These missing labels were manually corrected, and the corresponding image names are listed below:
 
   <details>
   <summary>100241706 (5 images)</summary>
@@ -391,12 +391,12 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
   </details>
 
 ## ③ Data Splitting
-* The **1,000** annotated images was randomly split into training, validation, and test sets with a ratio of **8:1:1**, consisting of **800** training images, **100** validation images, and **100** test images.
+* The **1,000** annotated images were randomly split into training, validation, and test sets with a ratio of **8:1:1**, consisting of **800** training images, **100** validation images, and **100** test images.
 * The **real dataset** can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
 
 # Synthetic Data Augmentation
-* For the training set, **128** high-quality red seal images were used for synthetic data augmentation, expanding the training set from **800** corrected images to **1,600** images.
-* **Real documents with seals** versus **synthetic documents with seals**:
+* For the training set, **128** high-quality red seal images were used for synthetic data augmentation, thereby expanding the training set from **800** corrected images to **1,600** images.
+* Real vs. synthetic seal-interfered documents:
   <p align="left">
     <img src="img/fig_synthetic.png" width="640" title="details">
   </p>
