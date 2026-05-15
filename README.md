@@ -24,22 +24,22 @@ Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interfer
 ## ① Data Collection
 * The original dataset is available from the [Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/char-shape/book/), and the raw data is held by [National Institute of Japanese Literature (NIJL)](https://www.nijl.ac.jp/db/).
 
-  | Index | NIJL ID | Book Title | Total Pages | Annotated Pages | Total Characters |
-  | :--: | :--: | :--: | :--: | :--: | :--: |
-  | 1 | 100241706 | Usonarubeshi (虚南留別志) | 77 | 67 | 8,565 |
-  | 2 | 100249376 | Gozenkashi Hiden-shou (御前菓子秘伝抄) | 112 | 104 | 11,841 |
-  | 3 | 100249416 | Mochigashi Sokuseki Teseishuu (餅菓子即席手製集) | 70 | 58 | 7,967 |
-  | 4 | 100249476 | Meshi Hyakuchin Den (飯百珍伝) | 54 | 46 | 7,842 |
-  | 5 | 200006663 | Diguchi (ぢぐち) | 12 | 8 | 121 |
-  | 6 | 200015843 | Nippon Eitaigura (日本永代蔵) | 244 | 180 | 50,251 |
-  | 7 | 200017458 | Soga Monogatari (曾我物語) | 102 | 78 | 29,641 |
-  | 8 | 200020019 | Chikusai (竹斎) | 162 | 146 | 33,228 |
-  | 9 | 200021086 | Isoho Monogatari (伊曾保物語) | 62 | 60 | 15,410 |
-  | 10 | 200021763 | Zenbu Ryouri-shou (膳部料理抄) | 100 | 94 | 11,437 |
-  | 11 | 200021802 | Ryouri Monogatari (料理物語) | 111 | 105 | 19,609 |
-  | 12 | 200021869 | Ryourikata Kokoroenokoto (料理方心得之事) | 35 | 30 | 3,012 |
-  | 13 | 200022050 | Ryouri Hiden-shou (料理秘伝抄) | 30 | 24 | 9,558 |
-  | Total | N/A | N/A | 1,171 | 1,000 | 208,482 |
+| Index | NIJL ID | Book Title | Pages | Characters | Chars/Page |
+| :--: | :--: | :-- | :--: | :--: | :--: |
+| 1 | 100241706 | Usonarubeshi (虚南留別志) | 67 | 8,565 | 127.8 |
+| 2 | 100249376 | Gozenkashi Hiden-shou (御前菓子秘伝抄) | 104 | 11,841 | 113.9 |
+| 3 | 100249416 | Mochigashi Sokuseki Teseishuu (餅菓子即席手製集) | 58 | 7,967 | 137.4 |
+| 4 | 100249476 | Meshi Hyakuchin Den (飯百珍伝) | 46 | 7,842 | 170.5 |
+| 5 | 200006663 | Diguchi (ぢぐち) | 8 | 121 | 15.1 |
+| 6 | 200015843 | Nippon Eitaigura (日本永代蔵) | 180 | 50,251 | 279.2 |
+| 7 | 200017458 | Soga Monogatari (曾我物語) | 78 | 29,641 | 380.0 |
+| 8 | 200020019 | Chikusai (竹斎) | 146 | 33,228 | 227.6 |
+| 9 | 200021086 | Isoho Monogatari (伊曾保物語) | 60 | 15,410 | 256.8 |
+| 10 | 200021763 | Zenbu Ryouri-shou (膳部料理抄) | 94 | 11,437 | 121.7 |
+| 11 | 200021802 | Ryouri Monogatari (料理物語) | 105 | 19,609 | 186.8 |
+| 12 | 200021869 | Ryourikata Kokoroenokoto (料理方心得之事) | 30 | 3,012 | 100.4 |
+| 13 | 200022050 | Ryouri Hiden-shou (料理秘伝抄) | 24 | 9,558 | 398.3 |
+| **Total** | N/A | N/A | **1,000** | **208,482** | **208.5** |
 
 * Accordingly, we selected the **1,000** annotated images listed above as the benchmark dataset.
 
