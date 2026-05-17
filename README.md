@@ -391,6 +391,47 @@ Dashed arrows indicate additional processes performed in parallel with character
   </ul>
   </details>
 
+<table>
+<tr>
+<td valign="top">
+
+<details>
+<summary>100241706 (5 images)</summary>
+<ul>
+<li>100241706_00002_1</li>
+<li>100241706_00006_1</li>
+<li>100241706_00016_1</li>
+<li>100241706_00033_1</li>
+<li>100241706_00038_1</li>
+</ul>
+</details>
+
+</td>
+<td valign="top">
+
+<details>
+<summary>100249376 (10 images)</summary>
+<ul>
+<li>100249376_00012_1</li>
+<li>...</li>
+</ul>
+</details>
+
+</td>
+<td valign="top">
+
+<details>
+<summary>100249416 (9 images)</summary>
+<ul>
+<li>100249416_00002_2</li>
+<li>...</li>
+</ul>
+</details>
+
+</td>
+</tr>
+</table>
+
 ## ③ Data Splitting
 * The **1,000** annotated images were randomly split into training, validation, and test sets with a ratio of **8:1:1**, consisting of **800** training images, **100** validation images, and **100** test images.
 * The **real dataset** can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
