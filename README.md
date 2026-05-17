@@ -434,7 +434,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 * For the training set, **128** high-quality red seal images were used for synthetic data augmentation, thereby expanding the training set from **800** corrected images to **1,600** images.
 * **Real** vs. **synthetic** seal-interfered documents:
   <p align="left">
-    <img src="img/fig_synthetic.png" width="640" title="details">
+    <img src="img/fig_synthetic.png" width="1024" title="details">
   </p>
 * The **synthetic dataset** through synthetic data augmentation can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
 * Notably, if you want to train on both the real and synthetic datasets together, please make sure that the image names across the two datasets are different.
