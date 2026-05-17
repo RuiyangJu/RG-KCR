@@ -40,7 +40,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 | 11 | 200021802 | Ryouri Monogatari (料理物語) | 105 | 19,609 | 186.8 |
 | 12 | 200021869 | Ryourikata Kokoroenokoto (料理方心得之事) | 30 | 3,012 | 100.4 |
 | 13 | 200022050 | Ryouri Hiden-shou (料理秘伝抄) | 24 | 9,558 | 398.3 |
-| Total | N/A | N/A | 1,000 | 208,482 | 208.5 |
+| Total | -- | -- | 1,000 | 208,482 | 208.5 |
 
 * Accordingly, we selected the **1,000** annotated images listed above as the benchmark dataset.
 
