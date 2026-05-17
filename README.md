@@ -26,7 +26,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 * The original dataset is available from the [Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/char-shape/book/), and the raw data is held by [National Institute of Japanese Literature (NIJL)](https://www.nijl.ac.jp/db/).
 
 | Index | NIJL ID | Book Title | Pages | Characters | Chars/Page |
-| :--- | :--- | :--- | :--- | :--- | :--- |
+| :--: | :--: | :--: | :--: | :--: | :--: |
 | 1 | 100241706 | Usonarubeshi (虚南留別志) | 67 | 8,565 | 127.8 |
 | 2 | 100249376 | Gozenkashi Hiden-shou (御前菓子秘伝抄) | 104 | 11,841 | 113.9 |
 | 3 | 100249416 | Mochigashi Sokuseki Teseishuu (餅菓子即席手製集) | 58 | 7,967 | 137.4 |
