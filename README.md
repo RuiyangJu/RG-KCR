@@ -47,7 +47,9 @@ Dashed arrows indicate additional processes performed in parallel with character
 ## ② Data Correction
 * Among the **1,000** annotated images, we found that **267** images contained incomplete annotations.
 * As shown below, the red bounding boxes are annotated by us, while the green bounding boxes are from the original annotations:
-
+  <p align="left">
+    <img src="img/fig_correction.png" width="1024" title="details">
+  </p>
 * These missing labels were manually corrected, and the corresponding image names are listed below:
 
   <table>
