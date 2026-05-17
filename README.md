@@ -54,9 +54,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 
   <table>
   <tr>
-  
   <td valign="top">
-  
   <details>
   <summary>100241706 (5 images)</summary>
   <ul>
@@ -67,11 +65,9 @@ Dashed arrows indicate additional processes performed in parallel with character
   <li>100241706_00038_1</li>
   </ul>
   </details>
-  
   </td>
   
   <td valign="top">
-  
   <details>
   <summary>100249376 (10 images)</summary>
   <ul>
@@ -87,11 +83,9 @@ Dashed arrows indicate additional processes performed in parallel with character
   <li>100249376_00043_2</li>
   </ul>
   </details>
-  
   </td>
   
   <td valign="top">
-  
   <details>
   <summary>100249416 (9 images)</summary>
   <ul>
@@ -106,16 +100,12 @@ Dashed arrows indicate additional processes performed in parallel with character
   <li>100249416_00018_1</li>
   </ul>
   </details>
-  
   </td>
-  
   </tr>
   
   
   <tr>
-  
   <td valign="top">
-  
   <details>
   <summary>100249476 (3 images)</summary>
   <ul>
@@ -124,11 +114,9 @@ Dashed arrows indicate additional processes performed in parallel with character
   <li>100249476_00018_1</li>
   </ul>
   </details>
-  
   </td>
   
   <td valign="top">
-  
   <details>
   <summary>200015843 (65 images)</summary>
   <ul>
@@ -199,11 +187,9 @@ Dashed arrows indicate additional processes performed in parallel with character
   <li>200015843_00132_1</li>
   </ul>
   </details>
-  
   </td>
   
   <td valign="top">
-  
   <details>
   <summary>200017458 (27 images)</summary>
   <ul>
@@ -236,16 +222,11 @@ Dashed arrows indicate additional processes performed in parallel with character
   <li>200017458_00051_2</li>
   </ul>
   </details>
-  
   </td>
-  
   </tr>
   
-  
   <tr>
-  
   <td valign="top">
-  
   <details>
   <summary>200020019 (48 images)</summary>
   <ul>
@@ -299,11 +280,9 @@ Dashed arrows indicate additional processes performed in parallel with character
   <li>200020019_00079_2</li>
   </ul>
   </details>
-  
   </td>
   
   <td valign="top">
-  
   <details>
   <summary>200021086 (46 images)</summary>
   <ul>
@@ -355,11 +334,9 @@ Dashed arrows indicate additional processes performed in parallel with character
   <li>200021086_00032_1</li>
   </ul>
   </details>
-  
   </td>
   
   <td valign="top">
-  
   <details>
   <summary>200021763 (22 images)</summary>
   <ul>
@@ -387,16 +364,11 @@ Dashed arrows indicate additional processes performed in parallel with character
   <li>200021763_00047_2</li>
   </ul>
   </details>
-  
   </td>
-  
   </tr>
   
-  
   <tr>
-  
   <td valign="top">
-  
   <details>
   <summary>200021802 (23 images)</summary>
   <ul>
@@ -425,11 +397,9 @@ Dashed arrows indicate additional processes performed in parallel with character
   <li>200021802_00055_2</li>
   </ul>
   </details>
-  
   </td>
   
   <td valign="top">
-  
   <details>
   <summary>200021869 (3 images)</summary>
   <ul>
@@ -438,11 +408,9 @@ Dashed arrows indicate additional processes performed in parallel with character
   <li>200021869_00014_1</li>
   </ul>
   </details>
-  
   </td>
   
   <td valign="top">
-  
   <details>
   <summary>200022050 (6 images)</summary>
   <ul>
@@ -454,9 +422,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   <li>200022050_00013_2</li>
   </ul>
   </details>
-  
   </td>
-  
   </tr>
   </table>
 
