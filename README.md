@@ -4,7 +4,7 @@ Seal-Robust KCR: A Framework for Stable Kuzushiji Character Recognition in Japan
 >[Project](https://ruiyangju.github.io/RG-KCR/)
 
 # Pipeline
-* The proposed framework consists of four main stages: **(1) Character Detection**, **(2) Document Restoration**, **(3) Character Classification**, and **(4) Character Ordering**.
+* Conventional pipeline (blue flow) and the proposed pipeline (red flow) for seal-interference Kuzushiji document images. Dashed arrows indicate additional processes performed in parallel with character detection without affecting the detection results.
   <p align="left">
     <img src="img/fig_pipeline.png" width="1024" title="details">
   </p>
