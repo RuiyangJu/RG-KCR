@@ -614,12 +614,12 @@ Dashed arrows indicate additional processes performed in parallel with character
 
 ## ⑥ Visualization
   <p align="center">
-    <img src="img/fig_final_output.png" width="1024" title="details">
+    <img src="img/fig_visualization.png" width="1024" title="details">
   </p>
   
-* After running `classification.py` to generate the `.json` file, please execute the following command to map the prediction results onto the restored document images:
+* After running `classification.py` to generate the `.json` file, if you want a visualization, please execute the following command to map the prediction results onto the restored document images:
   ```
-    python final_map.py --image path/to/restored_image.jpg --json /path/to/classification_results.json --out ./final_output_image.jpg --font_size 64
+    python visual.py --image path/to/restored_image.jpg --json /path/to/classification_results.json --out ./visutalization.jpg --font_size 64
   ```
 
 # License
