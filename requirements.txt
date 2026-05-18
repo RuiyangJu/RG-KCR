@@ -1,6 +1,5 @@
 torch
 torchvision
-transformers
 einops
 scipy
 pywavelets
@@ -9,6 +8,7 @@ numpy==2.0.2
 opencv-python==4.11.0.86
 scikit-image==0.24.0
 scikit-learn==1.6.1
+transformers==5.1.0
 matplotlib
 pytesseract
 ultralytics
