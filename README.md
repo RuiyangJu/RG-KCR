@@ -595,21 +595,13 @@ Dashed arrows indicate additional processes performed in parallel with character
 * The output directory `./visual_crop` contains: (1) Cropped images of individual Kuzushiji characters, and (2) Visualization results of the original images overlaid with the predicted bounding boxes.
 
 ## ④ Character Classification
-* Details of the dataset for character classification are summarized as follows：
-
-  | Test set #Images | Total GT Bounding Boxes | Total Pred Bounding Boxes | Total Matched Pairs (IoU>=0.5) |
-  | :--: | :--: | :--: | :--: |
-  | 100 | 19,035 | 18,656 | 17,982 |
-
-* The ground-truth data for the test set can be accessed at the following [link](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OAR9Eascelseepquchb3bOXk?e=TdsKac).
-
-
+* We employ the results of our Character Detection method (based on YOLO11-L) on the Synthetic Test Set as the dataset for Character Classification, which contains 17,982 characters.
 * The results of the ablation study are presented as follows:
 
-  | Method | Document Restoration (Stage 2) | Top-1 Accuracy | Top-5 Accuracy | 
+  | Method | Top-1 Acc. | Top-5 Acc. | FPS |
   | :--: | :--: | :--: | :--: |
-  | Metom |  | 93.45% | 97.46% | 
-  | Metom | ✔ | 95.33% | 98.62% |
+  | Baseline (Metom) | 93.45% | 97.46% |  |
+  | + Rest. (Ours) | 95.33% | 98.62% |  |
 
 * We employ [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for Kuzushiji character classification, and the official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 * To perform Kuzushiji character classification and evaluate the recognition performance, please run the following commands:
