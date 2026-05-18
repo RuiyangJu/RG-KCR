@@ -587,17 +587,15 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
 * The evaluation results will be saved to `./resotration_results`.
 
-## ③ Kuzushiji Character Cropping
+## ③ Character Cropping
 * To extract individual Kuzushiji character instances, we crop each character region based on the predicted bounding boxes：
   ```
     python crop.py
   ```
 * The output directory `./visual_crop` contains: (1) Cropped images of individual Kuzushiji characters, and (2) Visualization results of the original images overlaid with the predicted bounding boxes.
 
-## ④ Kuzushiji Character Classification
-
-## :two: Kuzushiji Character Classification 
-* Details of the dataset are summarized as follows：
+## ④ Character Classification
+* Details of the dataset for character classification are summarized as follows：
 
   | Test set #Images | Total GT Bounding Boxes | Total Pred Bounding Boxes | Total Matched Pairs (IoU>=0.5) |
   | :--: | :--: | :--: | :--: |
