@@ -617,7 +617,7 @@ Dashed arrows indicate additional processes performed in parallel with character
     <img src="img/fig_visualization.png" width="1024" title="details">
   </p>
   
-* After running `classification.py` to generate the `.json` file, if you want a visualization, please execute the following command to map the prediction results onto the restored document images:
+* After running `classification.py` to generate the `.json` file, you can visualize the prediction results by mapping them onto the restored document image using the following command:
   ```
     python visual.py --image path/to/restored_image.jpg --json /path/to/classification_results.json --out ./visutalization.jpg --font_size 64
   ```
