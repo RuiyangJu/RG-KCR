@@ -446,7 +446,7 @@ Dashed arrows indicate additional processes performed in parallel with character
     pip install -r requirements.txt
   ```
 
-## ① Kuzushiji Character Detection
+## ① Character Detection
 * The evaluation results on the test set are presented as follows:
 
   | Method | Params | FLOPs | Epoch | FPS | P<sup>Real</sup> | R<sup>Real</sup> | AP<sub>50</sub><sup>Real</sup> | AP<sub>50:95</sub><sup>Real</sup> | P<sup>Synth.</sup> | R<sup>Synth.</sup> | AP<sub>50</sub><sup>Synth.</sup> | AP<sub>50:95</sub><sup>Synth.</sup> |
@@ -553,7 +553,7 @@ Dashed arrows indicate additional processes performed in parallel with character
     python test_aug_yolo12l.py 
   ```
   
-## ② Kuzushiji Document Restoration
+## ② Document Restoration
 * The results of the parameter study are presented as follows:
   
   | τ<sub>r</sub> | (τ<sub>rg</sub>,τ<sub>rb</sub>) | PSNR<sub>Valid</sub> | SSIM<sub>Valid</sub> | PSNR<sub>Test</sub> | SSIM<sub>Test</sub> |
