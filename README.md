@@ -502,18 +502,18 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
     from ultralytics import YOLO
     
-    model = YOLO('./ultralytics/cfg/models/v12/yolov12n_SA.yaml')
+    model = YOLO('./ultralytics/cfg/models/v12/yolov12l.yaml')
     
     # Train the model
     results = model.train(
       data='./dataset/meta_raw.yaml',
-      epochs=100, 
+      epochs=1000, 
       batch=16, 
       imgsz=640,
       optimizer="SGD",
       lr0=0.01,
       device="0",
-      name="train_yolo12n_SA"
+      name="train_yolo12l"
     )
     
     # Evaluate model performance on the validation set
