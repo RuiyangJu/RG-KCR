@@ -447,7 +447,8 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
 
 ## ① Character Detection
-*
+* The character detection results are ss follows:
+  
   | Method | Params | FLOPs | Epoch | FPS | P<sup>Real</sup> | R<sup>Real</sup> | AP<sub>50</sub><sup>Real</sup> | AP<sub>50:95</sub><sup>Real</sup> | P<sup>Synth.</sup> | R<sup>Synth.</sup> | AP<sub>50</sub><sup>Synth.</sup> | AP<sub>50:95</sub><sup>Synth.</sup> |
   | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
   | RT-DETR-R50 | 41.94M | 125.6G | 988 | 11.8 | 93.6% | 90.3% | 94.3% | 70.1% | 91.1% | 85.0% | 90.8% | 65.2% |
@@ -553,6 +554,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
   
 ## ② Document Restoration
+* The document restoration results are ss follows:
   
   | τ<sub>r</sub> | (τ<sub>rg</sub>,τ<sub>rb</sub>) | PSNR<sub>Valid</sub> | SSIM<sub>Valid</sub> | PSNR<sub>Test</sub> | SSIM<sub>Test</sub> |
   | :--: | :--: | :--: | :--: | :--: | :--: |
@@ -593,6 +595,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 * The output directory `./visual_crop` contains: (1) Cropped images of individual Kuzushiji characters, and (2) Visualization results of the original images overlaid with the predicted bounding boxes.
 
 ## ④ Character Classification
+* The character classification results are ss follows:
 
   | Method | Top-1 Acc. | Top-5 Acc. | FPS |
   | :--: | :--: | :--: | :--: |
