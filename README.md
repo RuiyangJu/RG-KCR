@@ -523,12 +523,12 @@ Dashed arrows indicate additional processes performed in parallel with character
 * You can train the baseline models and our model as follows:
 
   ```
-    cd yolov12
-    python train_rtdetr.py
-    python train_yolov9n.py
-    python train_yolov10n.py
-    python train_yolo11n.py
-    python train_yolo12n.py 
+    cd Seal-Robust-KCR/yolov12
+    python train_rtdetr_resnet50.py
+    python train_yolov9c.py
+    python train_yolov10l.py
+    python train_yolo11l.py
+    python train_yolo12l.py 
   ```
 
 ### Test_Raw:
