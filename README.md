@@ -568,19 +568,19 @@ Dashed arrows indicate additional processes performed in parallel with character
   | 90 | 1.4 | 34.05dB | 0.9763 | 33.94dB | 0.9753 |
   | 90 | 1.5 | 32.03dB | 0.9721 | 31.74dB | 0.9710 |
 
-* Visual examples of document restoration results obtained with the parameters τ<sub>r</sub>=90, τ<sub>rg</sub>=τ<sub>rb</sub>=1.3:
+* Visual examples of document restoration results obtained with the parameters τ<sub>r</sub> = 90 and τ<sub>rg</sub> = τ<sub>rb</sub> = 1.3 are shown below:
   <p align="left">
     <img src="img/fig_restoration.png" width="1024" title="details">
   </p>
 
 ### Perform
-* Example command for performing document restoration with `r_min = 90` and `rg_ratio & rb_ratio = 1.3`:
+* Example command for performing document restoration with `r_min = 90` and `rg_ratio = rb_ratio = 1.3`:
   ```
     python restoration.py --r_min 90 --rg_ratio 1.3 --rb_ratio 1.3
   ```
 
 ### Evaluate
-* The ground-truth data (original document images) can be download from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
+* The ground-truth data, i.e., the original document images, can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
 * Example command for evaluation using PSNR and SSIM is provided below:
   ```
     python restoration_metric.py
@@ -588,15 +588,15 @@ Dashed arrows indicate additional processes performed in parallel with character
 * The evaluation results will be saved to `./resotration_results`.
 
 ## ③ Character Cropping
-* To extract individual Kuzushiji character instances, we crop each character region based on the predicted bounding boxes：
+* To extract individual Kuzushiji character instances, we crop each character region based on the predicted bounding boxes:
   ```
     python crop.py
   ```
-* The output directory `./visual_crop` contains: (1) Cropped images of individual Kuzushiji characters, and (2) Visualization results of the original images overlaid with the predicted bounding boxes.
+* The output directory `./visual_crop` contains: (1) cropped images of individual Kuzushiji characters and (2) visualization results of the original images overlaid with the predicted bounding boxes.
 
 ## ④ Character Classification
-*  We employ the results of our Character Detection method (based on YOLO11-L) on the Synthetic Test Set as the dataset for Character Classification, which contains 17,982 characters.
-* We employ [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for Kuzushiji character classification, and the official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
+*  We use the results of our Character Detection method, based on YOLO11-L, on the Synthetic Test Set as the dataset for Character Classification. This dataset contains 17,982 characters.
+* We use [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for character classification. The official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 * The character classification results are as follows:
 
   | Method | Top-1 Acc. | Top-5 Acc. | FPS |
