@@ -580,7 +580,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
 
 ### Evaluate
-* The ground-truth data (original document images) can be found at `Kuzushiji_Character_Detection_Dataset/images/test_raw`，available from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
+* The ground-truth data (original document images) can be download from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
 * Example command for evaluation using PSNR and SSIM is provided below:
   ```
     python restoration_metric.py
