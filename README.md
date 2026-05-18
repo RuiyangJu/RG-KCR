@@ -461,41 +461,41 @@ Dashed arrows indicate additional processes performed in parallel with character
   | **+ SAD (Ours)** | 26.39M | 82.1G | 408 | 10.4 | 97.5% | 93.6% | 96.5% | 83.2% | 97.5% | 92.8% | 96.3% | 81.9% |
 
 ### Train:
-* Please make sure the dataet is in `./yolov12/dataset`, and presented as below:
+* Please ensure that the dataset is placed under `./yolov12/dataset` and organized as follows:
 
-       yolov12
-          └── dataset   
-               ├── meta.yaml
-               ├── images
-               │    ├── train
-               │    │    ├── train_img1.png
-               │    │    └── ...
-               │    ├── valid
-               │    │    ├── valid_img1.png
-               │    │    └── ...
-               │    ├── test_raw
-               │    │    ├── test_raw_img1.png
-               │    │    └── ...
-               │    └── test_aug
-               │         ├── test_aug_img1.png
-               │         └── ...
-               └── labels
-                    ├── train
-                    │    ├── train_annotation1.txt
-                    │    └── ...
-                    ├── valid
-                    │    ├── valid_annotation1.txt
-                    │    └── ...
-                    ├── test_raw
-                    │    ├── test_raw_annotation1.txt
-                    │    └── ...
-                    └── test_aug
-                         ├── test_aug_annotation1.txt
-                         └── ...
+    yolov12
+    └── dataset
+        ├── meta_raw.yaml
+        ├── meta_aug.yaml
+        ├── images
+        │   ├── train
+        │   │   ├── train_img1.png
+        │   │   └── ...
+        │   ├── valid
+        │   │   ├── valid_img1.png
+        │   │   └── ...
+        │   ├── test_raw
+        │   │   ├── test_raw_img1.png
+        │   │   └── ...
+        │   └── test_aug
+        │       ├── test_aug_img1.png
+        │       └── ...
+        └── labels
+            ├── train
+            │   ├── train_annotation1.txt
+            │   └── ...
+            ├── valid
+            │   ├── valid_annotation1.txt
+            │   └── ...
+            ├── test_raw
+            │   ├── test_raw_annotation1.txt
+            │   └── ...
+            └── test_aug
+                ├── test_aug_annotation1.txt
+                └── ...
 
-  
-* Please revise the `/path/to/data` in `./yolov12/dataset/meta_raw.yaml` and `./yolov12/dataset/meta_aug.yaml`.
-* You can run `train_xxx.py` to train the model. For example, `train_yolo12n_SA.py` can be used for training.
+* Please update the dataset path (`/path/to/data`) in both `./yolov12/dataset/meta_raw.yaml` and `./yolov12/dataset/meta_aug.yaml` before training.
+* You can train the model by running the corresponding training script. For example, `train_yolo12l.py` can be used to train the model:
 
   ```
     from ultralytics import YOLO
