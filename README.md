@@ -461,6 +461,33 @@ Dashed arrows indicate additional processes performed in parallel with character
   | **+ SAD (Ours)** | 26.39M | 82.1G | 408 | 10.4 | 97.5% | 93.6% | 96.5% | 83.2% | 97.5% | 92.8% | 96.3% | 81.9% |
 
 ### Train:
+* Please make sure the dataet is in `./yolov12/dataset`, and presented as below:
+
+       GRAZPEDWRI-DX
+          └── data   
+               ├── meta.yaml
+               ├── images
+               │    ├── train
+               │    │    ├── train_img1.png
+               │    │    └── ...
+               │    ├── valid
+               │    │    ├── valid_img1.png
+               │    │    └── ...
+               │    └── test
+               │         ├── test_img1.png
+               │         └── ...
+               └── labels
+                    ├── train
+                    │    ├── train_annotation1.txt
+                    │    └── ...
+                    ├── valid
+                    │    ├── valid_annotation1.txt
+                    │    └── ...
+                    └── test
+                         ├── test_annotation1.txt
+                         └── ...
+
+  
 * Please revise the `/path/to/data` in `./yolov12/dataset/meta_raw.yaml` and `./yolov12/dataset/meta_aug.yaml`.
 * You can run `train_xxx.py` to train the model. For example, `train_yolo12n_SA.py` can be used for training.
 
