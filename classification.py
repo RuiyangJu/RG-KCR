@@ -11,7 +11,7 @@ repo_name = "SakanaAI/Metom"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 torch_dtype = torch.float32
 
-ROOT_DIR = Path("./visual_crop_raw/crops")
+ROOT_DIR = Path("./visual_crop/crops")
 OUT_DIR = Path("./classification_results")
 
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".webp"}
