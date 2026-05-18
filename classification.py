@@ -98,7 +98,7 @@ def main():
 
     t0_all = time.perf_counter()
 
-    total_processed = 0  
+    total_processed = 0   # NEW
 
     for folder in tqdm(subdirs, desc="Folders", unit="folder"):
 
@@ -152,7 +152,7 @@ def main():
                     "bbox": bbox
                 })
 
-                total_processed += 1  
+                total_processed += 1   # NEW
 
             except Exception as e:
                 failed.append({
@@ -166,6 +166,7 @@ def main():
 
     total_time = time.perf_counter() - t0_all
 
+    # NEW
     avg_time_per_img = total_time / total_processed
     fps = total_processed / total_time
 
