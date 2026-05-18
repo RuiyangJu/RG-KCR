@@ -11,15 +11,17 @@ repo_name = "SakanaAI/Metom"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 torch_dtype = torch.float32
 
-ROOT_DIR = Path("./visual_crop/crops")  
+ROOT_DIR = Path("./visual_crop_raw/crops")
 OUT_DIR = Path("./classification_results")
 
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".webp"}
 BBOX_RE = re.compile(r"_X(\d+)_Y(\d+)_W(\d+)_H(\d+)", re.IGNORECASE)
 
+
 def get_image(image_path: Path) -> Image.Image:
     with Image.open(image_path) as im:
         return im.convert("RGB")
+
 
 def parse_bbox_from_name(name: str):
     m = BBOX_RE.search(name)
@@ -28,8 +30,10 @@ def parse_bbox_from_name(name: str):
     x, y, w, h = map(int, m.groups())
     return [x, y, w, h]
 
+
 def extract_topk_labels_only(out):
     labels = None
+
     if isinstance(out, dict):
         labels = out.get("labels", None)
         if labels is None:
@@ -58,6 +62,7 @@ def extract_topk_labels_only(out):
 
     return [str(x) for x in labels]
 
+
 def dump_json_one_item_per_line(path: Path, items: list):
     with open(path, "w", encoding="utf-8") as f:
         f.write("[\n")
@@ -67,19 +72,24 @@ def dump_json_one_item_per_line(path: Path, items: list):
             f.write(",\n" if i < len(items) - 1 else "\n")
         f.write("]\n")
 
+
 processor = AutoProcessor.from_pretrained(repo_name, trust_remote_code=True)
+
 model = AutoModel.from_pretrained(
     repo_name,
     torch_dtype=torch_dtype,
     _attn_implementation="eager",
     trust_remote_code=True,
 ).to(device=device)
+
 model.eval()
 
 torch.backends.cuda.matmul.allow_tf32 = True
 torch.backends.cudnn.allow_tf32 = True
 
+
 def main():
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     subdirs = sorted([p for p in ROOT_DIR.iterdir() if p.is_dir()])
@@ -88,61 +98,87 @@ def main():
 
     t0_all = time.perf_counter()
 
-    for folder in tqdm(subdirs, desc="Folders", unit="folder"):
-        t0_folder = time.perf_counter()
+    total_processed = 0  
 
-        img_paths = sorted([p for p in folder.iterdir() if p.suffix.lower() in IMG_EXTS])
+    for folder in tqdm(subdirs, desc="Folders", unit="folder"):
+
+        img_paths = sorted(
+            [p for p in folder.iterdir() if p.suffix.lower() in IMG_EXTS]
+        )
 
         results = []
-        skipped = []  
-        failed  = []  
+        skipped = []
+        failed = []
 
-        for img_path in tqdm(img_paths, desc=f"Images in {folder.name}", unit="img", leave=False):
+        for img_path in tqdm(
+            img_paths,
+            desc=f"Images in {folder.name}",
+            unit="img",
+            leave=False,
+        ):
+
             bbox = parse_bbox_from_name(img_path.name)
+
             if bbox is None:
                 skipped.append(img_path.name)
                 continue
 
             try:
+
                 image = get_image(img_path)
-                pixel_values = processor(images=image, return_tensors="pt")["pixel_values"].to(
-                    device=device, dtype=torch_dtype
+
+                pixel_values = processor(
+                    images=image,
+                    return_tensors="pt"
+                )["pixel_values"].to(
+                    device=device,
+                    dtype=torch_dtype
                 )
 
                 with torch.inference_mode():
-                    out = model.get_topk_labels(pixel_values, k=5, return_probs=True)
+                    out = model.get_topk_labels(
+                        pixel_values,
+                        k=5,
+                        return_probs=True
+                    )
 
                 char_top5 = extract_topk_labels_only(out)
 
                 if len(char_top5) != 5:
                     char_top5 = (char_top5 + [""] * 5)[:5]
-                    failed.append({"file": img_path.name, "err": f"Returned labels != 5 (padded). raw={out}"})
 
-                results.append({"char": char_top5, "bbox": bbox})
+                results.append({
+                    "char": char_top5,
+                    "bbox": bbox
+                })
+
+                total_processed += 1  
 
             except Exception as e:
-                failed.append({"file": img_path.name, "err": str(e)})
+                failed.append({
+                    "file": img_path.name,
+                    "err": str(e)
+                })
                 continue
 
         out_path = OUT_DIR / f"{folder.name}.json"
         dump_json_one_item_per_line(out_path, results)
 
-        if skipped:
-            skipped_path = OUT_DIR / f"{folder.name}_skipped.txt"
-            with open(skipped_path, "w", encoding="utf-8") as f:
-                for name in skipped:
-                    f.write(name + "\n")
-
-        if failed:
-            failed_path = OUT_DIR / f"{folder.name}_failed.json"
-            with open(failed_path, "w", encoding="utf-8") as f:
-                json.dump(failed, f, ensure_ascii=False, indent=2)
-
-        folder_time = time.perf_counter() - t0_folder
-
     total_time = time.perf_counter() - t0_all
-    print(f"Done. Processed {len(subdirs)} folders in {total_time:.2f}s")
+
+    avg_time_per_img = total_time / total_processed
+    fps = total_processed / total_time
+
+    print(f"Done.")
+    print(f"Processed folders: {len(subdirs)}")
+    print(f"Processed images: {total_processed}")
+    print(f"Total time: {total_time:.2f}s")
+
+    print(f"Average latency: {avg_time_per_img*1000:.2f} ms/image")
+    print(f"Average FPS: {fps:.2f}")
+
     print(f"JSON saved to: {OUT_DIR}")
+
 
 if __name__ == "__main__":
     main()
