@@ -463,8 +463,8 @@ Dashed arrows indicate additional processes performed in parallel with character
 ### Train:
 * Please make sure the dataet is in `./yolov12/dataset`, and presented as below:
 
-       GRAZPEDWRI-DX
-          └── data   
+       yolov12
+          └── dataset   
                ├── meta.yaml
                ├── images
                │    ├── train
@@ -473,8 +473,11 @@ Dashed arrows indicate additional processes performed in parallel with character
                │    ├── valid
                │    │    ├── valid_img1.png
                │    │    └── ...
-               │    └── test
-               │         ├── test_img1.png
+               │    ├── test_raw
+               │    │    ├── test_raw_img1.png
+               │    │    └── ...
+               │    └── test_aug
+               │         ├── test_aug_img1.png
                │         └── ...
                └── labels
                     ├── train
@@ -483,8 +486,11 @@ Dashed arrows indicate additional processes performed in parallel with character
                     ├── valid
                     │    ├── valid_annotation1.txt
                     │    └── ...
-                    └── test
-                         ├── test_annotation1.txt
+                    ├── test_raw
+                    │    ├── test_raw_annotation1.txt
+                    │    └── ...
+                    └── test_aug
+                         ├── test_aug_annotation1.txt
                          └── ...
 
   
