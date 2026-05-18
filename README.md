@@ -610,7 +610,7 @@ Dashed arrows indicate additional processes performed in parallel with character
     python classification_metric.py
   ```
 
-## ⑤ Order
+## ⑤ Character Ordering
 
 ## ⑥ Visualization
   <p align="center">
