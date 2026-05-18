@@ -449,13 +449,16 @@ Dashed arrows indicate additional processes performed in parallel with character
 ## ① Kuzushiji Character Detection
 * The evaluation results on the test set are presented as follows:
 
-  | Method | Params | FLOPs | Precision | Recall | AP<sub>50</sub> | AP<sub>50:95</sub> |
-  | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-  | RT-DETR (CVPR'24) | 31.99M | 103.4G | 86.2% | 79.2% | 84.1% | 57.0% |
-  | YOLOv9 (ECCV'24) | 20.01M | 76.5G | 97.7% | 93.0% | 96.6% | 80.9% |
-  | YOLOv10 (NeurIPS'24) | 15.31M | 58.9G | 97.7% | 92.3% | 96.5% | 80.5% |
-  | YOLO11 (Ultralytics'24) | 20.03M | 67.6G | 98.1% | 93.3% | 96.7% | 81.7% |
-  | YOLOv12 (NeurIPS'25) | 20.11M | 67.1G | 98.0% | 93.9% | 97.0% | 82.3% |
+  | Method | Params | FLOPs | Epoch | FPS | Real P | Real R | Real AP<sub>50</sub> | Real AP<sub>50:95</sub> | Synthetic P | Synthetic R | Synthetic AP<sub>50</sub> | Synthetic AP<sub>50:95</sub> |
+  | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+  | RT-DETR-R50 (CVPR'24) | 41.94M | 125.6G | 988 | 11.8 | 93.6% | 90.3% | 94.3% | 70.1% | 91.1% | 85.0% | 90.8% | 65.2% |
+  | + SAD (Ours) | 41.94M | 125.6G | 736 | 11.7 | 96.3% | 93.1% | 95.6% | 70.5% | 95.6% | 92.2% | 95.0% | 68.4% |
+  | YOLOv10-L (NeurIPS'24) | 25.77M | 127.2G | 781 | 11.0 | 98.0% | 92.0% | 96.3% | 82.5% | 95.7% | 87.2% | 93.6% | 77.5% |
+  | + SAD (Ours) | 25.77M | 127.2G | 415 | 11.0 | 98.3% | 92.7% | 96.5% | 83.1% | 98.0% | 92.4% | 96.4% | 81.8% |
+  | YOLO11-L (2024) | 25.28M | 86.6G | 549 | 10.5 | 97.9% | 92.9% | 96.4% | 83.0% | 95.8% | 87.7% | 93.7% | 78.1% |
+  | + SAD (Ours) | 25.28M | 86.6G | 440 | 10.5 | 98.0% | 93.5% | 96.5% | 83.3% | 97.6% | 93.1% | 96.4% | 82.1% |
+  | YOLOv12-L (NeurIPS'25) | 26.39M | 82.1G | 909 | 10.5 | 97.4% | 93.4% | 96.4% | 82.7% | 95.5% | 87.7% | 93.7% | 77.6% |
+  | + SAD (Ours) | 26.39M | 82.1G | 408 | 10.4 | 97.5% | 93.6% | 96.5% | 83.2% | 97.5% | 92.8% | 96.3% | 81.9% |
 
 ### Train:
 * Please revise the `/path/to/data` in `./yolov12/dataset/meta_raw.yaml` and `./yolov12/dataset/meta_aug.yaml`.
