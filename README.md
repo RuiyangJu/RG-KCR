@@ -532,23 +532,23 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
 
 ### Test_Raw:
-* Please place the folder `Pretrained_Model_Kuzushiji_Detection` in `./`.
   ```
-    yolo val model='./runs/detect/train_rtdetr-l/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_rtdetr-l
-    yolo val model='./runs/detect/train_yolov9m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_yolov9m
-    yolo val model='./runs/detect/train_yolov10m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_yolov10m
-    yolo val model='./runs/detect/train_yolo11m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_yolo11m
-    yolo val model='./runs/detect/train_yolo12m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_raw.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_raw_yolo12m
+    cd Seal-Robust-KCR/yolov12
+    python test_raw_rtdetr_resnet50.py
+    python test_raw_yolov9c.py
+    python test_raw_yolov10l.py
+    python test_raw_yolo11l.py
+    python test_raw_yolo12l.py 
   ```
 
 ### Test_Aug:
-* Please place the folder `Pretrained_Model_Kuzushiji_Detection` in `./`.
   ```
-    yolo val model='./runs/detect/train_rtdetr-l/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_rtdetr-l
-    yolo val model='./runs/detect/train_yolov9m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_yolov9m
-    yolo val model='./runs/detect/train_yolov10m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_yolov10m
-    yolo val model='./runs/detect/train_yolo11m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_yolo11m
-    yolo val model='./runs/detect/train_yolo12m/weights/best.pt' data=./Kuzushiji_Character_Detection_Dataset/meta_aug.yaml split='test' save_txt=True save_conf=True conf=0.1 name=test_aug_yolo12m
+    cd Seal-Robust-KCR/yolov12
+    python test_aug_rtdetr_resnet50.py
+    python test_aug_yolov9c.py
+    python test_aug_yolov10l.py
+    python test_aug_yolo11l.py
+    python test_aug_yolo12l.py 
   ```
   
 ## ② Kuzushiji Document Restoration
