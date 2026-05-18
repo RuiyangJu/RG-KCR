@@ -447,7 +447,6 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
 
 ## ① Character Detection
-* The evaluation results on the test set are presented as follows:
 
   | Method | Params | FLOPs | Epoch | FPS | P<sup>Real</sup> | R<sup>Real</sup> | AP<sub>50</sub><sup>Real</sup> | AP<sub>50:95</sub><sup>Real</sup> | P<sup>Synth.</sup> | R<sup>Synth.</sup> | AP<sub>50</sub><sup>Synth.</sup> | AP<sub>50:95</sub><sup>Synth.</sup> |
   | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
@@ -554,7 +553,6 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
   
 ## ② Document Restoration
-* The results of the parameter study are presented as follows:
   
   | τ<sub>r</sub> | (τ<sub>rg</sub>,τ<sub>rb</sub>) | PSNR<sub>Valid</sub> | SSIM<sub>Valid</sub> | PSNR<sub>Test</sub> | SSIM<sub>Test</sub> |
   | :--: | :--: | :--: | :--: | :--: | :--: |
@@ -595,14 +593,13 @@ Dashed arrows indicate additional processes performed in parallel with character
 * The output directory `./visual_crop` contains: (1) Cropped images of individual Kuzushiji characters, and (2) Visualization results of the original images overlaid with the predicted bounding boxes.
 
 ## ④ Character Classification
-* We employ the results of our Character Detection method (based on YOLO11-L) on the Synthetic Test Set as the dataset for Character Classification, which contains 17,982 characters.
-* The results of the ablation study are presented as follows:
 
   | Method | Top-1 Acc. | Top-5 Acc. | FPS |
   | :--: | :--: | :--: | :--: |
   | Baseline (Metom) | 93.45% | 97.46% |  |
   | + Rest. (Ours) | 95.33% | 98.62% |  |
-
+  
+*  We employ the results of our Character Detection method (based on YOLO11-L) on the Synthetic Test Set as the dataset for Character Classification, which contains 17,982 characters.
 * We employ [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for Kuzushiji character classification, and the official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 * To perform Kuzushiji character classification and evaluate the recognition performance, please run the following commands:
   ```
