@@ -449,7 +449,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 ## ① Kuzushiji Character Detection
 * The evaluation results on the test set are presented as follows:
 
-  | Method | Params | FLOPs | Epoch | FPS | Real P | Real R | Real AP<sub>50</sub> | Real AP<sub>50:95</sub> | Synthetic P | Synthetic R | Synthetic AP<sub>50</sub> | Synthetic AP<sub>50:95</sub> |
+  | Method | Params | FLOPs | Epoch | FPS | P<sup>Real</sup> | R<sup>Real</sup> | AP<sub>50</sub><sup>Real</sup> | AP<sub>50:95</sub><sup>Real</sup> | P<sup>Synth.</sup> | R<sup>Synth.</sup> | AP<sub>50</sub><sup>Synth.</sup> | AP<sub>50:95</sub><sup>Synth.</sup> |
   | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
   | RT-DETR-R50 (CVPR'24) | 41.94M | 125.6G | 988 | 11.8 | 93.6% | 90.3% | 94.3% | 70.1% | 91.1% | 85.0% | 90.8% | 65.2% |
   | + SAD (Ours) | 41.94M | 125.6G | 736 | 11.7 | 96.3% | 93.1% | 95.6% | 70.5% | 95.6% | 92.2% | 95.0% | 68.4% |
