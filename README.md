@@ -463,6 +463,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 ### Train:
 * Please ensure that the dataset is placed under `./yolov12/dataset` and organized as follows:
 
+  ```
     yolov12
     └── dataset
         ├── meta_raw.yaml
@@ -493,6 +494,7 @@ Dashed arrows indicate additional processes performed in parallel with character
             └── test_aug
                 ├── test_aug_annotation1.txt
                 └── ...
+    ```
 
 * Please update the dataset path (`/path/to/data`) in both `./yolov12/dataset/meta_raw.yaml` and `./yolov12/dataset/meta_aug.yaml` before training.
 * You can train the model by running the corresponding training script. For example, `train_yolo12l.py` can be used to train the model:
