@@ -70,9 +70,7 @@ def main():
     if len(files) == 0:
         raise RuntimeError(f"No images found in: {input_dir}")
 
-    print("======================================")
-    print(" Red Seal Removal Preprocessing")
-    print("======================================")
+    print("=" * 60)
     print(f"Input Dir   : {input_dir}")
     print(f"Output Dir  : {output_dir}")
     print(f"r_min       : {r_min}")
@@ -80,7 +78,7 @@ def main():
     print(f"rb_ratio    : {rb_ratio}")
     print(f"inpaint     : {args.inpaint_method} (radius={inpaint_radius})")
     print(f"dilate      : kernel={dilate_kernel}, iter={dilate_iter}")
-    print("======================================")
+    print("=" * 60)
 
     for fn in tqdm(files, desc="Processing"):
         in_path = os.path.join(input_dir, fn)
