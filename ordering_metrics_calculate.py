@@ -3,7 +3,7 @@ import pandas as pd
 
 gt_dir = Path("./order_gt")      
 pred_dir = Path("./order_results_baseline") 
-out_csv = "./order_results_baseline.csv"
+out_csv = "./ordering_results_baseline.csv"
 
 def levenshtein_distance(s1, s2):
     m, n = len(s1), len(s2)
