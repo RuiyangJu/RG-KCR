@@ -601,8 +601,8 @@ Dashed arrows indicate additional processes performed in parallel with character
 
   | Method | Top-1 Acc. | Top-5 Acc. | FPS |
   | :--: | :--: | :--: | :--: |
-  | Baseline (Metom) | 93.45% | 97.46% |  |
-  | + Rest. (Ours) | 95.33% | 98.62% |  |
+  | Baseline (Metom) | 93.45% | 97.46% | 1.95 |
+  | + Rest. (Ours) | 95.33% | 98.62% | 1.19 |
   
 * To perform Kuzushiji character classification and evaluate the recognition performance, please run the following commands:
   ```
