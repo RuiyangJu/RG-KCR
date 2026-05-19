@@ -595,7 +595,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 * The output directory `./visual_crop` contains: (1) cropped images of individual Kuzushiji characters and (2) visualization results of the original images overlaid with the predicted bounding boxes.
 
 ## ④ Character Classification
-*  We use the results of our Character Detection method (based on YOLO11-L) on the Synthetic Test Set as the dataset for Character Classification. This dataset contains 17,982 characters.
+*  We use the results of our Character Detection method (based on YOLO11-L) on the Synthetic Test Set as the dataset for Character Classification. This dataset contains 18,656 characters.
 * We use [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for character classification. The official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 * The character classification results are as follows:
 
