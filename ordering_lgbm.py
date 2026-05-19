@@ -1,7 +1,7 @@
 import json
-from pathlib import Path
-import numpy as np
 import joblib
+import numpy as np
+from pathlib import Path
 
 input_dir = Path("./classification_results_restoration")
 output_dir = Path("./order_results_lgbm")
@@ -10,7 +10,7 @@ model = joblib.load("./lgbm_ordering_model.pkl")
 
 
 def make_pair_features(a, b):
-    return [[
+    return [
         a["cx"] - b["cx"],
         a["cy"] - b["cy"],
         abs(a["cx"] - b["cx"]),
@@ -30,31 +30,7 @@ def make_pair_features(a, b):
         a["h"],
         b["w"],
         b["h"],
-    ]]
-
-
-def refine_with_lgbm(ordered_rows, max_iter=3, threshold=0.5):
-    rows = ordered_rows[:]
-
-    for _ in range(max_iter):
-        changed = False
-
-        for i in range(len(rows) - 1):
-            a = rows[i]
-            b = rows[i + 1]
-
-            prob_a_before_b = model.predict_proba(
-                make_pair_features(a, b)
-            )[0][1]
-
-            if prob_a_before_b < threshold:
-                rows[i], rows[i + 1] = rows[i + 1], rows[i]
-                changed = True
-
-        if not changed:
-            break
-
-    return rows
+    ]
 
 
 def json_to_text(json_path: Path) -> str:
@@ -63,11 +39,12 @@ def json_to_text(json_path: Path) -> str:
 
     rows = []
 
-    for item in data:
+    for idx, item in enumerate(data):
         char = item["char"][0]
         x, y, w, h = item["bbox"]
 
         rows.append({
+            "id": idx,
             "char": char,
             "x": x,
             "y": y,
@@ -75,59 +52,31 @@ def json_to_text(json_path: Path) -> str:
             "h": h,
             "cx": x + w / 2,
             "cy": y + h / 2,
+            "score": 0.0,
         })
 
     if len(rows) == 0:
         return ""
 
-    avg_w = sum(r["w"] for r in rows) / len(rows)
-    column_thresh = avg_w * 0.8
+    n = len(rows)
 
-    rows = sorted(rows, key=lambda r: r["cx"], reverse=True)
+    pair_features = []
+    pair_indices = []
 
-    columns = []
+    for i in range(n):
+        for j in range(i + 1, n):
+            pair_features.append(make_pair_features(rows[i], rows[j]))
+            pair_indices.append((i, j))
 
-    for r in rows:
-        matched_col = None
-        min_dist = float("inf")
+    probs = model.predict_proba(np.array(pair_features))[:, 1]
 
-        for col in columns:
-            dist = abs(r["cx"] - col["median_cx"])
+    for (i, j), prob_a_before_b in zip(pair_indices, probs):
+        rows[i]["score"] += prob_a_before_b
+        rows[j]["score"] += 1.0 - prob_a_before_b
 
-            if dist < min_dist:
-                min_dist = dist
-                matched_col = col
+    ordered = sorted(rows, key=lambda r: r["score"], reverse=True)
 
-        if matched_col is not None and min_dist <= column_thresh:
-            matched_col["items"].append(r)
-            matched_col["median_cx"] = np.median(
-                [item["cx"] for item in matched_col["items"]]
-            )
-        else:
-            columns.append({
-                "median_cx": r["cx"],
-                "items": [r],
-            })
-
-    columns = sorted(
-        columns,
-        key=lambda c: c["median_cx"],
-        reverse=True
-    )
-
-    ordered_rows = []
-
-    for col in columns:
-        items = sorted(col["items"], key=lambda r: r["cy"])
-        ordered_rows.extend(items)
-
-    ordered_rows = refine_with_lgbm(
-        ordered_rows,
-        max_iter=3,
-        threshold=0.5
-    )
-
-    return "".join(r["char"] for r in ordered_rows)
+    return "".join(r["char"] for r in ordered)
 
 
 for json_path in sorted(input_dir.glob("*.json")):
