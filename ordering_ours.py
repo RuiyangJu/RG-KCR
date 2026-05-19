@@ -3,7 +3,7 @@ from pathlib import Path
 import numpy as np
 
 input_dir = Path("./classification_results_restoration")
-output_dir = Path("./ordering_results_baseline")
+output_dir = Path("./order_results_ours")
 output_dir.mkdir(parents=True, exist_ok=True)
 
 
