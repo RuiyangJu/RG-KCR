@@ -2,8 +2,8 @@ from pathlib import Path
 import pandas as pd
 
 gt_dir = Path("./order_gt")      
-pred_dir = Path("./order_results_baseline") 
-out_csv = "./ordering_results_baseline.csv"
+pred_dir = Path("./order_results_ours") 
+out_csv = "./order_results_ours.csv"
 
 def levenshtein_distance(s1, s2):
     m, n = len(s1), len(s2)
