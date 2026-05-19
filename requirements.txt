@@ -11,6 +11,7 @@ scikit-learn==1.6.1
 
 segmentation-models-pytorch
 transformers==5.1.0
+lightgbm
 ultralytics
 
 matplotlib
