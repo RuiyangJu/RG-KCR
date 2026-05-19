@@ -160,10 +160,10 @@ def main():
 
     print("=" * 60)
     print("Benchmark summary")
-    print(f"Images per run: {len(images)}")
+    print(f"Pages per run: {len(images)}")
     print(f"Total time: {statistics.mean(time_list):.4f} ± {statistics.stdev(time_list):.4f} s")
-    print(f"FPS: {statistics.mean(fps_list):.2f} ± {statistics.stdev(fps_list):.2f} images/s")
-    print(f"Latency: {statistics.mean(latency_list):.2f} ± {statistics.stdev(latency_list):.2f} ms/image")
+    print(f"FPS: {statistics.mean(fps_list):.2f} ± {statistics.stdev(fps_list):.2f} pages/s")
+    print(f"Latency: {statistics.mean(latency_list):.2f} ± {statistics.stdev(latency_list):.2f} ms")
     print(f"CSV saved to: {args.out_csv}")
     print("=" * 60)
 
