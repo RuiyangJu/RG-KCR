@@ -573,7 +573,7 @@ Dashed arrows indicate additional processes performed in parallel with character
     <img src="img/fig_restoration.png" width="1024" title="details">
   </p>
 
-### Perform
+### Run
 * Example command for performing document restoration with `r_min = 90` and `rg_ratio = rb_ratio = 1.3`:
   ```
     python restoration.py --r_min 90 --rg_ratio 1.3 --rb_ratio 1.3
