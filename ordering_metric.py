@@ -1,7 +1,7 @@
 from pathlib import Path
 import pandas as pd
 
-gt_dir = Path("./order_gt")      
+gt_dir = Path("./groundtruth_ordering_test")      
 pred_dir = Path("./order_results_ours") 
 out_csv = "./order_results_ours.csv"
 
