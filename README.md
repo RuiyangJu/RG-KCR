@@ -617,6 +617,14 @@ Dashed arrows indicate additional processes performed in parallel with character
   | :--: | :--: | :--: |
   | LightGBM | 78.50% | 15.38 |
   | Ours | 86.33 | 419.27 |
+
+
+### Run
+* You can run both methods as follows:
+  ```
+    python ordering_ours.py
+    python ordering_lgbm.py
+  ```
   
 ## ⑥ Visualization
   <p align="center">
