@@ -628,6 +628,9 @@ Dashed arrows indicate additional processes performed in parallel with character
 
 ### Evaluate
 * Before evaluation, you need download the test set ground-truth text from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ), and run as follows:
+  ```
+    python ordering_metric.py
+  ```
 
 ## ⑥ Visualization
   <p align="center">
