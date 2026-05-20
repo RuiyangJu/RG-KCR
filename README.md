@@ -625,7 +625,10 @@ Dashed arrows indicate additional processes performed in parallel with character
     python ordering_ours.py
     python ordering_lgbm.py
   ```
-  
+
+### Evaluate
+* Before evaluation, you need download the test set ground-truth text from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ), and run as follows:
+
 ## ⑥ Visualization
   <p align="center">
     <img src="img/fig_visualization.png" width="1024" title="details">
