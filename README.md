@@ -611,7 +611,9 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
 
 ## ⑤ Character Ordering
+* The character ordering results are as follows:
 
+  
 ## ⑥ Visualization
   <p align="center">
     <img src="img/fig_visualization.png" width="1024" title="details">
