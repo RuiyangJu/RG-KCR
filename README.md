@@ -442,7 +442,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 # Experiments
 ## Environment
   ```
-    conda create -n Kuzushiji python=3.10
+    conda create -n sealkcr python=3.10
     pip install -r requirements.txt
   ```
 
