@@ -437,7 +437,7 @@ Dashed arrows indicate additional processes performed in parallel with character
     <img src="img/fig_synthetic.png" width="1024" title="details">
   </p>
 * The **synthetic dataset** through synthetic data augmentation can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
-* Notably, if you want to train on both the real and synthetic datasets together, please make sure that the image names across the two datasets are different.
+* Notably, if you want to train on both the **real** and **synthetic** datasets together, please make sure that the image names across the two datasets are **different**.
 
 # Experiments
 ## Environment
