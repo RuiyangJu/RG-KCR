@@ -604,8 +604,8 @@ Dashed arrows indicate additional processes performed in parallel with character
 
   | Method | Top-1 Acc. | Top-5 Acc. | FPS |
   | :--: | :--: | :--: | :--: |
-  | Baseline (Metom) | 93.45% | 97.46% | 1.95 |
-  | + Rest. (Ours) | 95.33% | 98.62% | 1.19 |
+  | Baseline (Metom) | 94.22% | 97.64% | 1.81 |
+  | + Rest. (Ours) | 95.66% | 98.62% | 1.14 |
   
 * To perform Kuzushiji character classification and evaluate the recognition performance, please run the following commands:
   ```
@@ -616,10 +616,10 @@ Dashed arrows indicate additional processes performed in parallel with character
 ## ⑤ Character Ordering
 * We compare our proposed method with [LightGBM](https://github.com/lightgbm-org/LightGBM) on the character ordering task, and the results are shown below:
   
-  | Method | 1 − CER | FPS on i5-11600K |
-  | :--: | :--: | :--: |
-  | LightGBM | 78.50% | 15.38 |
-  | Ours | 86.33 | 419.27 |
+  | Method | Training | 1 − CER | FPS on i5-11600K |
+  | :--: | :--: | :--: | :--: |
+  | LightGBM | Yes | 78.75% | 15.38 |
+  | Ours | No | 86.33 | 419.27 |
 
 
 ### Run
