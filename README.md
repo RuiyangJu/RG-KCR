@@ -4,7 +4,7 @@ Seal-Robust KCR: A Framework for Stable Kuzushiji Character Recognition in Japan
 >[Project](https://ruiyangju.github.io/RG-KCR/)
 
   <p align="left">
-    <img src="img/fig_teaser.png" width="1024" title="details">
+    <img src="img/fig_teaser.png" width="640" title="details">
   </p>
 
 * End-to-end Comparsion (from image to text):
