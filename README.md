@@ -6,7 +6,14 @@ Seal-Robust KCR: A Framework for Stable Kuzushiji Character Recognition in Japan
   <p align="left">
     <img src="img/fig_teaser.png" width="1024" title="details">
   </p>
-  
+
+  | Method | Real Test Set | Synth. Test Set |
+  | :-- | :--: | :--: |
+  | NDLkotenOCR-Lite  | 78.24 | 52.18 |
+  | NDLkotenOCR | 87.27 | 76.57 |
+  | Baseline | 80.14 | 72.59 |
+  | **Ours** | **88.02** | **86.33** |
+
 # Pipeline
 * Conventional pipeline (blue flow) and the proposed pipeline (red flow) for seal-interference Kuzushiji document images.
 Dashed arrows indicate additional processes performed in parallel with character detection without affecting the detection results.
