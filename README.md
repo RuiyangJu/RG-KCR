@@ -454,12 +454,12 @@ Dashed arrows indicate additional processes performed in parallel with character
 * Notably, if you want to train on both the **real** and **synthetic** datasets together, please make sure that the image names across the two datasets are **different**.
 * Therefore, the statistics of the dataset used in this work are summarized as follows:
 
-  | Split | Real | Synthetic | Total | Seals/Page |
-  | :---: | :---: | :---: | :---: | :---: |
-  | Train | 800 | 800 | 1,600 | ≈10 |
-  | Valid | 100 | 100 | 200 | ≈10 |
-  | Test (Real) | 200 | N/A | 200 | 0-2 |
-  | Test (Synth.) | N/A | 200 | 200 | ≈10 |
+    | Split | Real | Synthetic | Total | Seals/Page |
+    | :---: | :---: | :---: | :---: | :---: |
+    | Train | 800 | 800 | 1,600 | ≈10 |
+    | Valid | 100 | 100 | 200 | ≈10 |
+    | Test (Real) | 200 | N/A | 200 | 0-2 |
+    | Test (Synth.) | N/A | 200 | 200 | ≈10 |
 
 # Experiments
 ## Environment
@@ -521,6 +521,19 @@ Dashed arrows indicate additional processes performed in parallel with character
     ```
 
 * Please update the dataset path (`/path/to/data`) in both `./yolov12/dataset/meta_raw.yaml` and `./yolov12/dataset/meta_aug.yaml` before training.
+
+  ```
+    # patch: /path/to/data
+    path: '/path/to/data'
+    train: 'images/train'
+    val: 'images/valid'
+    test: 'images/test'
+    
+    nc: 1
+    names:
+      0: Kuzushiji
+  ```
+  
 * You can train the model by running the corresponding training script. For example, `train_yolo12l.py` can be used to train the model:
 
   ```
