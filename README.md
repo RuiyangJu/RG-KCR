@@ -523,11 +523,10 @@ Dashed arrows indicate additional processes performed in parallel with character
 * Please update the dataset path (`/path/to/data`) in both `./yolov12/dataset/meta_raw.yaml` and `./yolov12/dataset/meta_aug.yaml` before training.
 
   ```
-    # patch: /path/to/data
     path: '/path/to/data'
     train: 'images/train'
     val: 'images/valid'
-    test: 'images/test'
+    test: 'images/test' # 'images/test_raw' or 'images/test_aug'
     
     nc: 1
     names:
