@@ -649,7 +649,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 ## ⑤ Character Ordering
 * We compare our proposed method with [LightGBM](https://github.com/lightgbm-org/LightGBM) on the character ordering task, and the results are shown below:
   
-  | Method | Training | 1 − CER | FPS on i5-11600K |
+  | Method | Training | 1 − CER | FPS@i5-11600K |
   | :--: | :--: | :--: | :--: |
   | LightGBM | Yes | 78.75% | 15.38 |
   | Ours | No | 86.33 | 419.27 |
