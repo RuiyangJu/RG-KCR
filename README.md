@@ -452,6 +452,9 @@ Dashed arrows indicate additional processes performed in parallel with character
   </p>
 * The **synthetic dataset** through synthetic data augmentation can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
 * Notably, if you want to train on both the **real** and **synthetic** datasets together, please make sure that the image names across the two datasets are **different**.
+* Therefore, the statistics of the dataset used in this work are summarized as follows:
+
+  
 
 # Experiments
 ## Environment
