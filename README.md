@@ -456,10 +456,10 @@ Dashed arrows indicate additional processes performed in parallel with character
 
   | Split | Real | Synthetic | Total | Seals/Page |
   | :---: | :---: | :---: | :---: | :---: |
-  | Train | 800 | 800 | 1,600 | $\approx$10 |
-  | Valid | 100 | 100 | 200 | $\approx$10 |
-  | Test (Real) | 200 | -- | 200 | 0--2 |
-  | Test (Synth.) | -- | 200 | 200 | $\approx$10 |
+  | Train | 800 | 800 | 1,600 | ≈10 |
+  | Valid | 100 | 100 | 200 | ≈10 |
+  | Test (Real) | 200 | N/A | 200 | 0-2 |
+  | Test (Synth.) | N/A | 200 | 200 | ≈10 |
 
 # Experiments
 ## Environment
