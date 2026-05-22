@@ -494,29 +494,29 @@ Dashed arrows indicate additional processes performed in parallel with character
         ├── meta_aug.yaml
         ├── images
         │   ├── train
-        │   │   ├── train_img1.png
+        │   │   ├── 100241706_00002_1.png
         │   │   └── ...
         │   ├── valid
-        │   │   ├── valid_img1.png
+        │   │   ├── 100241706_00005_2.png
         │   │   └── ...
         │   ├── test_raw
-        │   │   ├── test_raw_img1.png
+        │   │   ├── 100241706_00008_1.png
         │   │   └── ...
         │   └── test_aug
-        │       ├── test_aug_img1.png
+        │       ├── 100241706_00008_1.png
         │       └── ...
         └── labels
             ├── train
-            │   ├── train_annotation1.txt
+            │   ├── 100241706_00002_1.txt
             │   └── ...
             ├── valid
-            │   ├── valid_annotation1.txt
+            │   ├── 100241706_00005_2.txt
             │   └── ...
             ├── test_raw
-            │   ├── test_raw_annotation1.txt
+            │   ├── 100241706_00008_1.txt
             │   └── ...
             └── test_aug
-                ├── test_aug_annotation1.txt
+                ├── 100241706_00008_1.txt
                 └── ...
     ```
 
