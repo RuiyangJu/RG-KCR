@@ -11,10 +11,13 @@ from transformers import AutoModel, AutoImageProcessor
 
 repo_name = "SakanaAI/Metom"
 device = "cuda" if torch.cuda.is_available() else "cpu"
-torch_dtype = torch.float32
+
+torch_dtype = torch.float16 if device == "cuda" else torch.float32
 
 ROOT_DIR = Path("./visual_crop/crops")
 OUT_DIR = Path("./classification_results")
+
+BATCH_SIZE = 256
 
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".webp"}
 BBOX_RE = re.compile(r"_X(\d+)_Y(\d+)_W(\d+)_H(\d+)", re.IGNORECASE)
@@ -50,19 +53,53 @@ def extract_topk_labels_only(out):
     else:
         labels = out
 
-    if isinstance(labels, (list, tuple)) and len(labels) > 0 and isinstance(labels[0], (list, tuple)):
-        if len(labels) == 1:
-            labels = labels[0]
-
     if isinstance(labels, (list, tuple)) and len(labels) > 0:
         first = labels[0]
-        if isinstance(first, (list, tuple)) and len(first) == 2:
-            labels = [x[0] for x in labels]
+
+        if isinstance(first, (list, tuple)) and len(labels) == 1:
+            labels = first
+
+        if isinstance(labels, (list, tuple)) and len(labels) > 0:
+            first = labels[0]
+            if isinstance(first, (list, tuple)) and len(first) == 2:
+                labels = [x[0] for x in labels]
 
     if not isinstance(labels, (list, tuple)):
         labels = [labels]
 
     return [str(x) for x in labels]
+
+
+def split_batch_output(out, batch_size):
+    if isinstance(out, dict):
+        labels = out.get("labels", None)
+        if labels is None:
+            raise ValueError(f"Unexpected dict output keys: {list(out.keys())}")
+
+        if isinstance(labels, (list, tuple)) and len(labels) == batch_size:
+            return labels
+
+        if batch_size == 1:
+            return [labels]
+
+        raise ValueError(f"Cannot split dict output. batch_size={batch_size}, labels_len={len(labels)}")
+
+    if isinstance(out, (tuple, list)) and len(out) == 2:
+        labels = out[0]
+
+        if isinstance(labels, (list, tuple)) and len(labels) == batch_size:
+            return labels
+
+        if batch_size == 1:
+            return [labels]
+
+    if isinstance(out, (list, tuple)) and len(out) == batch_size:
+        return out
+
+    if batch_size == 1:
+        return [out]
+
+    raise ValueError(f"Cannot split batch output. type={type(out)}, batch_size={batch_size}")
 
 
 def dump_json_one_item_per_line(path: Path, items: list):
@@ -94,6 +131,85 @@ if device == "cuda":
     torch.backends.cudnn.allow_tf32 = True
 
 
+def process_batch(batch_items, results, failed):
+    if len(batch_items) == 0:
+        return 0, 0
+
+    images = []
+    valid_items = []
+
+    for item in batch_items:
+        try:
+            image = get_image(item["path"])
+            images.append(image)
+            valid_items.append(item)
+        except Exception as e:
+            failed.append({
+                "file": item["path"].name,
+                "err": f"Image loading failed: {str(e)}",
+            })
+
+    if len(images) == 0:
+        return 0, len(batch_items)
+
+    try:
+        pixel_values = processor(
+            images=images,
+            return_tensors="pt",
+        )["pixel_values"].to(
+            device=device,
+            dtype=torch_dtype,
+        )
+
+        with torch.inference_mode():
+            out = model.get_topk_labels(
+                pixel_values,
+                k=5,
+                return_probs=True,
+            )
+
+        batch_outputs = split_batch_output(out, batch_size=len(images))
+
+        processed = 0
+        local_failed = 0
+
+        for item, one_out in zip(valid_items, batch_outputs):
+            try:
+                char_top5 = extract_topk_labels_only(one_out)
+
+                if len(char_top5) != 5:
+                    char_top5 = (char_top5 + [""] * 5)[:5]
+                    failed.append({
+                        "file": item["path"].name,
+                        "err": f"Returned labels != 5. raw={one_out}",
+                    })
+                    local_failed += 1
+
+                results.append({
+                    "char": char_top5,
+                    "bbox": item["bbox"],
+                })
+
+                processed += 1
+
+            except Exception as e:
+                failed.append({
+                    "file": item["path"].name,
+                    "err": f"Output parsing failed: {str(e)}",
+                })
+                local_failed += 1
+
+        return processed, local_failed
+
+    except Exception as e:
+        for item in valid_items:
+            failed.append({
+                "file": item["path"].name,
+                "err": f"Batch inference failed: {str(e)}",
+            })
+        return 0, len(valid_items)
+
+
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -117,11 +233,16 @@ def main():
     for folder in tqdm(subdirs, desc="Folders", unit="folder"):
         t0_folder = time.perf_counter()
 
-        img_paths = sorted([p for p in folder.iterdir() if p.suffix.lower() in IMG_EXTS])
+        img_paths = sorted([
+            p for p in folder.iterdir()
+            if p.suffix.lower() in IMG_EXTS
+        ])
 
         results = []
         skipped = []
         failed = []
+
+        batch_items = []
 
         for img_path in tqdm(img_paths, desc=f"Images in {folder.name}", unit="img", leave=False):
             bbox = parse_bbox_from_name(img_path.name)
@@ -131,48 +252,21 @@ def main():
                 total_skipped += 1
                 continue
 
-            try:
-                image = get_image(img_path)
+            batch_items.append({
+                "path": img_path,
+                "bbox": bbox,
+            })
 
-                pixel_values = processor(
-                    images=image,
-                    return_tensors="pt",
-                )["pixel_values"].to(
-                    device=device,
-                    dtype=torch_dtype,
-                )
+            if len(batch_items) >= BATCH_SIZE:
+                processed, failed_count = process_batch(batch_items, results, failed)
+                total_processed += processed
+                total_failed += failed_count
+                batch_items = []
 
-                with torch.inference_mode():
-                    out = model.get_topk_labels(
-                        pixel_values,
-                        k=5,
-                        return_probs=True,
-                    )
-
-                char_top5 = extract_topk_labels_only(out)
-
-                if len(char_top5) != 5:
-                    char_top5 = (char_top5 + [""] * 5)[:5]
-                    failed.append({
-                        "file": img_path.name,
-                        "err": f"Returned labels != 5 (padded). raw={out}",
-                    })
-                    total_failed += 1
-
-                results.append({
-                    "char": char_top5,
-                    "bbox": bbox,
-                })
-
-                total_processed += 1
-
-            except Exception as e:
-                failed.append({
-                    "file": img_path.name,
-                    "err": str(e),
-                })
-                total_failed += 1
-                continue
+        if len(batch_items) > 0:
+            processed, failed_count = process_batch(batch_items, results, failed)
+            total_processed += processed
+            total_failed += failed_count
 
         out_path = OUT_DIR / f"{folder.name}.json"
         dump_json_one_item_per_line(out_path, results)
@@ -194,7 +288,7 @@ def main():
         folder_time = time.perf_counter() - t0_folder
 
         page_latency_list.append(folder_time)
-        page_fps_list.append(1.0 / folder_time)
+        page_fps_list.append(1.0 / folder_time if folder_time > 0 else 0.0)
         page_patch_count_list.append(len(results))
 
     if device == "cuda":
@@ -220,8 +314,10 @@ def main():
         total_page_fps = 0.0
         avg_patches_per_page = 0.0
 
-    print("=" * 60)
     print("Done.")
+    print(f"Device: {device}")
+    print(f"Torch dtype: {torch_dtype}")
+    print(f"Batch size: {BATCH_SIZE}")
     print(f"Processed folders/pages: {len(subdirs)}")
     print(f"Processed patches/images: {total_processed}")
     print(f"Skipped patches/images: {total_skipped}")
@@ -242,7 +338,6 @@ def main():
 
     print()
     print(f"JSON saved to: {OUT_DIR}")
-    print("=" * 60)
 
 
 if __name__ == "__main__":
