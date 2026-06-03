@@ -27,12 +27,13 @@ Dashed arrows indicate additional processes performed in parallel with character
 # Citation
 * If you find our paper useful in your research, please consider citing:
   ```
-    @article{ju2026rgkcr,
-      title={Restoration-Guided Kuzushiji Character Recognition Framework under Seal Interference},
+    @article{ju2026seal,
+      title={Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal Interference},
       author={Ju, Rui-Yang and Yamashita, Kohei and Kameko, Hirotaka and Mori, Shinsuke},
       journal={arXiv preprint arXiv:2602.19086},
       year={2026}
     }
+
   ```
 
 # Dataset
