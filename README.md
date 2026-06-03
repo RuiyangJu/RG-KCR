@@ -9,7 +9,7 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
 
 * End-to-end Kuzushiji character recognition results comparison (i.e., from document image to text):
 
-  | Method | CER (Real Test) | Speed (s/img) (Real Test) | CER (Synth. Test) | Speed (s/img) (Synth. Test) |
+  | Method | CER @ Real Test | Speed (s/img) @ Real Test | CER @ Synth. Test | Speed (s/img) @ Synth. Test |
   |:--|:--:|:--:|:--:|:--:|
   | NDLkotenOCR-Lite | 21.76 | 2.494 | 47.82 | 3.225 |
   | NDLkotenOCR | 12.73 | 1.631 | 23.43 | 2.427 |
