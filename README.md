@@ -33,7 +33,6 @@ Dashed arrows indicate additional processes performed in parallel with character
       journal={arXiv preprint arXiv:2602.19086},
       year={2026}
     }
-
   ```
 
 # Dataset
