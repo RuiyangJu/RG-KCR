@@ -604,10 +604,11 @@ Dashed arrows indicate additional processes performed in parallel with character
   | + Rest. (Ours) | 95.66% | 98.62% | 1.14 |
   
 * We use [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for character classification. The official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
-* You can run and evaluate the classification as follows:
+* You can run character classification as follows:
   ```
     python ./classification/run.py --root_dir ./crop/output/crops --out_dir ./classification/output
   ```
+* You can download the ground truth [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OARZmbqVZtbsxw1OqcD_Rhxw?e=eBhF2z). Please put the ground truth in `./classification/`.
   ```
     python ./classification/evaluate.py
   ```
