@@ -23,3 +23,11 @@ ndlocr_cli
   python main.py infer input_root output_dir
 ```
 * `input_root` and `output_dir` are as follows:
+```
+  input_root/
+    └── img
+        ├── page01.jpg
+        ├── page02.jpg
+        ・・・
+        └── page10.jpg
+```
