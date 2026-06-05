@@ -454,13 +454,13 @@ Dashed arrows indicate additional processes performed in parallel with character
 * Notably, if you want to combine both the **real** and **synthetic** datasets for model training/validation/testing, please make sure that the image names across the two datasets are **different**.
 * Therefore, the statistics of the dataset used in this work are summarized as follows:
 
-    | Split | Real | Synthetic | Total | Seals/Page |
-    | :---: | :---: | :---: | :---: | :---: |
-    | Train | 800 | 800 | 1,600 | ≈10 |
-    | Valid | 100 | 100 | 200 | ≈10 |
-    | Test (Real) | 200 | N/A | 200 | 0-2 |
-    | Test (Synth.) | N/A | 200 | 200 | ≈10 |
-
+    | Set | Real #Pages | Real Avg. S/P | Synthetic #Pages | Synthetic Avg. S/P | Total Pages |
+    |------|------:|:------:|------:|:------:|------:|
+    | Train | 800 | 0–2 | 800 | ≈10 | 1,600 |
+    | Validation | 100 | 0–2 | 100 | ≈10 | 200 |
+    | Real Test | 100 | 0–2 | -- | -- | 100 |
+    | Synth. Test | -- | -- | 100 | ≈10 | 100 |
+  
 # Experiments
 ## Environment
   ```
