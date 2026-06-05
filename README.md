@@ -613,8 +613,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 ### Run
 * Example command for performing document restoration with `r_min = 90` and `rg_ratio = rb_ratio = 1.3`:
   ```
-    cd restoration 
-    python run.py --input_dir --r_min 90 --rg_ratio 1.3 --rb_ratio 1.3
+    python ./restoration/run.py --input_dir --r_min 90 --rg_ratio 1.3 --rb_ratio 1.3
   ```
 
 ### Evaluate
