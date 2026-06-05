@@ -532,7 +532,7 @@ Dashed arrows indicate additional processes performed in parallel with character
     names:
       0: Kuzushiji
   ```
-  
+* The difference between `meta_raw.yaml` and `meta_aug.yaml` is the test set: the former uses the Real Test Set, while the latter uses the Synthetic Test Set.
 * You can train the model by running the corresponding training script. For example, `train_yolo12l.py` can be used to train the model:
 
   ```
