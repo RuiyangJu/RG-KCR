@@ -596,7 +596,6 @@ Dashed arrows indicate additional processes performed in parallel with character
 * The output contains: **(1)** cropped images of individual Kuzushiji characters and **(2)** visualization results of the original images overlaid with the predicted bounding boxes.
 
 ## ④ Character Classification
-* We use [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for character classification. The official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 * The character classification results are as follows:
 
   | Method | Top-1 Acc. | Top-5 Acc. | FPS |
@@ -604,7 +603,8 @@ Dashed arrows indicate additional processes performed in parallel with character
   | Baseline (Metom) | 94.22% | 97.64% | 1.81 |
   | + Rest. (Ours) | 95.66% | 98.62% | 1.14 |
   
-* To perform Kuzushiji character classification and evaluate the recognition performance, please run the following commands:
+* We use [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for character classification. The official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
+* You can run and evaluate the classification as follows:
   ```
     python classification.py
     python classification_metric.py
