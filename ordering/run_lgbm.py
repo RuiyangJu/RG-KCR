@@ -4,7 +4,6 @@ from pathlib import Path
 import joblib
 import numpy as np
 
-
 def make_pair_features(a, b):
     return [
         a["cx"] - b["cx"],
@@ -104,6 +103,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--input_dir", type=str, required=True, help="Directory containing classification JSON files")
     parser.add_argument("--output_dir", type=str, required=True, help="Directory to save ordered text files")
-    parser.add_argument("--model", type=str, default="./lgbm_ordering_model.pkl", help="Path to LightGBM ordering model")
+    parser.add_argument("--model", type=str, default="./ordering/lgbm_ordering_model.pkl", help="Path to LightGBM ordering model")
     args = parser.parse_args()
     main(args)
