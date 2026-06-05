@@ -622,7 +622,6 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
     python ./restoration/evaluate.py --gt_dir ./dataset/images/test_raw --pred_dir ./restoration/output --output_csv ./restoration/output_csv
   ```
-* The evaluation results will be saved to `./resotration_results`.
 
 ## ③ Character Cropping
 * To extract individual Kuzushiji character instances, we crop each character region based on the predicted bounding boxes:
