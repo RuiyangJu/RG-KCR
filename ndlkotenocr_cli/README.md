@@ -53,5 +53,5 @@ ndlocr_cli
 ```
 * Evaluate the performance (CER):
 ```
-  python evaluate.py --gt_dir gt_dir --pred pred_dir --output_csv output_csv
+  python evaluate.py --gt_dir gt_folder --pred output_dir/txt --output_csv output
 ```
