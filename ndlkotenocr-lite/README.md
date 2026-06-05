@@ -6,12 +6,12 @@ This is for reference only. Please refer to the [original GitHub repository](htt
   git clone https://github.com/ndl-lab/ndlkotenocr-lite
   cd ndlkotenocr-lite
   pip install -r requirements.txt
-  cd src
 ```
 
 ## Run
 * For calculating the speed and GPU memory, after cloning the repository, replace the cloned `ocr.py` with the `ocr.py` provided here.
 ```
+  cd src
   python3 ocr.py --sourcedir input_root --output output_dir
 ```
 
