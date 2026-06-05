@@ -45,3 +45,9 @@ ndlocr_cli
     │        ・・・
     └── opt.json
 ```
+
+## Evaluate
+* Revise the names of outputs:
+```
+  python revise_name.py --input output_dir/txt
+```
