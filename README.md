@@ -578,23 +578,15 @@ Dashed arrows indicate additional processes performed in parallel with character
 ### Test_Raw:
 * You can test the model on real test set as follows:
   ```
-    cd Seal-Robust-KCR/yolov12
-    python test_raw_rtdetr_resnet50.py
-    python test_raw_yolov9c.py
-    python test_raw_yolov10l.py
-    python test_raw_yolo11l.py
-    python test_raw_yolo12l.py 
+    cd yolov12
+    python test.py --model ./models/YOLO11L_SDA.pt --data ./dataset/meta_raw.yaml
   ```
 
 ### Test_Aug:
 * You can test the model on synthetic test set as follows:
   ```
-    cd Seal-Robust-KCR/yolov12
-    python test_aug_rtdetr_resnet50.py
-    python test_aug_yolov9c.py
-    python test_aug_yolov10l.py
-    python test_aug_yolo11l.py
-    python test_aug_yolo12l.py 
+    cd yolov12
+    python test.py --model ./models/YOLO11L_SDA.pt --data ./dataset/meta_aug.yaml
   ```
   
 ## ② Document Restoration
