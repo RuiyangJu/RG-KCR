@@ -205,44 +205,11 @@ def main(args):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Visualize YOLO labels and crop detected regions"
-    )
-
-    parser.add_argument(
-        "--image_dir",
-        type=str,
-        required=True,
-        help="Path to image directory"
-    )
-
-    parser.add_argument(
-        "--labels_dir",
-        type=str,
-        required=True,
-        help="Path to YOLO label directory"
-    )
-
-    parser.add_argument(
-        "--save_root",
-        type=str,
-        required=True,
-        help="Root directory to save visualization and crops"
-    )
-
-    parser.add_argument(
-        "--conf_thres",
-        type=float,
-        default=None,
-        help="Confidence threshold. Default: None"
-    )
-
-    parser.add_argument(
-        "--topk",
-        type=int,
-        default=None,
-        help="Keep top-k detections per image. Default: None"
-    )
-
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--image_dir", type=str, required=True, help="Path to image directory")
+    parser.add_argument("--labels_dir", type=str, required=True, help="Path to YOLO label directory")
+    parser.add_argument("--save_root", type=str, required=True, help="Root directory to save visualization and crops")
+    parser.add_argument("--conf_thres", type=float, default=None, help="Confidence threshold. Default: None")
+    parser.add_argument("--topk", type=int, default=None, help="Keep top-k detections per image. Default: None")
     args = parser.parse_args()
     main(args)
