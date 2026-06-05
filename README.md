@@ -455,7 +455,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 * Therefore, the statistics of the dataset used in this work are summarized as follows:
 
     | Set | Real #Pages | Real Avg. S/P | Synthetic #Pages | Synthetic Avg. S/P | Total Pages |
-    |------|------:|:------:|------:|:------:|------:|
+    | :--- | :--: | :--: | :--: | :--: | :--: |
     | Train | 800 | 0–2 | 800 | ≈10 | 1,600 |
     | Validation | 100 | 0–2 | 100 | ≈10 | 200 |
     | Real Test | 100 | 0–2 | -- | -- | 100 |
