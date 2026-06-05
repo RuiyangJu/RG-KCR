@@ -568,7 +568,7 @@ Dashed arrows indicate additional processes performed in parallel with character
     metrics = model.val()
   ```
 
-* You can train the baseline models and our model as follows:
+* You can train the models as follows:
 
   ```
     cd yolov12
