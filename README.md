@@ -635,7 +635,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 ### Evaluate
 * You can download the ground truth [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCQBKNHucC0SZAQDXpORyKlAY-pUSEMAv77RLDIXC_DXYM?e=eRD2az). Please put the ground truth in `./ordering/` and name the folder as `gt`.
   ```
-    python ./ordering/evaluate.py --gt_dir ./ordering/gt --pred_dir ./ordering/output_ours
+    python ./ordering/evaluate.py --gt_dir ./ordering/gt --pred_dir ./ordering/output_ours --output_csv ./ordering/output_ours_csv
   ```
 
 ## ⑥ Visualization (Optional)
