@@ -18,3 +18,8 @@ ndlocr_cli
       ├── ndl_kotenseki_layout/models/ndl_kotenseki_layout_ver3.pth
       └── text_kotenseki_recognition/model-ver2
 ```
+## Run
+```
+  python main.py infer input_root output_dir
+```
+* `input_root` and `output_dir` are as follows:
