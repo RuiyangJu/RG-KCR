@@ -11,5 +11,5 @@ This is for reference only. Please refer to the [original GitHub repository](htt
 
 ## Run
 ```
-  python3 ocr.py --sourcedir 竜宮苦界玉手箱 _ 3巻_9892834_0001 --output tmpdir 
+  python3 ocr.py --sourcedir input_root --output output_dir
 ```
