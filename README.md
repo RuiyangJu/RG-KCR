@@ -488,7 +488,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 * Please ensure that the dataset is placed under `./detection/dataset` and organized as follows:
 
   ```
-    detection
+    Seal-Robust-KCR
     └── dataset
         ├── meta_raw.yaml
         ├── meta_aug.yaml
