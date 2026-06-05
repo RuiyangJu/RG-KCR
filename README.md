@@ -607,7 +607,9 @@ Dashed arrows indicate additional processes performed in parallel with character
 * You can run and evaluate the classification as follows:
   ```
     python ./classification/run.py --root_dir ./crop/output/crops --out_dir ./classification/output
-    python classification_metric.py
+  ```
+  ```
+    python ./classification/evaluate.py
   ```
 
 ## ⑤ Character Ordering
