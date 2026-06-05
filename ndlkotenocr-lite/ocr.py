@@ -379,7 +379,7 @@ if __name__ == "__main__":
     parser.add_argument("--det-iou-threshold", type=float, required=False, default=0.3)
     parser.add_argument("--rec-weights", type=str, required=False, default="model/parseq-ndl-32x384-tiny-10.onnx")
     parser.add_argument("--rec-classes", type=str, required=False, default="config/NDLmoji.yaml")
-    parser.add_argument("--device", type=str, required=False, choices=["cpu", "cuda"], default="cuda")
+    parser.add_argument("--device", type=str, required=False, choices=["cpu", "cuda"], default="cpu")
     parser.add_argument("--gpu-id", type=int, required=False, default=0)
 
     args = parser.parse_args()
