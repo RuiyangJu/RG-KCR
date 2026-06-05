@@ -639,7 +639,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
 
 ## ⑥ Visualization
-* After running `classification.py` to generate the `.json` file, you can visualize the prediction results by mapping them onto the restored document image using the following command:
+* After running the character classification to generate the `.json` file, you can visualize the prediction results by projecting them onto the restored document image using the following command:
   ```
     python visual.py --image path/to/restored_image.jpg --json /path/to/classification_results.json --out ./visutalization.jpg --font_size 64
   ```
@@ -651,7 +651,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 # License
 <img src="./img/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="100" style="vertical-align: middle;">  
 
-This benchmark dataset is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+This dataset is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ### Original Kuzushiji Dataset
 
