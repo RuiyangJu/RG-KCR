@@ -575,7 +575,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
 
 ### Pre-trained Model
-* You can download our pre-trained models `YOLO11L.pt` and `YOLO11L_SDA.pt` [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
+* You can download our pre-trained models `YOLO11L.pt` and `YOLO11L_SDA.pt` [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgAweMF9eV9jTLbzl0QRTO3qAZyziA9SlZ0Zjs9l5y1A3pI?e=cDmAwc).
 * Put them in `./detection/models/`.
 
 ### Test_Raw:
