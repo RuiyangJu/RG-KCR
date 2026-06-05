@@ -611,16 +611,16 @@ Dashed arrows indicate additional processes performed in parallel with character
   </p>
 
 ### Run
-* Example command for performing document restoration with `r_min = 90` and `rg_ratio = rb_ratio = 1.3`:
+* You can run document restoration with `r_min = 90` and `rg_ratio = rb_ratio = 1.3` as follows:
   ```
     python ./restoration/run.py --input_dir ./dataset/images/test_aug --output_dir ./restoration/output --r_min 90 --rg_ratio 1.3 --rb_ratio 1.3
   ```
 
 ### Evaluate
-* For the synthetic image, the ground-truth data is the corresponding real image.
-* Example command for evaluation using PSNR and SSIM is provided below:
+* For the synthetic image, the ground truth is the corresponding real image.
+* You can evaluate using `PSNR` and `SSIM` as follows:
   ```
-    python restoration_metric.py
+    python ./restoration.py --gt_dir ./dataset/images/test_raw --pred_dir ./restoration/output --output_csv ./restoration/output_csv
   ```
 * The evaluation results will be saved to `./resotration_results`.
 
