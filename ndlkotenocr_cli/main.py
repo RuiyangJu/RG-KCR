@@ -74,12 +74,12 @@ def infer(ctx, input_root, output_root, config_file, input_structure, add_info):
         'add_info': add_info
     }
 
-    # check if input_root exists
+    # Check if input_root exists
     if not os.path.exists(input_root):
         print(f'INPUT_ROOT not found : {input_root}', file=sys.stderr)
         sys.exit(0)
 
-    # parse command line option
+    # Parse command line options
     infer_cfg = utils.parse_cfg(cfg)
 
     if infer_cfg is None:
@@ -96,12 +96,12 @@ def infer(ctx, input_root, output_root, config_file, input_structure, add_info):
         infer_cfg.get("text_kotenseki_recognition", {}).get("saved_ocr_model")
     )
 
-    # prepare output root directory
+    # Prepare output root directory
     infer_cfg['output_root'] = utils.mkdir_with_duplication_check(
         infer_cfg['output_root']
     )
 
-    # save inference option
+    # Save inference options
     with open(
         os.path.join(infer_cfg['output_root'], 'opt.json'),
         'w',
@@ -131,10 +131,15 @@ def infer(ctx, input_root, output_root, config_file, input_structure, add_info):
         print('[ERROR] No images found.', file=sys.stderr)
         sys.exit(1)
 
+    # Initialize inferencer
     inferencer = OcrInferencer(infer_cfg)
 
-    # CUDA synchronize for accurate timing
+    # Reset CUDA peak memory statistics before inference
+    # This measures only the GPU memory used during inferencer.run(),
+    # excluding model loading as much as possible.
     if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.reset_peak_memory_stats()
         torch.cuda.synchronize()
 
     start_time = time.perf_counter()
@@ -154,12 +159,26 @@ def infer(ctx, input_root, output_root, config_file, input_structure, add_info):
     print(f'Average time/image  : {avg_time:.4f} sec')
     print(f'FPS                 : {fps:.2f}')
 
+    gpu_result = {}
+
+    if torch.cuda.is_available():
+        max_memory_allocated = torch.cuda.max_memory_allocated() / 1024**3
+        max_memory_reserved = torch.cuda.max_memory_reserved() / 1024**3
+
+        print(f'GPU max memory allocated : {max_memory_allocated:.4f} GB')
+        print(f'GPU max memory reserved  : {max_memory_reserved:.4f} GB')
+
+        gpu_result = {
+            "gpu_max_memory_allocated_GB": round(max_memory_allocated, 4),
+            "gpu_max_memory_reserved_GB": round(max_memory_reserved, 4)
+        }
 
     speed_result = {
         "num_images": num_images,
         "total_time_sec": round(total_time, 4),
         "avg_time_per_image_sec": round(avg_time, 4),
-        "fps": round(fps, 2)
+        "fps": round(fps, 2),
+        **gpu_result
     }
 
     with open(
