@@ -626,10 +626,10 @@ Dashed arrows indicate additional processes performed in parallel with character
   | Ours | No | 86.33 | 419.27 |
 
 ### Run
-* You can run both methods as follows:
+* You can run both methods for character ordering as follows:
   ```
-    python ordering_ours.py
-    python ordering_lgbm.py
+    python ./ordering/run_ours.py --input_dir ./classification/output --output_dir ./ordering/output_ours
+    python ./ordering/run_lgbm.py --input_dir ./classification/output --output_dir ./ordering/output_lgbm
   ```
 
 ### Evaluate
