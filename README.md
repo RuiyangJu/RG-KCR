@@ -638,7 +638,7 @@ Dashed arrows indicate additional processes performed in parallel with character
     python ordering_metric.py
   ```
 
-## ⑥ Visualization
+## ⑥ Visualization (Optional)
 * After running the character classification to generate the `.json` file, you can visualize the prediction results by projecting them onto the restored document image using the following command:
   ```
     python visual.py --image path/to/restored_image.jpg --json /path/to/classification_results.json --out ./visutalization.jpg --font_size 64
