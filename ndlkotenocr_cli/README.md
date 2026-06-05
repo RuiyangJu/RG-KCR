@@ -31,3 +31,17 @@ ndlocr_cli
         ・・・
         └── page10.jpg
 ```
+```
+  output_dir/
+    ├── input_root
+    │   ├── txt
+    │   │     ├── page01.txt
+    │   │     ├── page02.txt
+    │   │    ・・・
+    │   │    
+    │   └── json
+    │         ├── page01.json
+    │         ├── page02.json
+    │        ・・・
+    └── opt.json
+```
