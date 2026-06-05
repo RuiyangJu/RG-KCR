@@ -617,7 +617,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
 
 ### Evaluate
-* The ground-truth data, i.e., the original document images, can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
+* For the synthetic image, the ground-truth data is the corresponding real image.
 * Example command for evaluation using PSNR and SSIM is provided below:
   ```
     python restoration_metric.py
