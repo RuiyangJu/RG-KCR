@@ -606,7 +606,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 * We use [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for character classification. The official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 * You can run and evaluate the classification as follows:
   ```
-    python ./classification/run.py --root_dir ./crop/output/crops --output_dir ./classification/output
+    python ./classification/run.py --root_dir ./crop/output/crops --out_dir ./classification/output
     python classification_metric.py
   ```
 
