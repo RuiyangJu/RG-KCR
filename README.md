@@ -442,7 +442,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 
 ## ③ Data Splitting
 * The **1,000** annotated images were randomly split into training, validation, and test sets with a ratio of **8:1:1**, consisting of **800** training images, **100** validation images, and **100** test images.
-* You can download the **raw dataset** (train + valid + real test) [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCVAf1XRUZ4R4v6RequRDv7AaJMpwXhTEcaV4gz2CHa-y0?e=0wLcSC).
+* You can download the **real dataset** (train + valid + real test) [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCVAf1XRUZ4R4v6RequRDv7AaJMpwXhTEcaV4gz2CHa-y0?e=0wLcSC).
 
 ## ④ Synthetic Data Augmentation
 * For the training set, **128** high-quality red seal images were used for synthetic data augmentation, thereby expanding the training set from **800** corrected images to **1,600** images.
