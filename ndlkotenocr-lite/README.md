@@ -14,3 +14,9 @@ This is for reference only. Please refer to the [original GitHub repository](htt
 ```
   python3 ocr.py --sourcedir input_root --output output_dir
 ```
+
+## Evaluate
+* Evaluate the performance (CER):
+```
+  python evaluate.py --gt_dir gt_folder --pred output_dir/txt --output_csv output
+```
