@@ -217,26 +217,14 @@ def main(args):
 
     total_time = time.perf_counter() - t0_all
 
-    if total_processed > 0:
-        avg_time_per_patch = total_time / total_processed
-        patch_fps = total_processed / total_time
-    else:
-        avg_time_per_patch = 0.0
-        patch_fps = 0.0
-
     if page_latency_list:
         avg_page_latency = sum(page_latency_list) / len(page_latency_list)
         avg_page_fps = sum(page_fps_list) / len(page_fps_list)
-        total_page_fps = len(page_latency_list) / total_time
-        avg_patches_per_page = sum(page_patch_count_list) / len(page_patch_count_list)
     else:
         avg_page_latency = 0.0
         avg_page_fps = 0.0
-        total_page_fps = 0.0
-        avg_patches_per_page = 0.0
 
-    print("=" * 60)
-    print("Done.")
+
     print(f"Device: {device}")
     print(f"Root dir: {root_dir}")
     print(f"Output dir: {out_dir}")
@@ -244,43 +232,14 @@ def main(args):
     print(f"Processed patches/images: {total_processed}")
     print(f"Skipped patches/images: {total_skipped}")
     print(f"Failed patches/images: {total_failed}")
-    print(f"Total time: {total_time:.2f}s")
-
-    print()
-    print("Patch-level speed:")
-    print(f"Average latency: {avg_time_per_patch * 1000:.2f} ms/patch")
-    print(f"Average FPS: {patch_fps:.2f} patches/s")
-
-    print()
-    print("Page-level speed:")
-    print(f"Average latency: {avg_page_latency:.2f} s/page")
-    print(f"Average FPS: {avg_page_fps:.2f} pages/s")
-    print(f"Overall FPS: {total_page_fps:.2f} pages/s")
-    print(f"Average patches per page: {avg_patches_per_page:.2f}")
-
-    print()
+    print(f"Total Inference Time: {total_time:.2f}s")
+    print(f"Average Inference Time: {avg_page_latency:.2f} sec")
+    print(f"Average Inference Speed: {avg_page_fps:.2f} fps")
     print(f"JSON saved to: {out_dir}")
-    print("=" * 60)
-
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Run Metom classification on cropped images"
-    )
-
-    parser.add_argument(
-        "--root_dir",
-        type=str,
-        required=True,
-        help="Root directory containing cropped image subfolders"
-    )
-
-    parser.add_argument(
-        "--out_dir",
-        type=str,
-        required=True,
-        help="Directory to save classification JSON results"
-    )
-
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--root_dir", type=str, required=True, help="Root directory containing cropped image subfolders")
+    parser.add_argument("--out_dir", type=str, required=True, help="Directory to save classification JSON results")
     args = parser.parse_args()
     main(args)
