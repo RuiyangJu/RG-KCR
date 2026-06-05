@@ -51,3 +51,7 @@ ndlocr_cli
 ```
   python revise_name.py --input output_dir/txt
 ```
+* Evaluate the performance (CER):
+```
+  python evaluate.py --gt_dir gt_dir --pred pred_dir --output_csv output_csv
+```
