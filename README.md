@@ -593,7 +593,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
     python ./crop/run.py --image_dir ./restoration/output --labels_dir ./detection/runs/detect/test_YOLO11L_SDA/labels --save_root ./crop/output
   ```
-* The output contains: (1) cropped images of individual Kuzushiji characters and (2) visualization results of the original images overlaid with the predicted bounding boxes.
+* The output contains: **(1)** cropped images of individual Kuzushiji characters and **(2)** visualization results of the original images overlaid with the predicted bounding boxes.
 
 ## ④ Character Classification
 *  We use the results of our Character Detection method (based on YOLO11-L) on the Synthetic Test Set as the dataset for Character Classification. This dataset contains 18,350 characters.
