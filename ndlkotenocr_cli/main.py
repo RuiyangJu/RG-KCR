@@ -154,7 +154,7 @@ def infer(ctx, input_root, output_root, config_file, input_structure, add_info):
 
     print(f'Total Inference Time : {total_time:.4f} sec')
     print(f'Average Inference Time: {avg_time:.4f} sec')
-    print(f'Speed (in FPS)       : {fps:.2f}')
+    print(f'Average Inference Speed : {fps:.2f} fps')
 
     gpu_result = {}
 
@@ -162,8 +162,8 @@ def infer(ctx, input_root, output_root, config_file, input_structure, add_info):
         max_memory_allocated = torch.cuda.max_memory_allocated() / 1024**3
         max_memory_reserved = torch.cuda.max_memory_reserved() / 1024**3
 
-        print(f'GPU max memory allocated : {max_memory_allocated:.4f} GB')
-        print(f'GPU max memory reserved  : {max_memory_reserved:.4f} GB')
+        print(f'GPU Max Memory Allocated : {max_memory_allocated:.4f} GB')
+        print(f'GPU Max Memory Reserved  : {max_memory_reserved:.4f} GB')
 
         gpu_result = {
             "gpu_max_memory_allocated_GB": round(max_memory_allocated, 4),
