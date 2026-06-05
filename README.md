@@ -572,11 +572,11 @@ Dashed arrows indicate additional processes performed in parallel with character
 
   ```
     cd yolov12
-    python train.py --model ./ultralytics/cfg/models/v11/yolo11l.yaml --data ./dataset/meta.yaml
+    python train.py --model ./ultralytics/cfg/models/v11/yolo11l.yaml --data ./dataset/meta_raw.yaml
   ```
 
 ### Test_Raw:
-* You can test the baseline models and our model on real test set as follows:
+* You can test the model on real test set as follows:
   ```
     cd Seal-Robust-KCR/yolov12
     python test_raw_rtdetr_resnet50.py
@@ -587,7 +587,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
 
 ### Test_Aug:
-* You can test the baseline models and our model on synthetic test set as follows:
+* You can test the model on synthetic test set as follows:
   ```
     cd Seal-Robust-KCR/yolov12
     python test_aug_rtdetr_resnet50.py
