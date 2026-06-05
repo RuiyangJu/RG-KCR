@@ -591,7 +591,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 ## ③ Character Cropping
 * To extract individual Kuzushiji character instances, we crop each character region based on the predicted bounding boxes:
   ```
-    python crop.py
+    python ./crop/run.py --
   ```
 * The output directory `./visual_crop` contains: (1) cropped images of individual Kuzushiji characters and (2) visualization results of the original images overlaid with the predicted bounding boxes.
 
