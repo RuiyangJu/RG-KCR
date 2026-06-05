@@ -134,9 +134,6 @@ def infer(ctx, input_root, output_root, config_file, input_structure, add_info):
     # Initialize inferencer
     inferencer = OcrInferencer(infer_cfg)
 
-    # Reset CUDA peak memory statistics before inference
-    # This measures only the GPU memory used during inferencer.run(),
-    # excluding model loading as much as possible.
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
         torch.cuda.reset_peak_memory_stats()
@@ -155,9 +152,9 @@ def infer(ctx, input_root, output_root, config_file, input_structure, add_info):
     avg_time = total_time / num_images
     fps = num_images / total_time
 
-    print(f'Total inference time : {total_time:.4f} sec')
-    print(f'Average time/image  : {avg_time:.4f} sec')
-    print(f'FPS                 : {fps:.2f}')
+    print(f'Total Inference Time : {total_time:.4f} sec')
+    print(f'Average Inference Time: {avg_time:.4f} sec')
+    print(f'Speed (in FPS)       : {fps:.2f}')
 
     gpu_result = {}
 
