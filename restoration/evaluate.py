@@ -4,21 +4,29 @@ from pathlib import Path
 import cv2
 import numpy as np
 from tqdm import tqdm
-import metrics 
+import metrics
+
 
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".webp"}
 
+
 def is_image_file(p: Path) -> bool:
     return p.is_file() and p.suffix.lower() in IMG_EXTS
+
 
 def collect_images(root: str):
     root = Path(root)
     files = [p for p in root.rglob("*") if is_image_file(p)]
     return {str(p.relative_to(root)).replace("\\", "/"): p for p in files}
 
+
 def mean_ignore_nan(values):
-    vals = [v for v in values if v is not None and not (isinstance(v, float) and np.isnan(v))]
+    vals = [
+        v for v in values
+        if v is not None and not (isinstance(v, float) and np.isnan(v))
+    ]
     return float(np.mean(vals)) if len(vals) > 0 else float("nan")
+
 
 def eval_folders(
     gt_dir: str,
@@ -28,7 +36,7 @@ def eval_folders(
     input_order: str = "HWC",
     test_y_channel: bool = False,
     compute_psnrb: bool = False,
-    strict_shape: bool = True,  
+    strict_shape: bool = True,
 ):
     gt_map = collect_images(gt_dir)
     pred_map = collect_images(pred_dir)
@@ -56,10 +64,27 @@ def eval_folders(
         if gt.shape != pred.shape:
             if strict_shape:
                 continue
-            pred = cv2.resize(pred, (gt.shape[1], gt.shape[0]), interpolation=cv2.INTER_LINEAR)
+            pred = cv2.resize(
+                pred,
+                (gt.shape[1], gt.shape[0]),
+                interpolation=cv2.INTER_LINEAR
+            )
 
-        psnr = metrics.calculate_psnr(gt, pred, crop_border=crop_border, input_order=input_order, test_y_channel=test_y_channel)
-        ssim = metrics.calculate_ssim(gt, pred, crop_border=crop_border, input_order=input_order, test_y_channel=test_y_channel)
+        psnr = metrics.calculate_psnr(
+            gt,
+            pred,
+            crop_border=crop_border,
+            input_order=input_order,
+            test_y_channel=test_y_channel
+        )
+
+        ssim = metrics.calculate_ssim(
+            gt,
+            pred,
+            crop_border=crop_border,
+            input_order=input_order,
+            test_y_channel=test_y_channel
+        )
 
         row = {
             "rel_path": key,
@@ -74,9 +99,16 @@ def eval_folders(
 
         if compute_psnrb:
             try:
-                psnrb = metrics.calculate_psnrb(gt, pred, crop_border=crop_border, input_order=input_order, test_y_channel=test_y_channel)
+                psnrb = metrics.calculate_psnrb(
+                    gt,
+                    pred,
+                    crop_border=crop_border,
+                    input_order=input_order,
+                    test_y_channel=test_y_channel
+                )
             except Exception:
                 psnrb = float("nan")
+
             row["PSNRB"] = psnrb
             psnrb_list.append(psnrb)
 
@@ -93,10 +125,11 @@ def eval_folders(
         fieldnames.append("PSNRB")
 
     with open(out_csv, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=fieldnames)
-        w.writeheader()
-        for r in rows:
-            w.writerow(r)
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+
+        for row in rows:
+            writer.writerow(row)
 
         avg_row = {
             "rel_path": "__AVERAGE__",
@@ -105,32 +138,45 @@ def eval_folders(
             "PSNR": avg_psnr,
             "SSIM": avg_ssim,
         }
+
         if compute_psnrb:
             avg_row["PSNRB"] = avg_psnrb
-        w.writerow(avg_row)
+
+        writer.writerow(avg_row)
 
     print(f"[Saved] {out_csv}")
-    print(f"[Pairs] matched={len(common)}  evaluated={len(rows)}  missing_in_pred={len(missing_in_pred)}  extra_in_pred={len(extra_in_pred)}")
-    print(f"[Average] PSNR={avg_psnr:.6f}, SSIM={avg_ssim:.6f}" + (f", PSNRB={avg_psnrb:.6f}" if compute_psnrb else ""))
+    print(
+        f"[Pairs] matched={len(common)}  "
+        f"evaluated={len(rows)}  "
+        f"missing_in_pred={len(missing_in_pred)}  "
+        f"extra_in_pred={len(extra_in_pred)}"
+    )
+    print(
+        f"[Average] PSNR={avg_psnr:.6f}, SSIM={avg_ssim:.6f}"
+        + (f", PSNRB={avg_psnrb:.6f}" if compute_psnrb else "")
+    )
 
     if missing_in_pred:
         print(f"[Warning] Missing in pred (show up to 10): {missing_in_pred[:10]}")
+
     if extra_in_pred:
         print(f"[Info] Extra in pred (show up to 10): {extra_in_pred[:10]}")
 
 
 if __name__ == "__main__":
-    gt_dir = "./Kuzushiji_Character_Detection_Dataset/images/test_raw"
-    pred_dir = "./Kuzushiji_Character_Detection_Dataset/images/test_r90_rg1.3_rb1.3"
-    out_csv = "./restoration_results/test/r90_rg1.3_rb1.3.csv"
-
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--gt_dir", type=str, required=True, help="Path to ground-truth image folder")
+    parser.add_argument("--pred_dir", type=str, required=True, help="Path to predicted/restored image folder")
+    parser.add_argument("--output_csv", type=str, required=True, help="Path to output CSV file")
+    args = parser.parse_args()
     eval_folders(
-        gt_dir=gt_dir,
-        pred_dir=pred_dir,
-        out_csv=out_csv,
+        gt_dir=args.gt_dir,
+        pred_dir=args.pred_dir,
+        out_csv=args.output_csv,
         crop_border=0,
         input_order="HWC",
-        test_y_channel=False, 
-        compute_psnrb=False, 
+        test_y_channel=False,
+        compute_psnrb=False,
         strict_shape=True
     )
