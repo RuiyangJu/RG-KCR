@@ -564,7 +564,8 @@ Dashed arrows indicate additional processes performed in parallel with character
     python train_yolov9c.py
     python train_yolov10l.py
     python train_yolo11l.py
-    python train_yolo12l.py 
+    python train_yolo12l.py
+    python train.py --model ./ultralytics/cfg/models/v11/yolo11l.yaml --data ./dataset/meta_raw.yaml
   ```
 
 ### Test_Raw:
