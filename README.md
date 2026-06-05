@@ -575,6 +575,10 @@ Dashed arrows indicate additional processes performed in parallel with character
     python train.py --model ./ultralytics/cfg/models/v11/yolo11l.yaml --data ./dataset/meta_raw.yaml
   ```
 
+### Pre-trained Model
+* You can download our pre-trained models `YOLO11L.pt` and `YOLO11L_SDA.pt` here.
+* Put them in `yolov12/models/`.
+
 ### Test_Raw:
 * You can test the model on real test set as follows:
   ```
