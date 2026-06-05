@@ -485,10 +485,10 @@ Dashed arrows indicate additional processes performed in parallel with character
     | **+ SDA (Ours)** | 26.39M | 82.1G | 408 | 10.4 | 97.5% | 93.6% | 96.5% | 83.2% | 97.5% | 92.8% | 96.3% | 81.9% |
 
 ### Train:
-* Please ensure that the dataset is placed under `./yolov12/dataset` and organized as follows:
+* Please ensure that the dataset is placed under `./detection/dataset` and organized as follows:
 
   ```
-    yolov12
+    detection
     └── dataset
         ├── meta_raw.yaml
         ├── meta_aug.yaml
@@ -520,7 +520,7 @@ Dashed arrows indicate additional processes performed in parallel with character
                 └── ...
     ```
 
-* Please update the dataset path (`/path/to/data`) in both `./yolov12/dataset/meta_raw.yaml` and `./yolov12/dataset/meta_aug.yaml` before training.
+* Please update the dataset path (`/path/to/data`) in both `./detection/dataset/meta_raw.yaml` and `./detection/dataset/meta_aug.yaml` before training.
 
   ```
     path: '/path/to/data'
@@ -571,25 +571,25 @@ Dashed arrows indicate additional processes performed in parallel with character
 * You can train the models as follows:
 
   ```
-    cd yolov12
+    cd detection
     python train.py --model ./ultralytics/cfg/models/v11/yolo11l.yaml --data ./dataset/meta_raw.yaml
   ```
 
 ### Pre-trained Model
 * You can download our pre-trained models `YOLO11L.pt` and `YOLO11L_SDA.pt` [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
-* Put them in `yolov12/models/`.
+* Put them in `detection/models/`.
 
 ### Test_Raw:
 * You can test the model on real test set as follows:
   ```
-    cd yolov12
+    cd detection
     python test.py --model ./models/YOLO11L_SDA.pt --data ./dataset/meta_raw.yaml
   ```
 
 ### Test_Aug:
 * You can test the model on synthetic test set as follows:
   ```
-    cd yolov12
+    cd detection
     python test.py --model ./models/YOLO11L_SDA.pt --data ./dataset/meta_aug.yaml
   ```
   
