@@ -533,26 +533,38 @@ Dashed arrows indicate additional processes performed in parallel with character
       0: Kuzushiji
   ```
 * The difference between `meta_raw.yaml` and `meta_aug.yaml` is the test set: the former uses the Real Test Set, while the latter uses the Synthetic Test Set.
-* You can train the model by running the corresponding training script. For example, `train_yolo12l.py` can be used to train the model:
+* The parameters for model training are as follows:
 
   ```
-    from ultralytics import YOLO
+    import argparse
+    from pathlib import Path
+    from ultralytics import YOLO, RTDETR
     
-    model = YOLO('./ultralytics/cfg/models/v12/yolov12l.yaml')
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model", required=True)
+    parser.add_argument("--data", required=True)
     
-    # Train the model
+    args = parser.parse_args()
+    
+    model_name = Path(args.model).stem
+    run_name = f"train_{model_name}"
+    
+    if "rtdetr" in model_name.lower():
+        model = RTDETR(args.model)
+    else:
+        model = YOLO(args.model)
+    
     results = model.train(
-      data='./dataset/meta_raw.yaml',
-      epochs=1000, 
-      batch=16, 
-      imgsz=640,
-      optimizer="SGD",
-      lr0=0.01,
-      device="0",
-      name="train_yolo12l"
+        data=args.data,
+        epochs=1000,
+        batch=16,
+        imgsz=640,
+        optimizer="SGD",
+        lr0=0.01,
+        device="0",
+        name=run_name,
     )
     
-    # Evaluate model performance on the validation set
     metrics = model.val()
   ```
 
