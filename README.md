@@ -633,7 +633,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
 
 ### Evaluate
-* Before evaluation, you need download the test set ground-truth text from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ), and run as follows:
+* You can download the ground truth [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCQBKNHucC0SZAQDXpORyKlAY-pUSEMAv77RLDIXC_DXYM?e=eRD2az). Please put the ground truth in `./ordering/` and name the folder as `gt`.
   ```
     python ordering_metric.py
   ```
