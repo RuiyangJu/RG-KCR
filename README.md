@@ -610,7 +610,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
 * You can download the ground truth [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OARZmbqVZtbsxw1OqcD_Rhxw?e=eBhF2z). Please put the ground truth in `./classification/` and name the folder as `gt`.
   ```
-    python ./classification/evaluate.py
+    python ./classification/evaluate.py --gt_dir ./classification/gt --pred_dir ./classification/output
   ```
 
 ## ⑤ Character Ordering
