@@ -442,7 +442,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 
 ## ③ Data Splitting
 * The **1,000** annotated images were randomly split into training, validation, and test sets with a ratio of **8:1:1**, consisting of **800** training images, **100** validation images, and **100** test images.
-* The **real dataset** can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
+* The **real dataset** can be downloaded [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
 
 ## ④ Synthetic Data Augmentation
 * For the training set, **128** high-quality red seal images were used for synthetic data augmentation, thereby expanding the training set from **800** corrected images to **1,600** images.
@@ -450,7 +450,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   <p align="left">
     <img src="img/fig_synthetic.png" width="1024" title="details">
   </p>
-* The **synthetic dataset** through synthetic data augmentation can be downloaded from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
+* The **synthetic dataset** through synthetic data augmentation can be downloaded [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
 * Notably, if you want to train on both the **real** and **synthetic** datasets together, please make sure that the image names across the two datasets are **different**.
 * Therefore, the statistics of the dataset used in this work are summarized as follows:
 
