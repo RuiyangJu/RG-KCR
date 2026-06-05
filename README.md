@@ -490,7 +490,8 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
     yolov12
     └── dataset
-        ├── meta.yaml
+        ├── meta_raw.yaml
+        ├── meta_aug.yaml
         ├── images
         │   ├── train
         │   │   ├── 100241706_00002_1.png
