@@ -11,3 +11,10 @@ This is for reference only. Please refer to the [original GitHub repository](htt
   git clone https://github.com/ndl-lab/ndlkotenocr_cli
 ```
 * Download the NDLKotenOCR ver.3 pre-trained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
+* Put the pre-trained models as follows:
+```
+ndlocr_cli
+  └── src 
+      ├── ndl_kotenseki_layout/models/ndl_kotenseki_layout_ver3.pth
+      └── text_kotenseki_recognition/model-ver2
+```
