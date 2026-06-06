@@ -3,12 +3,53 @@ set -e
 
 START_TIME=$(date +%s)
 
+# Input Root
+TEST_SET="test_aug"
+RUN_EVAL="false"
+MONITOR_GPU="false"
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --test_set)
+            TEST_SET="$2"
+            shift 2
+            ;;
+        --run_eval)
+            RUN_EVAL="$2"
+            shift 2
+            ;;
+        --monitor_gpu)
+            MONITOR_GPU="$2"
+            shift 2
+            ;;
+        *)
+            echo "Unknown option: $1"
+            echo "Usage: bash run_pipeline.sh --test_set [test_raw|test_aug] --run_eval [true|false] --monitor_gpu [true|false]"
+            exit 1
+            ;;
+    esac
+done
+
+if [[ "$TEST_SET" != "test_raw" && "$TEST_SET" != "test_aug" ]]; then
+    echo "TEST_SET must be test_raw or test_aug"
+    exit 1
+fi
+
+if [[ "$RUN_EVAL" != "true" && "$RUN_EVAL" != "false" ]]; then
+    echo "RUN_EVAL must be true or false"
+    exit 1
+fi
+
+if [[ "$MONITOR_GPU" != "true" && "$MONITOR_GPU" != "false" ]]; then
+    echo "MONITOR_GPU must be true or false"
+    exit 1
+fi
+
 # GPU Memory Monitor
 GPU_ID=0
 GPU_MONITOR_INTERVAL=0.05
 GPU_MEMORY_LOG="./peak_gpu_memory.log"
-
-echo "0" > ${GPU_MEMORY_LOG}
+GPU_MONITOR_PID=""
 
 monitor_gpu_memory() {
     while true; do
@@ -24,26 +65,17 @@ monitor_gpu_memory() {
     done
 }
 
-monitor_gpu_memory &
-GPU_MONITOR_PID=$!
-
 cleanup() {
-    kill ${GPU_MONITOR_PID} 2>/dev/null || true
+    if [[ -n "$GPU_MONITOR_PID" ]]; then
+        kill ${GPU_MONITOR_PID} 2>/dev/null || true
+    fi
 }
 trap cleanup EXIT
 
-# Input Root
-TEST_SET=${1:-test_aug}
-RUN_EVAL=${2:-false}
-
-if [[ "$TEST_SET" != "test_raw" && "$TEST_SET" != "test_aug" ]]; then
-    echo "Usage: bash run_pipeline.sh [test_raw|test_aug] [true|false]"
-    exit 1
-fi
-
-if [[ "$RUN_EVAL" != "true" && "$RUN_EVAL" != "false" ]]; then
-    echo "RUN_EVAL must be true or false"
-    exit 1
+if [[ "$MONITOR_GPU" = "true" ]]; then
+    echo "0" > ${GPU_MEMORY_LOG}
+    monitor_gpu_memory &
+    GPU_MONITOR_PID=$!
 fi
 
 DATASET_DIR="./dataset"
@@ -69,6 +101,7 @@ RB_RATIO=1.3
 echo "Seal-Robust-KCR Inference Pipeline"
 echo "Test Set: ${TEST_SET}"
 echo "Evaluation: ${RUN_EVAL}"
+echo "Monitor GPU: ${MONITOR_GPU}"
 echo "GPU ID: ${GPU_ID}"
 
 # Check model
@@ -141,14 +174,16 @@ fi
 END_TIME=$(date +%s)
 TOTAL_TIME=$((END_TIME - START_TIME))
 
-# Stop GPU monitor
-kill ${GPU_MONITOR_PID} 2>/dev/null || true
-trap - EXIT
-
-PEAK_GPU_MEMORY_MB=$(sort -nr ${GPU_MEMORY_LOG} | head -n 1)
-PEAK_GPU_MEMORY_GB=$(awk "BEGIN {printf \"%.4f\", ${PEAK_GPU_MEMORY_MB}/1024}")
-
 echo "Pipeline Finished"
 echo "Final TXT results are saved in: ${ORDER_OUTPUT}"
 echo "Total Pipeline Time: ${TOTAL_TIME} sec"
-echo "Peak GPU Memory Used: ${PEAK_GPU_MEMORY_GB} GB (${PEAK_GPU_MEMORY_MB} MiB)"
+
+if [[ "$MONITOR_GPU" = "true" ]]; then
+    kill ${GPU_MONITOR_PID} 2>/dev/null || true
+    trap - EXIT
+
+    PEAK_GPU_MEMORY_MB=$(sort -nr ${GPU_MEMORY_LOG} | head -n 1)
+    PEAK_GPU_MEMORY_GB=$(awk "BEGIN {printf \"%.4f\", ${PEAK_GPU_MEMORY_MB}/1024}")
+
+    echo "Peak GPU Memory Used: ${PEAK_GPU_MEMORY_GB} GB (${PEAK_GPU_MEMORY_MB} MiB)"
+fi
