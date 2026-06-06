@@ -17,17 +17,16 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
   | Baseline | 19.86 | **1.513** | 27.41 | **1.534** |
   | **Ours** | **11.98** | 2.002 | **13.67** | 2.662 |
 
-## Synthetic Test Set
-bash run_pipeline.sh test_aug
+## Run
+* Example command to process the Real Test Set:
+```
+  bash run_pipeline.sh test_raw false
+```
 
-## Real Test Set
-bash run_pipeline.sh test_raw
-
-## Synthetic Test Set + CER Evaluation
-bash run_pipeline.sh test_aug true
-
-## Real Test Set + CER Evaluation
-bash run_pipeline.sh test_raw true
+* Example command to process the Real Test Set and evaluate:
+```
+  bash run_pipeline.sh test_aug true
+```
 
 # Pipeline
 * Conventional pipeline (blue flow) and the proposed pipeline (red flow) for seal-interference Kuzushiji document images.
