@@ -366,6 +366,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--root_dir", type=str, required=True, help="Root directory containing cropped image subfolders")
     parser.add_argument("--out_dir", type=str, required=True, help="Directory to save classification JSON results")
-    parser.add_argument("--batch_size", type=int, default=1024, help="Batch size for classification inference")
+    parser.add_argument("--batch_size", type=int, default=1280, help="Batch size for classification inference")
     args = parser.parse_args()
     main(args)
