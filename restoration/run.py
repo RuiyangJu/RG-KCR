@@ -3,6 +3,8 @@ import cv2
 import argparse
 import numpy as np
 from tqdm import tqdm
+from concurrent.futures import ThreadPoolExecutor
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--input_dir", type=str, required=True, help="Input image directory")
@@ -14,6 +16,8 @@ parser.add_argument("--inpaint_radius", type=int, default=3, help="Inpainting ra
 parser.add_argument("--inpaint_method", type=str, default="telea", choices=["telea", "ns"], help="Inpainting method: telea or ns")
 parser.add_argument("--dilate_kernel", type=int, default=3, help="Dilate kernel size (0 to disable)")
 parser.add_argument("--dilate_iter", type=int, default=1, help="Dilate iterations")
+parser.add_argument("--max_workers", type=int, default=6, help="Number of worker threads")
+
 args = parser.parse_args()
 input_dir = args.input_dir
 
@@ -41,6 +45,7 @@ else:
 
 exts = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff"}
 
+
 def remove_red_seal(bgr: np.ndarray) -> np.ndarray:
     rgb = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
 
@@ -58,8 +63,29 @@ def remove_red_seal(bgr: np.ndarray) -> np.ndarray:
     out_bgr = cv2.inpaint(bgr, seal_mask, inpaint_radius, inpaint_method)
     return out_bgr
 
+
 def is_image_file(fn: str) -> bool:
     return os.path.splitext(fn.lower())[1] in exts
+
+
+def process_one(fn: str):
+    in_path = os.path.join(input_dir, fn)
+    out_path = os.path.join(output_dir, fn)
+
+    bgr = cv2.imread(in_path, cv2.IMREAD_COLOR)
+
+    if bgr is None:
+        return f"[WARN] Skip unreadable: {in_path}"
+
+    out_bgr = remove_red_seal(bgr)
+
+    ok = cv2.imwrite(out_path, out_bgr)
+
+    if not ok:
+        return f"[WARN] Failed to write: {out_path}"
+
+    return None
+
 
 def main():
     os.makedirs(output_dir, exist_ok=True)
@@ -70,7 +96,6 @@ def main():
     if len(files) == 0:
         raise RuntimeError(f"No images found in: {input_dir}")
 
-    print("=" * 60)
     print(f"Input Dir   : {input_dir}")
     print(f"Output Dir  : {output_dir}")
     print(f"r_min       : {r_min}")
@@ -78,24 +103,23 @@ def main():
     print(f"rb_ratio    : {rb_ratio}")
     print(f"inpaint     : {args.inpaint_method} (radius={inpaint_radius})")
     print(f"dilate      : kernel={dilate_kernel}, iter={dilate_iter}")
-    print("=" * 60)
+    print(f"max_workers : {args.max_workers}")
 
-    for fn in tqdm(files, desc="Processing"):
-        in_path = os.path.join(input_dir, fn)
-        out_path = os.path.join(output_dir, fn)
+    with ThreadPoolExecutor(max_workers=args.max_workers) as executor:
+        results = list(
+            tqdm(
+                executor.map(process_one, files),
+                total=len(files),
+                desc="Processing"
+            )
+        )
 
-        bgr = cv2.imread(in_path, cv2.IMREAD_COLOR)
-        if bgr is None:
-            print(f"[WARN] Skip unreadable: {in_path}")
-            continue
-
-        out_bgr = remove_red_seal(bgr)
-
-        ok = cv2.imwrite(out_path, out_bgr)
-        if not ok:
-            print(f"[WARN] Failed to write: {out_path}")
+    for msg in results:
+        if msg is not None:
+            print(msg)
 
     print(f"\nDone! Saved to: {output_dir}")
+
 
 if __name__ == "__main__":
     main()
