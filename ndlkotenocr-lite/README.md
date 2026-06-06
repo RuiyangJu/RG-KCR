@@ -11,15 +11,17 @@ This is for reference only. Please refer to the [original GitHub repository](htt
 ## Run
 * For calculating the inference speed, after cloning the repository, replace the cloned `ocr.py` with the `ocr.py` provided here.
 ```
-  python3 ./src/ocr.py --sourcedir input_root --output output_dir --device cpu
+  cd src
+  python3 ocr.py --sourcedir input_root --output output_dir --device cpu
 ```
 * NDLkotenOCR-Lite runs on the CPU by default. To enable GPU inference and measure the peak GPU memory usage, you can run the following command:
 ```
-  python3 ./src/ocr.py --sourcedir input_root --output output_dir --device cuda --monitor-gpu
+  cd src
+  python3 ocr.py --sourcedir input_root --output output_dir --device cuda --monitor-gpu
 ```
 
 ## Evaluate
 * Evaluate the performance (CER):
 ```
-  python ./src/evaluate.py --gt_dir gt_folder --pred output_dir/txt --output_csv output
-```
+  cd src
+  python evaluate.py --gt_dir gt_folder --pred output_dir/txt --output_csv output
