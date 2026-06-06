@@ -19,6 +19,11 @@ else:
 model.predict(
     source=args.source,
     conf=0.1,
+    iou=0.7,
+    imgsz=640,
+    batch=16,
+    rect=True,
+    max_det=300,
     save=False,
     save_txt=True,
     save_conf=True,
