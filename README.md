@@ -7,7 +7,8 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
     <img src="img/fig_teaser.png" width="640" title="details">
   </p>
 
-* End-to-end Kuzushiji character recognition results comparison (i.e., from document image to text):
+# End-to-end KCR
+* The end-to-end Kuzushiji character recognition results (from document images to text) are compared as follows:
 
   | Method | CER @ Real Test | Speed (s/img) @ Real Test | CER @ Synth. Test | Speed (s/img) @ Synth. Test |
   |:--|:--:|:--:|:--:|:--:|
