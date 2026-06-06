@@ -536,7 +536,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 * You can train the models as follows:
 
   ```
-    python train.py --model ./detection/ultralytics/cfg/models/v11/yolo11l.yaml --data ./dataset/meta_raw.yaml
+    python ./detection/train.py --model ./detection/ultralytics/cfg/models/v11/yolo11l.yaml --data ./dataset/meta_raw.yaml
   ```
 
 ### Pre-trained Model
@@ -546,13 +546,13 @@ Dashed arrows indicate additional processes performed in parallel with character
 ### Test on Real Test Set:
 * You can test the model on real test set as follows:
   ```
-    python test.py --model ./detection/models/YOLO11L_SDA.pt --data ./dataset/meta_raw.yaml
+    python ./detection/test.py --model ./detection/models/YOLO11L_SDA.pt --data ./dataset/meta_raw.yaml
   ```
 
 ### Test on Synthetic Test Set:
 * You can test the model on synthetic test set as follows:
   ```
-    python test.py --model ./detection/models/YOLO11L_SDA.pt --data ./dataset/meta_aug.yaml
+    python ./detection/test.py --model ./detection/models/YOLO11L_SDA.pt --data ./dataset/meta_aug.yaml
   ```
   
 ## ② Document Restoration
