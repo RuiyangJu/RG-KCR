@@ -98,7 +98,7 @@ python ./ordering/run_ours.py \
 
 # (6) CER Evaluation (Optional)
 if [ "$RUN_EVAL" = "true" ]; then
-    echo echo "(6) CER Evaluation (Optional)"
+    echo "(6) CER Evaluation (Optional)"
 
     python ./ordering/evaluate.py \
         --gt_dir ./ordering/gt \
