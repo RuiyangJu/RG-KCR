@@ -19,10 +19,15 @@ else:
 model.val(
     data=args.data,
     split="test",
+    conf=0.1,
+    iou=0.7,
+    imgsz=640,
+    batch=16,
+    rect=True,
+    max_det=300,
     save_txt=True,
     save_conf=True,
-    conf=0.1,
-    project="./detection/runs/detect",  
-    name=f"test_{model_name}",        
-    exist_ok=True                    
+    project="./detection/runs/detect",
+    name=f"test_{model_name}",
+    exist_ok=True
 )
