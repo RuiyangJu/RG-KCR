@@ -606,7 +606,8 @@ Dashed arrows indicate additional processes performed in parallel with character
 * We use [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for character classification. The official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 
 ### Run
-* You can run character classification as follows:
+* You can run character classification as follows：
+* The Metom model will be downloaded automatically and stored in `./classification/models/Metom`.
   ```
     python ./classification/run.py --root_dir ./crop/output/crops --out_dir ./classification/output --batch_size 1024
   ```
