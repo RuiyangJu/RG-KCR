@@ -1,6 +1,37 @@
 #!/bin/bash
 set -e
 
+START_TIME=$(date +%s)
+
+# GPU Memory Monitor
+GPU_ID=0
+GPU_MONITOR_INTERVAL=0.05
+GPU_MEMORY_LOG="./peak_gpu_memory.log"
+
+echo "0" > ${GPU_MEMORY_LOG}
+
+monitor_gpu_memory() {
+    while true; do
+        MEM=$(nvidia-smi --id=${GPU_ID} \
+            --query-gpu=memory.used \
+            --format=csv,noheader,nounits 2>/dev/null | head -n 1)
+
+        if [[ -n "$MEM" ]]; then
+            echo "$MEM" >> ${GPU_MEMORY_LOG}
+        fi
+
+        sleep ${GPU_MONITOR_INTERVAL}
+    done
+}
+
+monitor_gpu_memory &
+GPU_MONITOR_PID=$!
+
+cleanup() {
+    kill ${GPU_MONITOR_PID} 2>/dev/null || true
+}
+trap cleanup EXIT
+
 # Input Root
 TEST_SET=${1:-test_aug}
 RUN_EVAL=${2:-false}
@@ -35,9 +66,10 @@ R_MIN=90
 RG_RATIO=1.3
 RB_RATIO=1.3
 
-echo " Seal-Robust-KCR Inference Pipeline"
-echo " Test Set: ${TEST_SET}"
-echo " Evaluation: ${RUN_EVAL}"
+echo "Seal-Robust-KCR Inference Pipeline"
+echo "Test Set: ${TEST_SET}"
+echo "Evaluation: ${RUN_EVAL}"
+echo "GPU ID: ${GPU_ID}"
 
 # Check model
 if [ ! -f "${MODEL}" ]; then
@@ -69,8 +101,8 @@ python ./restoration/run.py \
 REST_PID=$!
 
 echo "Waiting for detection and restoration..."
-wait ${DET_PID}
-wait ${REST_PID}
+wait ${DET_PID} || exit 1
+wait ${REST_PID} || exit 1
 
 echo "Detection and restoration finished."
 
@@ -87,7 +119,7 @@ echo "(4) Character Classification"
 
 python ./classification/run.py \
     --root_dir ${CROP_OUTPUT}/crops \
-    --out_dir ${CLS_OUTPUT} \
+    --out_dir ${CLS_OUTPUT}
 
 # (5) Character Ordering
 echo "(5) Character Ordering"
@@ -106,5 +138,17 @@ if [ "$RUN_EVAL" = "true" ]; then
         --out_csv ${ORDER_CSV}
 fi
 
+END_TIME=$(date +%s)
+TOTAL_TIME=$((END_TIME - START_TIME))
+
+# Stop GPU monitor
+kill ${GPU_MONITOR_PID} 2>/dev/null || true
+trap - EXIT
+
+PEAK_GPU_MEMORY_MB=$(sort -nr ${GPU_MEMORY_LOG} | head -n 1)
+PEAK_GPU_MEMORY_GB=$(awk "BEGIN {printf \"%.4f\", ${PEAK_GPU_MEMORY_MB}/1024}")
+
 echo "Pipeline Finished"
 echo "Final TXT results are saved in: ${ORDER_OUTPUT}"
+echo "Total Pipeline Time: ${TOTAL_TIME} sec"
+echo "Peak GPU Memory Used: ${PEAK_GPU_MEMORY_GB} GB (${PEAK_GPU_MEMORY_MB} MiB)"
