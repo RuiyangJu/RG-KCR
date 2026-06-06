@@ -52,22 +52,27 @@ else
     DATA_YAML=${SYNTH_YAML}
 fi
 
-# (1) Character Detection
+# (1) Character Detection + (2) Document Restoration (Parallel)
 echo "(1) Character Detection"
-
 python ./detection/test.py \
     --model ${MODEL} \
-    --data ${DATA_YAML}
+    --data ${DATA_YAML} &
+DET_PID=$!
 
-# (2) Document Restoration
 echo "(2) Document Restoration"
-
 python ./restoration/run.py \
     --input_dir ${IMAGE_DIR} \
     --output_dir ${REST_OUTPUT} \
     --r_min ${R_MIN} \
     --rg_ratio ${RG_RATIO} \
-    --rb_ratio ${RB_RATIO}
+    --rb_ratio ${RB_RATIO} &
+REST_PID=$!
+
+echo "Waiting for detection and restoration..."
+wait ${DET_PID}
+wait ${REST_PID}
+
+echo "Detection and restoration finished."
 
 # (3) Character Cropping
 echo "(3) Character Cropping"
@@ -82,7 +87,7 @@ echo "(4) Character Classification"
 
 python ./classification/run.py \
     --root_dir ${CROP_OUTPUT}/crops \
-    --out_dir ${CLS_OUTPUT}
+    --out_dir ${CLS_OUTPUT} \
 
 # (5) Character Ordering
 echo "(5) Character Ordering"
@@ -92,9 +97,8 @@ python ./ordering/run_ours.py \
     --output_dir ${ORDER_OUTPUT}
 
 # (6) CER Evaluation (Optional)
-echo "(6) CER Evaluation (Optional)"
 if [ "$RUN_EVAL" = "true" ]; then
-    echo "Evaluate CER"
+    echo echo "(6) CER Evaluation (Optional)"
 
     python ./ordering/evaluate.py \
         --gt_dir ./ordering/gt \
