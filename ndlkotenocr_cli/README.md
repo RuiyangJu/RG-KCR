@@ -18,7 +18,7 @@ ndlocr_cli
       └── text_kotenseki_recognition/model-ver2
 ```
 ## Run
-* For calculating the speed and GPU memory, after cloning the repository, replace the cloned `main.py` with the `main.py` provided here.
+* For calculating the speed, after cloning the repository, replace the cloned `main.py` with the `main.py` provided here.
 ```
   python main.py infer input_root output_dir
 ```
