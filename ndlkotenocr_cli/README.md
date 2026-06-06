@@ -2,7 +2,7 @@
 This is for reference only. Please refer to the [original GitHub repository](https://github.com/ndl-lab/ndlkotenocr_cli) for details.
 
 ## Environment
-* Please use the provided `requirements.txt` here.
+* Please use the `requirements.txt` provided here.
 ```
   pip install -r requirements.txt
 ```
