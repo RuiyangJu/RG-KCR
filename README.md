@@ -23,7 +23,7 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
   bash run_pipeline.sh test_raw false
 ```
 
-* Example command to process the Real Test Set and evaluate:
+* Example command to process the Real Test Set **and evaluate**:
 ```
   bash run_pipeline.sh test_aug true
 ```
