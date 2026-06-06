@@ -22,6 +22,12 @@ ndlocr_cli
 ```
   python main.py infer input_root output_dir
 ```
+
+* You can use the following command to obtain the peak GPU memory usage. Note that this may slightly increase the inference latency due to the monitoring overhead。
+```
+  python main.py infer input_root output_dir --monitor_gpu
+```
+
 * `input_root` and `output_dir` are as follows:
 ```
   input_root/
