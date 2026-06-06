@@ -150,11 +150,13 @@ def process(args):
 
     num_images = len(inputpathlist)
     print(f"[INFO] Number of images: {num_images}")
+    print(f"[INFO] Monitor GPU: {args.monitor_gpu}")
 
     recognizer = get_recognizer(args=args)
 
     gpu_monitor = None
-    if args.device == "cuda":
+
+    if args.device == "cuda" and args.monitor_gpu:
         gpu_monitor = GPUMemoryMonitor(gpu_id=args.gpu_id)
         gpu_monitor.start()
 
@@ -381,6 +383,7 @@ if __name__ == "__main__":
     parser.add_argument("--rec-classes", type=str, required=False, default="config/NDLmoji.yaml")
     parser.add_argument("--device", type=str, required=False, choices=["cpu", "cuda"], default="cpu")
     parser.add_argument("--gpu-id", type=int, required=False, default=0)
+    parser.add_argument("--monitor-gpu", action="store_true", help="Monitor peak GPU memory using nvidia-smi.")
 
     args = parser.parse_args()
     process(args)
