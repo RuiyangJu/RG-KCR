@@ -10,7 +10,7 @@ This is for reference only. Please refer to the [original GitHub repository](htt
 ```
   git clone https://github.com/ndl-lab/ndlkotenocr_cli
 ```
-* Download the NDLKotenOCR ver.3 pre-trained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDiLBlaev4XQ46AdIStVkE2Ab97A9c0c9QBD5IabfERfuQ).
+* Download the NDLKotenOCR pre-trained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgA4O6N0oUNJT4BNZ_-Gd7SUAQk5CvaYOZTJE46t2AGCUl0?e=gZqHBD). You can also access it through the [original GitHub repository](https://github.com/ndl-lab/ndlkotenocr_cli).
 * Put the pre-trained models as follows:
 ```
 ndlocr_cli
