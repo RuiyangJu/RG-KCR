@@ -4,6 +4,7 @@ from pathlib import Path
 import joblib
 import numpy as np
 
+
 def make_pair_features(a, b):
     return [
         a["cx"] - b["cx"],
@@ -52,6 +53,9 @@ def json_to_text(json_path: Path, model) -> str:
 
     if len(rows) == 0:
         return ""
+
+    if len(rows) == 1:
+        return rows[0]["char"]
 
     n = len(rows)
 
