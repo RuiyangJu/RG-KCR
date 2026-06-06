@@ -22,5 +22,7 @@ model.val(
     save_txt=True,
     save_conf=True,
     conf=0.1,
-    name=f"test_{model_name}"
+    project="./detection/runs/detect",  
+    name=f"test_{model_name}",        
+    exist_ok=True                    
 )
