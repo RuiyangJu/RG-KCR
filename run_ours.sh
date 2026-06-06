@@ -79,8 +79,6 @@ if [[ "$MONITOR_GPU" = "true" ]]; then
 fi
 
 DATASET_DIR="./dataset"
-REAL_YAML="${DATASET_DIR}/meta_raw.yaml"
-SYNTH_YAML="${DATASET_DIR}/meta_aug.yaml"
 
 MODEL="./detection/models/YOLO11L_SDA.pt"
 IMAGE_DIR="${DATASET_DIR}/images/${TEST_SET}"
@@ -110,18 +108,11 @@ if [ ! -f "${MODEL}" ]; then
     exit 1
 fi
 
-# Select YAML
-if [ "$TEST_SET" = "test_raw" ]; then
-    DATA_YAML=${REAL_YAML}
-else
-    DATA_YAML=${SYNTH_YAML}
-fi
-
 # (1) Character Detection + (2) Document Restoration (Parallel)
 echo "(1) Character Detection"
-python ./detection/test.py \
+python ./detection/predict.py \
     --model ${MODEL} \
-    --data ${DATA_YAML} &
+    --source ${IMAGE_DIR} &
 DET_PID=$!
 
 echo "(2) Document Restoration"
