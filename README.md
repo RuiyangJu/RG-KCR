@@ -18,15 +18,11 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
   | **Ours** | **11.98** | 2.002 | **13.67** | 2.662 |
 
 ## Run
-* Example command to process the Real Test Set:
+* Example command to process the Synthetic Test Set, optionally evaluate the results and measure the peak GPU memory usage:
 ```
-  bash run_pipeline.sh test_raw false
+  bash run_pipeline.sh --test_set test_aug --run_eval false --monitor_gpu true
 ```
-
-* Example command to process the Real Test Set **and evaluate**:
-```
-  bash run_pipeline.sh test_aug true
-```
+* Note that enabling `monitor_gpu` may slightly increase the inference latency due to the overhead of GPU memory monitoring.
 
 # Pipeline
 * Conventional pipeline (blue flow) and the proposed pipeline (red flow) for seal-interference Kuzushiji document images.
