@@ -610,7 +610,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
     python ./classification/run.py --root_dir ./crop/output/crops --out_dir ./classification/output --batch_size 1024
   ```
-* Nobtaly, the batch size for character classification directly affects inference speed and GPU usage.
+* Nobtably, the batch size for character classification directly affects inference speed and GPU usage.
   
 ### Evaluate
 * You can download the ground truth [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OARZmbqVZtbsxw1OqcD_Rhxw?e=eBhF2z). Please put the ground truth in `./classification/` and name the folder as `gt`.
