@@ -609,7 +609,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 * You can run character classification as follows：
 * The Metom model will be downloaded automatically and stored in `./classification/models/Metom`.
   ```
-    python ./classification/run.py --root_dir ./crop/output/crops --out_dir ./classification/output --batch_size 256
+    python ./classification/run.py --root_dir ./crop/output/crops --out_dir ./classification/output --batch_size 1024
   ```
 * Notably, the batch size used for character classification directly affects both inference speed and GPU memory usage.
   
