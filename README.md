@@ -608,7 +608,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 ### Run
 * You can run character classification as follows:
   ```
-    python ./classification/run.py --root_dir ./crop/output/crops --out_dir ./classification/output
+    python ./classification/run.py --root_dir ./crop/output/crops --out_dir ./classification/output --batch_size 256
   ```
   
 ### Evaluate
