@@ -12,10 +12,10 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
 
   | Method | Real CER (%) | Synth. CER (%) | Real Speed (FPS) | Synth. Speed (FPS) | Peak GPU Memory (GB) |
   |:--|:--:|:--:|:--:|:--:|:--:|
-  | NDL-Lite | 21.76 | 47.82 | 0.40 | 0.35 | - |
-  | NDL | 12.73 | 23.43 | **0.51** | 0.37 | 7.52 / 16.20 |
+  | NDLkotenOCR-Lite | 21.76 | 47.82 | 0.40 | 0.35 | - |
+  | NDLkotenOCR | 12.73 | 23.43 | **0.51** | 0.37 | 7.52 / 16.20 |
   | Baseline | 19.86 | 27.41 | 0.37 | 0.35 | 2.81 |
-  | **Seal-Robust KCR (Ours)** | **11.98** | **13.67** | 0.41 | **0.39** | **2.81** |
+  | **Seal-Robust KCR** | **11.98** | **13.67** | 0.41 | **0.39** | **2.81** |
   
 * All experiments were conducted on an NVIDIA RTX A5000 GPU and an Intel Core i5-11600K CPU whenever applicable.
 * NDL-Lite was evaluated using CPU-based inference and therefore does not require GPU memory.
