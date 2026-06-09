@@ -577,8 +577,8 @@ Dashed arrows indicate additional processes performed in parallel with character
   | 80 | 1.4 | 33.87dB | 0.9756 | 33.77dB | 0.9745 |
   | 80 | 1.5 | 31.97dB | 0.9717 | 31.68dB | 0.9706 |
   | 90 | 1.2 | 30.37dB | 0.9522 | 30.19dB | 0.9519 |
-  | 90 | 1.3 | 34.09dB | 0.9757 | 34.13dB | 0.9750 |
-  | 90 | 1.4 | 34.05dB | 0.9763 | 33.94dB | 0.9753 |
+  | 90 | 1.3 | **34.09dB** | 0.9757 | **34.13dB** | 0.9750 |
+  | 90 | 1.4 | 34.05dB | **0.9763** | 33.94dB | **0.9753** |
   | 90 | 1.5 | 32.03dB | 0.9721 | 31.74dB | 0.9710 |
 
 * Visual examples of document restoration results obtained with the parameters τ<sub>r</sub> = 90 and τ<sub>rg</sub> = τ<sub>rb</sub> = 1.3 are shown below:
