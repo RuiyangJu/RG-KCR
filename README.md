@@ -9,8 +9,6 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
 
 # End-to-end Implementation
 * The end-to-end Kuzushiji character recognition results (from document images to text) are compared as follows:
-* All experiments were conducted on an NVIDIA RTX A5000 GPU and an Intel Core i5-11600K CPU whenever applicable.
-* NDL-Lite was evaluated using CPU-based inference and therefore does not require GPU memory.
 
   | Method | Real CER (%) | Synth. CER (%) | Real Speed (FPS) | Synth. Speed (FPS) | Peak GPU Memory (GB) |
   |:--|:--:|:--:|:--:|:--:|:--:|
@@ -18,6 +16,9 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
   | NDL | 12.73 | 23.43 | **0.51** | 0.37 | 7.52 / 16.20 |
   | Baseline | 19.86 | 27.41 | 0.37 | 0.35 | 2.81 |
   | **Seal-Robust KCR (Ours)** | **11.98** | **13.67** | 0.41 | **0.39** | **2.81** |
+  
+* All experiments were conducted on an NVIDIA RTX A5000 GPU and an Intel Core i5-11600K CPU whenever applicable.
+* NDL-Lite was evaluated using CPU-based inference and therefore does not require GPU memory.
 
 ## Run
 * Example command to process the Synthetic Test Set, optionally evaluate the results and measure the peak GPU memory usage:
