@@ -609,10 +609,10 @@ Dashed arrows indicate additional processes performed in parallel with character
 ## ④ Character Classification
 * The character classification results are as follows:
 
-  | Method | Top-1 Acc. | Top-5 Acc. | FPS |
-  | :--: | :--: | :--: | :--: |
-  | Baseline (Metom) | 94.22% | 97.64% | 1.81 |
-  | + Rest. (Ours) | 95.66% | 98.62% | 1.14 |
+  | Method | Top-1 Acc. | Top-5 Acc. | Speed@A5000 | Speed@PRO 6000 |
+  | :--: | :--: | :--: | :--: | :--: |
+  | Baseline (Metom) | 94.22% | 97.64% | 1.19FPS | 4.76FPS |
+  | + Rest. (Ours) | 95.66% | 98.62% | 1.19FPS | 4.76FPS |
   
 * We use [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for character classification. The official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 
@@ -636,7 +636,7 @@ Dashed arrows indicate additional processes performed in parallel with character
   | Method | Training | CER | FPS |
   | :--: | :--: | :--: | :--: |
   | LightGBM | Yes | 21.25 | 15.38 |
-  | Ours | No | 13.67 | 419.27 |
+  | Ours | No | **13.67** | **419.27** |
 
 ### Run
 * You can run both methods for character ordering as follows:
