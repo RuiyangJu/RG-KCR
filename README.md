@@ -1,7 +1,7 @@
 # Seal-Robust KCR
 Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal Interference
 >[arXiv](https://arxiv.org/abs/2602.19086)
->[Project](https://ruiyangju.github.io/RG-KCR/)
+>[Project](https://ruiyangju.github.io/Seal-Robust-KCR/)
 
   <p align="left">
     <img src="img/fig_teaser.png" width="640" title="details">
