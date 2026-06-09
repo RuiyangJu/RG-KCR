@@ -10,7 +10,7 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
 # End-to-end Implementation
 * The end-to-end Kuzushiji character recognition results (from image to text) are compared as follows:
 
-  | Method | Real CER (%) | Real Speed (FPS) | Real Peak GPU Memory (GB) | Synth. CER (%) | Synth. Speed (FPS) | Synth. Peak GPU Memory (GB) |
+  | Method | CER@Real (%) | Speed@Real (FPS) | Peak GPU Memory@Real (GB) | CER@Synth. (%) | Speed@Synth. (FPS) | Peak GPU Memory@Synth. (GB) |
   |:--|:--:|:--:|:--:|:--:|:--:|:--:|
   | NDLkotenOCR-Lite | 21.76 | 0.40 | - | 47.82 | 0.35 | - |
   | NDLkotenOCR | 12.73 | **0.51** | 7.52 | 23.43 | 0.37 | 16.20 |
