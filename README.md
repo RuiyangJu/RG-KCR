@@ -12,7 +12,7 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
 
   | Method | CER@Real (%) | Speed@Real (FPS) | Peak GPU Memory@Real (GB) | CER@Synth. (%) | Speed@Synth. (FPS) | Peak GPU Memory@Synth. (GB) |
   |:--|:--:|:--:|:--:|:--:|:--:|:--:|
-  | NDLkotenOCR-Lite | 21.76 | 0.40 | - | 47.82 | 0.35 | - |
+  | NDLkotenOCR-Lite | 21.76 | 0.40 | - | 47.82 | 0.35 | — |
   | NDLkotenOCR | 12.73 | **0.51** | 7.52 | 23.43 | 0.37 | 16.20 |
   | Baseline | 19.86 | 0.37 | 2.81 | 27.41 | 0.35 | 2.81 |
   | **Seal-Robust KCR** | **11.98** | 0.41 | 2.81 | **13.67** | **0.39** | 2.81 |
