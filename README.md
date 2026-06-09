@@ -469,8 +469,8 @@ Dashed arrows indicate additional processes performed in parallel with character
     | :--- | :--: | :--: | :--: | :--: | :--: |
     | Train | 800 | 0–2 | 800 | ≈10 | 1,600 |
     | Validation | 100 | 0–2 | 100 | ≈10 | 200 |
-    | Real Test | 100 | 0–2 | -- | -- | 100 |
-    | Synth. Test | -- | -- | 100 | ≈10 | 100 |
+    | Real Test | 100 | 0–2 | - | - | 100 |
+    | Synth. Test | - | - | 100 | ≈10 | 100 |
   
 # Experiments
 ## Environment
