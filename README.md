@@ -27,6 +27,17 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
 ```
 * Note that enabling `monitor_gpu` may slightly increase the inference latency due to the overhead of GPU memory monitoring.
 
+## Application
+
+  <p align="left">
+    <img src="img/fig_application.png" width="1024" title="details">
+  </p>
+  
+* You can access the local GUI using as follows:
+```
+  streamlit run run_app.py
+```
+  
 # Pipeline
 * Conventional pipeline (blue flow) and the proposed pipeline (red flow) for seal-interference Kuzushiji document images.
 Dashed arrows indicate additional processes performed in parallel with character detection without affecting the detection results.
