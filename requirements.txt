@@ -16,3 +16,4 @@ ultralytics==8.4.2
 
 matplotlib==3.10.7
 pytesseract==0.3.13
+streamlit
