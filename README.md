@@ -23,7 +23,7 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
 ## Run
 * Example command to process the Synthetic Test Set, optionally evaluate the results and measure the peak GPU memory usage:
 ```
-  bash run_ours.sh --test_set test_aug --run_eval false --monitor_gpu true
+  bash run_ours.sh --test_set test_aug --run_eval true --monitor_gpu false
 ```
 * Note that enabling `monitor_gpu` may slightly increase the inference latency due to the overhead of GPU memory monitoring.
 
