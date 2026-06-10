@@ -17,7 +17,7 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
   | Baseline | 19.86 | 0.37 | 2.81 | 27.41 | 0.35 | 2.81 |
   | **Seal-Robust KCR** | **11.98** | 0.41 | 2.81 | **13.67** | **0.39** | 2.81 |
   
-* All experiments were conducted on an NVIDIA RTX A5000 GPU and an Intel Core i5-11600K CPU.
+* All above evaluations were conducted on an NVIDIA RTX A5000 GPU and an Intel Core i5-11600K CPU.
 * NDLkotenOCR-Lite was evaluated using CPU-based inference and therefore does not require GPU memory.
 
 ## Run
