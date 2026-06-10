@@ -33,7 +33,7 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
     <img src="img/fig_application.png" width="640" title="details">
   </p>
   
-* You can access the local GUI using as follows:
+* You can access the local web-based app as follows:
 ```
   streamlit run run_app.py
 ```
