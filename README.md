@@ -20,6 +20,12 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
 * All above evaluations were conducted on an NVIDIA RTX A5000 GPU and an Intel Core i5-11600K CPU.
 * NDLkotenOCR-Lite was evaluated using CPU-based inference and therefore does not require GPU memory.
 
+## Environment
+  ```
+    conda create -n sealrobustkcr python=3.10
+    pip install -r requirements.txt
+  ```
+
 ## Run
 * Example command to process the Synthetic Test Set, optionally evaluate the results and measure the peak GPU memory usage:
 ```
@@ -484,12 +490,6 @@ Dashed arrows indicate additional processes performed in parallel with character
     | Synth. Test | — | — | 100 | ≈10 | 100 |
   
 # Experiments
-## Environment
-  ```
-    conda create -n sealrobustkcr python=3.10
-    pip install -r requirements.txt
-  ```
-
 ## ① Character Detection
 * The character detection results are as follows:
   
