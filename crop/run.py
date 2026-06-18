@@ -70,17 +70,17 @@ def main(args):
     label_dir = args.labels_dir
     save_root = args.save_root
 
-    vis_dir = os.path.join(save_root, "vis_with_label")
+    # vis_dir = os.path.join(save_root, "vis_with_label")
     crop_dir = os.path.join(save_root, "crops")
 
-    os.makedirs(vis_dir, exist_ok=True)
+    # os.makedirs(vis_dir, exist_ok=True)
     os.makedirs(crop_dir, exist_ok=True)
 
-    default_color = (0, 255, 0)
-    thickness = 4
-    font = cv2.FONT_HERSHEY_SIMPLEX
-    font_scale = 0.6
-    font_thickness = 2
+    # default_color = (0, 255, 0)
+    # thickness = 4
+    # font = cv2.FONT_HERSHEY_SIMPLEX
+    # font_scale = 0.6
+    # font_thickness = 2
 
     CONF_THRES = args.conf_thres
     TOPK = args.topk
@@ -108,7 +108,7 @@ def main(args):
             continue
 
         H, W = img.shape[:2]
-        img_vis = img.copy()
+        # img_vis = img.copy()
 
         dets = []
 
@@ -144,27 +144,27 @@ def main(args):
         per_img_crop_root = os.path.join(crop_dir, stem)
         os.makedirs(per_img_crop_root, exist_ok=True)
 
-        for i, (cls_id, conf, x1, y1, x2, y2) in enumerate(dets_sorted):
-            cv2.rectangle(img_vis, (x1, y1), (x2, y2), default_color, thickness)
+        for cls_id, conf, x1, y1, x2, y2 in dets_sorted:
+            # cv2.rectangle(img_vis, (x1, y1), (x2, y2), default_color, thickness)
 
-            if conf is None:
-                label_text = f"{cls_id}"
-            else:
-                label_text = f"{cls_id}:{conf:.3f}"
+            # if conf is None:
+            #     label_text = f"{cls_id}"
+            # else:
+            #     label_text = f"{cls_id}:{conf:.3f}"
 
-            text_y = y1 - 6
-            if text_y < 10:
-                text_y = y1 + 20
+            # text_y = y1 - 6
+            # if text_y < 10:
+            #     text_y = y1 + 20
 
-            cv2.putText(
-                img_vis,
-                label_text,
-                (x1, text_y),
-                font,
-                font_scale,
-                default_color,
-                font_thickness
-            )
+            # cv2.putText(
+            #     img_vis,
+            #     label_text,
+            #     (x1, text_y),
+            #     font,
+            #     font_scale,
+            #     default_color,
+            #     font_thickness
+            # )
 
             patch = safe_crop(img, x1, y1, x2, y2)
             if patch is None:
@@ -190,11 +190,11 @@ def main(args):
             cv2.imwrite(crop_path, patch)
             total_crops += 1
 
-        out_vis_path = os.path.join(vis_dir, os.path.basename(img_path))
-        cv2.imwrite(out_vis_path, img_vis)
+        # out_vis_path = os.path.join(vis_dir, os.path.basename(img_path))
+        # cv2.imwrite(out_vis_path, img_vis)
 
         processed += 1
-        print(f"Saved vis: {out_vis_path}")
+        print(f"Saved crops for: {stem}")
 
     print(
         f"Finished! processed={processed}, "
@@ -211,5 +211,6 @@ if __name__ == "__main__":
     parser.add_argument("--save_root", type=str, required=True, help="Root directory to save visualization and crops")
     parser.add_argument("--conf_thres", type=float, default=None, help="Confidence threshold. Default: None")
     parser.add_argument("--topk", type=int, default=None, help="Keep top-k detections per image. Default: None")
+
     args = parser.parse_args()
     main(args)
