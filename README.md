@@ -23,6 +23,7 @@ Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal I
 ## Environment
   ```
     conda create -n sealrobustkcr python=3.10
+    conda activate sealrobustkcr
     pip install -r requirements.txt
   ```
 
