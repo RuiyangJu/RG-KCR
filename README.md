@@ -601,7 +601,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 ### Run
 * You can run document restoration with `r_min = 90` and `rg_ratio = rb_ratio = 1.3` as follows:
   ```
-    python ./restoration/run.py --input_dir ./dataset/images/test_aug --output_dir ./restoration/output --r_min 90 --rg_ratio 1.3 --rb_ratio 1.3 --max_workders 6
+    python ./restoration/run.py --input_dir ./dataset/images/test_aug --output_dir ./restoration/output --r_min 90 --rg_ratio 1.3 --rb_ratio 1.3 --max_workers 6
   ```
 
 ### Evaluate
