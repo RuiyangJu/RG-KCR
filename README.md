@@ -654,6 +654,8 @@ Dashed arrows indicate additional processes performed in parallel with character
 * You can run both methods for character ordering as follows:
   ```
     python ./ordering/run_ours.py --input_dir ./classification/output --output_dir ./ordering/output_ours
+  ```
+  ```
     python ./ordering/run_lgbm.py --input_dir ./classification/output --output_dir ./ordering/output_lgbm
   ```
 
