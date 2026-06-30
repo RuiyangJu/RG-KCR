@@ -608,7 +608,7 @@ Dashed arrows indicate additional processes performed in parallel with character
 * For the synthetic image, the ground truth is the corresponding real image.
 * You can evaluate using `PSNR` and `SSIM` as follows:
   ```
-    python ./restoration/evaluate.py --gt_dir ./dataset/images/test_raw --pred_dir ./restoration/output --output_csv ./restoration/output_csv
+    python ./restoration/evaluate.py --gt_dir ./dataset/images/test_aug --pred_dir ./restoration/output --output_csv ./restoration/output_csv
   ```
 
 ## ③ Character Cropping
