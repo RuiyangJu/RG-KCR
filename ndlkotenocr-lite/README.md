@@ -20,5 +20,5 @@ This is for reference only. Please refer to the [original GitHub repository](htt
 * Evaluate the performance (CER):
 ```
   cd src
-  python evaluate.py --gt_dir gt_folder --pred output_dir/txt --output_csv output
+  python evaluate.py --gt_dir gt_folder --pred output_dir --out_csv output.csv
 ```
