@@ -13,10 +13,7 @@ This is for reference only. Please refer to the [original GitHub repository](htt
 ```
   python3 ocr.py --sourcedir input_root --output output_dir --device cpu
 ```
-* NDLkotenOCR-Lite runs on the CPU by default. To enable GPU inference and measure the peak GPU memory usage, you can run the following command:
-```
-  python3 ocr.py --sourcedir input_root --output output_dir --device cuda --monitor-gpu
-```
+* Notably, NDLkotenOCR-Lite runs on the CPU by default.
 
 ## Evaluate
 * Evaluate the performance (CER):
